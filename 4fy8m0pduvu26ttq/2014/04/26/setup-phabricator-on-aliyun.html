@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>在CentOS上搭建Phabricator | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了LAMP(Linux+Apache+MySQL+PHP)环境和管理MySQL的phpMyAdmin，在mysite/phpMyAdmin下。Openfire平台也顺利的搭建好了，在9090端口。
+今天看到个讲Code Review的文章，分析了两个Code">
+  
+  <meta name="description" content="前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了LAMP(Linux+Apache+MySQL+PHP)环境和管理MySQL的phpMyAdmin，在mysite/phpMyAdmin下。Openfire平台也顺利的搭建好了，在9090端口。
+今天看到个讲Code Review的文章，分析了两个Code">
+<meta property="og:type" content="website">
+<meta property="og:title" content="在CentOS上搭建Phabricator">
+<meta property="og:url" content="http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/04/26/setup-phabricator-on-aliyun.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了LAMP(Linux+Apache+MySQL+PHP)环境和管理MySQL的phpMyAdmin，在mysite/phpMyAdmin下。Openfire平台也顺利的搭建好了，在9090端口。
+今天看到个讲Code Review的文章，分析了两个Code">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在CentOS上搭建Phabricator">
+<meta name="twitter:description" content="前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了LAMP(Linux+Apache+MySQL+PHP)环境和管理MySQL的phpMyAdmin，在mysite/phpMyAdmin下。Openfire平台也顺利的搭建好了，在9090端口。
+今天看到个讲Code Review的文章，分析了两个Code">
+
+  
+    <link rel="alternate" href="/atom.xml" title="Duger 博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/4fy8m0pduvu26ttq/2014/04/26/setup-phabricator-on-aliyun.html">
+  <time datetime="2014-04-25T16:00:00.000Z">
+    4月 26 2014
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">在CentOS上搭建Phabricator</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
+<p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
+<ul>
+<li>Facebook的Phabricator </li>
+<li>Google的Gerrit</li>
+</ul>
+<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br><a id="more"></a></p>
+<h3 id="安装">安装</h3>
+<p>本来想着应该是个软件吧，下下来就能用。去<a href="http://phabricator.org" target="_blank" rel="external">Phabricator官网</a>上溜达了一圈儿。翻了翻<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>，发现原来这厮还得要台Web服务器：</p>
+<blockquote>
+<ul>
+<li><strong>Apache</strong>: Many installs use Apache + mod_php.</li>
+<li><strong>nginx</strong>: Many installs use nginx + php-fpm.</li>
+<li><strong>lighttpd</strong> : lighttpd is less popular than Apache or nginx, but it works fine.</li>
+<li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
+<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.</li>
+</ul>
+</blockquote>
+<p>还需要:</p>
+<blockquote>
+<ul>
+<li><strong>MySQL</strong>: You need MySQL.</li>
+<li><strong>PHP</strong>: You need PHP 5.2 or newer.</li>
+</ul>
+</blockquote>
+<p>正想着蛮好，我那阿里云服务器不是为这货准备的嘛，接着看，湿了，这家伙还要个域名<code>domain name</code>，还必须是整个域名或者子域名：</p>
+<blockquote>
+<p><strong>NOTE</strong>: Phabricator must be installed on an entire domain. You can not install it to a path on an existing domain, like <code>example.com/phabricator/</code>. Instead, install it to an entire domain or subdomain, like <code>phabricator.example.com</code>.</p>
+</blockquote>
+<p>唉，要求那么高，非得把我的服务器给霸占了？再说我也没域名，就一个IP地址啊！！ 咋办，想了想，能不能跟Openfire的管理后台一样，也给分配个端口可以不。就这么干，先试试呗~</p>
+<p>按着<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>走，哇~ 有脚本，太好了，好省事儿。</p>
+<blockquote>
+<p><strong>RedHat Derivatives</strong>: <a href="http://www.phabricator.com/rsrc/install/install_rhel-derivs.sh" target="_blank" rel="external">http://www.phabricator.com/rsrc/install/install_rhel-derivs.sh</a><br>    脚本包含了配置LAMP环境和下载Phabricator!</p>
+</blockquote>
+<p>找个合适的地儿运行一下，命令行输入<code>sh rhel-derivs.sh</code>。很快执行完成，对应目录下多出了三个文件夹：<code>libphutil</code>、<code>arcanist</code>、<code>arcanist</code>。这就是Phabricator的主要文件，是从gitHub上clone下来的，手动的操作对应：</p>
+<pre><code>  <span class="variable">$cd</span> somewhere/ <span class="comment"># pick some install directory</span>
+  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/libphutil.git</span>
+  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/arcanist.git</span>
+  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/phabricator.git</span>
+</code></pre><p>还有一些选装的内容，就先忽略，这样安装就算完成啦。</p>
+<h3 id="更新Phabricator">更新Phabricator</h3>
+<p>Pharbricator经常会更新，如果想更新的话，手动方式是：</p>
+<ul>
+<li>Stop the webserver (including <code>php-fpm</code>, if you use it).</li>
+<li>Run <code>git pull</code> in <code>libphutil/</code>, <code>arcanist/</code> and <code>phabricator/</code>.</li>
+<li>Run <code>phabricator/bin/storage upgrade</code>.</li>
+<li>Restart the webserver (and <code>php-fpm</code>, if you stopped it earlier).</li>
+</ul>
+<p>当然也是有脚本滴！哈哈~</p>
+<p><a href="http://www.phabricator.com/rsrc/install/update_phabricator.sh" target="_blank" rel="external"><code>http://www.phabricator.com/rsrc/install/update_phabricator.sh</code></a></p>
+<p>文件目录下运行<code>sh update_phabricator.sh</code>就好啦!</p>
+<h2 id="配置">配置</h2>
+<h4 id="配置Apache">配置Apache</h4>
+<p>首先保证Apache可以正常访问，咱们是要设置个Apache虚拟主机,相同IP下不同端口(Port)的虚拟主机。<br>在服务器中找到目录<code>/etc/httpd/conf.d/</code>我的是<strong>CentOS系统</strong>，<br>它的特色之一就是如果你不想修改原始配置文件httpd.conf的话，那么你可以在此目录下创建一个<code>*.conf</code>文件，<br>将自己额外参数独立出来，启动apache时，这个文件就会被读入到主要配置文件。</p>
+<p>我这里创建<code>phabricator.conf</code>,增加一个7878端口，文件中写如下内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">//增加监听端口</div><div class="line">Listen 7878</div><div class="line">NameVirtualHost myIP:7878</div><div class="line"></div><div class="line">//更改虚拟主机设置</div><div class="line"><span class="variable">&lt;VirtualHost myIP:7878&gt;</span></div><div class="line">  <span class="comment"># Change this to the domain which points to your host.</span></div><div class="line">  ServerName myIP:7878</div><div class="line"></div><div class="line">  <span class="comment"># Change this to the path where you put 'phabricator' when you checked it</span></div><div class="line">  <span class="comment"># out from GitHub when following the Installation Guide.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Make sure you include "/webroot" at the end!</span></div><div class="line">  DocumentRoot /mnt/codeReview/phabricator/webroot</div><div class="line"></div><div class="line">  RewriteEngine on</div><div class="line">  RewriteRule ^/rsrc/(.<span class="keyword">*</span>)     -                       [L,QSA]</div><div class="line">  RewriteRule ^/favicon.ico   -                       [L,QSA]</div><div class="line">  RewriteRule ^(.<span class="keyword">*</span>)$          /index.php?__path__=$1  [B,L,QSA]</div><div class="line"><span class="variable">&lt;/VirtualHost&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="variable">&lt;Directory "/mnt/codeReview/phabricator/webroot"&gt;</span></div><div class="line">  DirectoryIndex index.php</div><div class="line">  AllowOverride None</div><div class="line">    Order allow,deny</div><div class="line">    Allow from all</div><div class="line"><span class="variable">&lt;/Directory&gt;</span></div></pre></td></tr></table></figure>
+
+<p>OK!WebServer配置好啦，现在我们可以启动啦~在浏览器中输入<code>http://myIP:7878</code>,哦喔~<br>怎么会报一个MySQL的错误！OK~还没完，继续！</p>
+<h4 id="配置MySQL">配置MySQL</h4>
+<p>配置一下phabricator中的信息，使他能连上咱们的MySQL。</p>
+<p>如果你的能正常连接MySQL，那么你只需要启动一下Phabricator schemata就可以了。<br>进入phabricator所在目录，运行如下命令：</p>
+<pre><code>phabricator/ <span class="variable">$ </span>./bin/storage upgrade
+</code></pre><p>如果你像我一样被一个无权限用户的错误挡在门外，那么就设置个MySQL中有权限的用户！<br>phabricator所在目录，运行如下命令：</p>
+<pre><code><span class="input"><span class="prompt">phabricator/ $ ./bin/storage upgrade --user &lt;user&gt;</span> --password &lt;password&gt;</span>
+</code></pre><p>OK！下一步，启动deamon,重启apache！</p>
+<pre><code>./bin/phd start
+<span class="class"><span class="keyword">service</span> <span class="title">apache2</span> restart</span>
+</code></pre><p>OK！重新进浏览器试试吧！大功告成！</p>
+<p>下面就是Phabricator咋配置咋用啦！官方有些文档可以参考一下：</p>
+<blockquote>
+<ul>
+<li>设置你的管理帐号和登陆/注册，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Accounts_and_Registration.html" target="_blank" rel="external">Configuring Accounts and Registration</a>; </li>
+<li>了解更高级的配置主题，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuration_User_Guide_Advanced_Configuration.html" target="_blank" rel="external">Configuration User Guide: Advanced Configuration</a>;</li>
+<li>配置上传的文件和附件的存储位置，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_File_Storage.html" target="_blank" rel="external">Configuring File Storage</a>;</li>
+<li>配置Phabricator以支持发送邮件，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Outbound_Email.html" target="_blank" rel="external">Configuring Outbound Email</a>;</li>
+<li>配置Phabricator以支持接收邮件，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Inbound_Email.html" target="_blank" rel="external">Configuring Inbound Email</a>;</li>
+<li>导入版本仓库，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Diffusion_User_Guide.html" target="_blank" rel="external">Diffusion User Guide</a>;</li>
+<li>了解守护进程工作，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Managing_Daemons_with_phd.html" target="_blank" rel="external">Managing Daemons with phd</a>;</li>
+<li>配置备份工作，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Backups.html" target="_blank" rel="external">Configuring Backups</a>;</li>
+<li>为Phabricator贡献力量，请参见<a href="http://www.phabricator.com/docs/phabricator/article/Contributor_Introduction.html" target="_blank" rel="external">Contributor Introduction</a>.</li>
+</ul>
+</blockquote>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/技术/">技术</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/ContOS/">ContOS</a>, <a class="tags-link" href="/tags/LAMP/">LAMP</a>, <a class="tags-link" href="/tags/Phabricator/">Phabricator</a>, <a class="tags-link" href="/tags/code-review/">code review</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="在CentOS上搭建Phabricator">
+  </div>
+</section>
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>

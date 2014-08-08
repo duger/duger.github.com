@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Duger 博客]]></title>
+  <subtitle><![CDATA[iOS小生]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://wfyh007.gitcafe.com/"/>
+  <updated>2014-08-08T08:23:51.580Z</updated>
+  <id>http://wfyh007.gitcafe.com/</id>
+  
+  <author>
+    <name><![CDATA[Duger wang]]></name>
+    <email><![CDATA[wfyh007@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[test4]]></title>
+    <link href="http://wfyh007.gitcafe.com//2014/08/05/test4.html"/>
+    <id>http://wfyh007.gitcafe.com//2014/08/05/test4.html</id>
+    <published>2014-08-05T09:29:55.000Z</published>
+    <updated>2014-08-05T09:29:55.000Z</updated>
+    <content type="html"><![CDATA[]]></content>
+    
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://wfyh007.gitcafe.com//2014/08/05/hello-world.html"/>
+    <id>http://wfyh007.gitcafe.com//2014/08/05/hello-world.html</id>
+    <published>2014-08-05T02:18:24.000Z</published>
+    <updated>2014-08-03T18:23:32.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2>
+<h3 id="Create_a_new_post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[在CentOS上搭建Phabricator]]></title>
+    <link href="http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/04/26/setup-phabricator-on-aliyun.html"/>
+    <id>http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/04/26/setup-phabricator-on-aliyun.html</id>
+    <published>2014-04-25T16:00:00.000Z</published>
+    <updated>2014-08-07T15:08:36.000Z</updated>
+    <content type="html"><![CDATA[<p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
+<p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
+<ul>
+<li>Facebook的Phabricator </li>
+<li>Google的Gerrit</li>
+</ul>
+<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br><a id="more"></a></p>
+<h3 id="安装">安装</h3>
+<p>本来想着应该是个软件吧，下下来就能用。去<a href="http://phabricator.org" target="_blank" rel="external">Phabricator官网</a>上溜达了一圈儿。翻了翻<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>，发现原来这厮还得要台Web服务器：</p>
+<blockquote>
+<ul>
+<li><strong>Apache</strong>: Many installs use Apache + mod_php.</li>
+<li><strong>nginx</strong>: Many installs use nginx + php-fpm.</li>
+<li><strong>lighttpd</strong> : lighttpd is less popular than Apache or nginx, but it works fine.</li>
+<li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
+<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.</li>
+</ul>
+</blockquote>
+<p>还需要:</p>
+<blockquote>
+<ul>
+<li><strong>MySQL</strong>: You need MySQL.</li>
+<li><strong>PHP</strong>: You need PHP 5.2 or newer.</li>
+</ul>
+</blockquote>
+<p>正想着蛮好，我那阿里云服务器不是为这货准备的嘛，接着看，湿了，这家伙还要个域名<code>domain name</code>，还必须是整个域名或者子域名：</p>
+<blockquote>
+<p><strong>NOTE</strong>: Phabricator must be installed on an entire domain. You can not install it to a path on an existing domain, like <code>example.com/phabricator/</code>. Instead, install it to an entire domain or subdomain, like <code>phabricator.example.com</code>.</p>
+</blockquote>
+<p>唉，要求那么高，非得把我的服务器给霸占了？再说我也没域名，就一个IP地址啊！！ 咋办，想了想，能不能跟Openfire的管理后台一样，也给分配个端口可以不。就这么干，先试试呗~</p>
+<p>按着<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>走，哇~ 有脚本，太好了，好省事儿。</p>
+<blockquote>
+<p><strong>RedHat Derivatives</strong>: <a href="http://www.phabricator.com/rsrc/install/install_rhel-derivs.sh" target="_blank" rel="external">http://www.phabricator.com/rsrc/install/install_rhel-derivs.sh</a><br>    脚本包含了配置LAMP环境和下载Phabricator!</p>
+</blockquote>
+<p>找个合适的地儿运行一下，命令行输入<code>sh rhel-derivs.sh</code>。很快执行完成，对应目录下多出了三个文件夹：<code>libphutil</code>、<code>arcanist</code>、<code>arcanist</code>。这就是Phabricator的主要文件，是从gitHub上clone下来的，手动的操作对应：</p>
+<pre><code>  <span class="variable">$cd</span> somewhere/ <span class="comment"># pick some install directory</span>
+  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/libphutil.git</span>
+  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/arcanist.git</span>
+  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/phabricator.git</span>
+</code></pre><p>还有一些选装的内容，就先忽略，这样安装就算完成啦。</p>
+<h3 id="更新Phabricator">更新Phabricator</h3>
+<p>Pharbricator经常会更新，如果想更新的话，手动方式是：</p>
+<ul>
+<li>Stop the webserver (including <code>php-fpm</code>, if you use it).</li>
+<li>Run <code>git pull</code> in <code>libphutil/</code>, <code>arcanist/</code> and <code>phabricator/</code>.</li>
+<li>Run <code>phabricator/bin/storage upgrade</code>.</li>
+<li>Restart the webserver (and <code>php-fpm</code>, if you stopped it earlier).</li>
+</ul>
+<p>当然也是有脚本滴！哈哈~</p>
+<p><a href="http://www.phabricator.com/rsrc/install/update_phabricator.sh" target="_blank" rel="external"><code>http://www.phabricator.com/rsrc/install/update_phabricator.sh</code></a></p>
+<p>文件目录下运行<code>sh update_phabricator.sh</code>就好啦!</p>
+<h2 id="配置">配置</h2>
+<h4 id="配置Apache">配置Apache</h4>
+<p>首先保证Apache可以正常访问，咱们是要设置个Apache虚拟主机,相同IP下不同端口(Port)的虚拟主机。<br>在服务器中找到目录<code>/etc/httpd/conf.d/</code>我的是<strong>CentOS系统</strong>，<br>它的特色之一就是如果你不想修改原始配置文件httpd.conf的话，那么你可以在此目录下创建一个<code>*.conf</code>文件，<br>将自己额外参数独立出来，启动apache时，这个文件就会被读入到主要配置文件。</p>
+<p>我这里创建<code>phabricator.conf</code>,增加一个7878端口，文件中写如下内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">//增加监听端口</div><div class="line">Listen 7878</div><div class="line">NameVirtualHost myIP:7878</div><div class="line"></div><div class="line">//更改虚拟主机设置</div><div class="line"><span class="variable">&lt;VirtualHost myIP:7878&gt;</span></div><div class="line">  <span class="comment"># Change this to the domain which points to your host.</span></div><div class="line">  ServerName myIP:7878</div><div class="line"></div><div class="line">  <span class="comment"># Change this to the path where you put 'phabricator' when you checked it</span></div><div class="line">  <span class="comment"># out from GitHub when following the Installation Guide.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Make sure you include "/webroot" at the end!</span></div><div class="line">  DocumentRoot /mnt/codeReview/phabricator/webroot</div><div class="line"></div><div class="line">  RewriteEngine on</div><div class="line">  RewriteRule ^/rsrc/(.<span class="keyword">*</span>)     -                       [L,QSA]</div><div class="line">  RewriteRule ^/favicon.ico   -                       [L,QSA]</div><div class="line">  RewriteRule ^(.<span class="keyword">*</span>)$          /index.php?__path__=$1  [B,L,QSA]</div><div class="line"><span class="variable">&lt;/VirtualHost&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="variable">&lt;Directory "/mnt/codeReview/phabricator/webroot"&gt;</span></div><div class="line">  DirectoryIndex index.php</div><div class="line">  AllowOverride None</div><div class="line">    Order allow,deny</div><div class="line">    Allow from all</div><div class="line"><span class="variable">&lt;/Directory&gt;</span></div></pre></td></tr></table></figure>
+
+<p>OK!WebServer配置好啦，现在我们可以启动啦~在浏览器中输入<code>http://myIP:7878</code>,哦喔~<br>怎么会报一个MySQL的错误！OK~还没完，继续！</p>
+<h4 id="配置MySQL">配置MySQL</h4>
+<p>配置一下phabricator中的信息，使他能连上咱们的MySQL。</p>
+<p>如果你的能正常连接MySQL，那么你只需要启动一下Phabricator schemata就可以了。<br>进入phabricator所在目录，运行如下命令：</p>
+<pre><code>phabricator/ <span class="variable">$ </span>./bin/storage upgrade
+</code></pre><p>如果你像我一样被一个无权限用户的错误挡在门外，那么就设置个MySQL中有权限的用户！<br>phabricator所在目录，运行如下命令：</p>
+<pre><code><span class="input"><span class="prompt">phabricator/ $ ./bin/storage upgrade --user &lt;user&gt;</span> --password &lt;password&gt;</span>
+</code></pre><p>OK！下一步，启动deamon,重启apache！</p>
+<pre><code>./bin/phd start
+<span class="class"><span class="keyword">service</span> <span class="title">apache2</span> restart</span>
+</code></pre><p>OK！重新进浏览器试试吧！大功告成！</p>
+<p>下面就是Phabricator咋配置咋用啦！官方有些文档可以参考一下：</p>
+<blockquote>
+<ul>
+<li>设置你的管理帐号和登陆/注册，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Accounts_and_Registration.html" target="_blank" rel="external">Configuring Accounts and Registration</a>; </li>
+<li>了解更高级的配置主题，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuration_User_Guide_Advanced_Configuration.html" target="_blank" rel="external">Configuration User Guide: Advanced Configuration</a>;</li>
+<li>配置上传的文件和附件的存储位置，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_File_Storage.html" target="_blank" rel="external">Configuring File Storage</a>;</li>
+<li>配置Phabricator以支持发送邮件，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Outbound_Email.html" target="_blank" rel="external">Configuring Outbound Email</a>;</li>
+<li>配置Phabricator以支持接收邮件，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Inbound_Email.html" target="_blank" rel="external">Configuring Inbound Email</a>;</li>
+<li>导入版本仓库，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Diffusion_User_Guide.html" target="_blank" rel="external">Diffusion User Guide</a>;</li>
+<li>了解守护进程工作，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Managing_Daemons_with_phd.html" target="_blank" rel="external">Managing Daemons with phd</a>;</li>
+<li>配置备份工作，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Backups.html" target="_blank" rel="external">Configuring Backups</a>;</li>
+<li>为Phabricator贡献力量，请参见<a href="http://www.phabricator.com/docs/phabricator/article/Contributor_Introduction.html" target="_blank" rel="external">Contributor Introduction</a>.</li>
+</ul>
+</blockquote>
+]]></content>
+    <summary type="html"><![CDATA[<p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
+<p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
+<ul>
+<li>Facebook的Phabricator </li>
+<li>Google的Gerrit</li>
+</ul>
+<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br>]]></summary>
+    
+      <category term="code review" scheme="http://wfyh007.gitcafe.com/tags/code-review/"/>
+    
+      <category term="Phabricator" scheme="http://wfyh007.gitcafe.com/tags/Phabricator/"/>
+    
+      <category term="LAMP" scheme="http://wfyh007.gitcafe.com/tags/LAMP/"/>
+    
+      <category term="ContOS" scheme="http://wfyh007.gitcafe.com/tags/ContOS/"/>
+    
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Easy come,easy go]]></title>
+    <link href="http://wfyh007.gitcafe.com/fa4ff536ka1kkgif/2014/04/21/easy-comeeasy-go.html"/>
+    <id>http://wfyh007.gitcafe.com/fa4ff536ka1kkgif/2014/04/21/easy-comeeasy-go.html</id>
+    <published>2014-04-20T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:08.000Z</updated>
+    <content type="html"><![CDATA[<p>三月25日鼓起勇气相识，到今天4月21日，整整的四周时间，其实也就四周。</p>
+<p>从开始就打的火热，你来我往的，聊得来，有话说。</p>
+<p>约出来，一起吃饭，爬山，处着很舒服。</p>
+<p>慢慢从好感到喜欢，从喜欢到牵挂，付出了感情，希望能走到一起。</p>
+]]></content>
+    
+    
+      <category term="情感" scheme="http://wfyh007.gitcafe.com/categories/%E6%83%85%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[香八拉徒步]]></title>
+    <link href="http://wfyh007.gitcafe.com/788pon931g4bt2aj/2014/04/10/shanbala.html"/>
+    <id>http://wfyh007.gitcafe.com/788pon931g4bt2aj/2014/04/10/shanbala.html</id>
+    <published>2014-04-09T16:00:00.000Z</published>
+    <updated>2014-08-07T15:09:06.000Z</updated>
+    <content type="html"><![CDATA[<p>清明假期第二天，我、顾鑫、高圆圆和她的小伙伴小芳一起去香八拉徒步。</p>
+<blockquote>
+<p>香八拉就是指香山至八大处之间的一段徒步山路，徒友爱称香八拉。</p>
+</blockquote>
+<p>驱车八大处，路线是：雍王府——虎头山——八大处——翠微山——陈家沟——香山水库——北马场——上满是松树的山——挂甲塔——碧云寺——公主坟——香山。</p>
+<p><img src="/images/shanbala/IMG_1746.PNG" alt="路程" title="20公里啊！" width="600"><br><a id="more"></a><br>从上午9点出发，总的走下来到下午4点左右到达香山。</p>
+<p>开始爬山啦，到达虎头山！</p>
+<p><img src="/images/shanbala/IMG_1672.jpg" alt="虎头山合影" title="虎头山合影" width="600"></p>
+<p>偷偷拍一张~</p>
+<p><img src="/images/shanbala/IMG_1677.jpg" alt="偷拍" title="干嘛不看镜头" width="600"></p>
+<p>野果子，某个傻妞说像屁股~你说呢~嘿嘿~</p>
+<p><img src="/images/shanbala/IMG_1693.jpg" alt="野果子" title="不像丁丁么~" width="600"></p>
+<p>小树林休息，我去探路，额头被划伤！！</p>
+<p><img src="/images/shanbala/IMG_1699.jpg" alt="休息" title="香山水库小树林旁边满地垃圾" width="600"></p>
+<p>中途有群不地道的驴友把人家羊群赶跑了，追不回来啊~~~</p>
+<p>荫翳的松树山上忽现桃花儿，这俩儿犯花痴，狂奔过去~</p>
+<p><img src="/images/shanbala/IMG_1719.jpg" alt="拍桃花" title="花痴！花痴" width="600"></p>
+<p>爬出松林，到达大路！开心！</p>
+<p><img src="/images/shanbala/IMG_1728.jpg" alt="到达大路" title="yeah!" width="600"></p>
+<p>然后慢慢~慢慢~挪到香山，挪回家~</p>
+<p><img src="/images/shanbala/IMG_4563.JPG" alt="回家" title="回家喽！" width="600"></p>
+]]></content>
+    <summary type="html"><![CDATA[<p>清明假期第二天，我、顾鑫、高圆圆和她的小伙伴小芳一起去香八拉徒步。</p>
+<blockquote>
+<p>香八拉就是指香山至八大处之间的一段徒步山路，徒友爱称香八拉。</p>
+</blockquote>
+<p>驱车八大处，路线是：雍王府——虎头山——八大处——翠微山——陈家沟——香山水库——北马场——上满是松树的山——挂甲塔——碧云寺——公主坟——香山。</p>
+<p><img src="/images/shanbala/IMG_1746.PNG" alt="路程" title="20公里啊！" width="600"><br>]]></summary>
+    
+      <category term="随笔" scheme="http://wfyh007.gitcafe.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Beauly fade Love stay]]></title>
+    <link href="http://wfyh007.gitcafe.com/788pon931g4bt2aj/2014/04/04/beauly-fade-love-stay.html"/>
+    <id>http://wfyh007.gitcafe.com/788pon931g4bt2aj/2014/04/04/beauly-fade-love-stay.html</id>
+    <published>2014-04-03T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:22.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="/images/bueatyFadeLoveStay.JPG" alt="pic" title="bueatyFadeLoveStay"></p>
+<p>美貌、青春是短暂的，慢慢滋润出来的爱是永恒的，用心爱吧！</p>
+]]></content>
+    
+    
+      <category term="随笔" scheme="http://wfyh007.gitcafe.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Spring]]></title>
+    <link href="http://wfyh007.gitcafe.com/2bn8278bs1k9x14d/2014/03/31/spring.html"/>
+    <id>http://wfyh007.gitcafe.com/2bn8278bs1k9x14d/2014/03/31/spring.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:30.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://m2.img.srcdd.com/farm4/d/2014/0330/23/B2D04EA8807E32381D69CDD1F0B149F5_B1280_1280_500_333.jpeg" alt="照片" title="spring"></p>
+<p>If we had no winter, the spring would not be so pleasant.</p>
+<blockquote>
+<p>如果没有冬天，春天不会如此悦人。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="春天" scheme="http://wfyh007.gitcafe.com/tags/%E6%98%A5%E5%A4%A9/"/>
+    
+      <category term="只言片语" scheme="http://wfyh007.gitcafe.com/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[随遇而安]]></title>
+    <link href="http://wfyh007.gitcafe.com/2bn8278bs1k9x14d/2014/03/31/god-never-forgive-us.html"/>
+    <id>http://wfyh007.gitcafe.com/2bn8278bs1k9x14d/2014/03/31/god-never-forgive-us.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:36.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://m1.img.srcdd.com/farm5/d/2014/0107/15/1732EAF028FDD7AC4357E08613F67AFB_B1280_1280_500_339.jpeg" alt="Life" title="Life is fair"></p>
+<p>Life rarely gives us what we want at the moment we consider appropriate. Miracles do occur but not punctually.</p>
+<blockquote>
+<p>生活很少在我们觉得合适的时候给我们想要的东西，奇迹确实会发生但通常很不守时。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="人生" scheme="http://wfyh007.gitcafe.com/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+      <category term="只言片语" scheme="http://wfyh007.gitcafe.com/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[apple touch icon]]></title>
+    <link href="http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/03/31/apple-touch-icon.html"/>
+    <id>http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/03/31/apple-touch-icon.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-08-03T18:33:10.000Z</updated>
+    <content type="html"><![CDATA[<p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
+<p><link href="http://image.feeliu.com/web/favicon.ico" rel="shortcut icon">  </p>
+<link href="http://image.feeliu.com/web/favicon.ico" rel="Bookmark">  
+
+<p>现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。实现方法是在HTML文档的<code>&lt;head&gt;</code>标签加入下面代码即可。</p>
+<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">href=</span><span class="string">"/custom_icon.png"</span>/&gt;   
+</code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
+<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。</p>
+<p>所以最完善的写法应该是：</p>
+<p><link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone.png">  </p>
+<p><link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png">  </p>
+<p><link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone4.png">    </p>
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad3-144.png">  
+
+<p>虽然官方都用的png图片做说明，但实际测试jpg格式也可用（不推荐），图片无需做圆角和高光效果，同Native App一样，系统会自动为图标添加圆角及高光。如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon，这时我们提供的图标就要自己做圆角和高亮效果了。</p>
+<p>图标搜索的优先级如下：<br>如果没有跟相应设备推荐尺寸一致的图标，那个会优先使用比推荐尺寸大，但最接近推荐尺寸的图标。<br>如果没有比推荐尺寸大的图标，会优先选择最接近推荐尺寸的图标。<br>如些有多个图标符合推荐尺寸，会优先选择包含关键字precomposed的图标。<br>如果未在区域指定用link标签指定图标，会自动搜索网站根目录下有apple-touch-icon…或者 apple-touch-icon-precomposed…前缀的图标。 如设备推荐尺寸为57x57,优先级如下：</p>
+<ul>
+<li><p>apple-touch-icon-57×57-precomposed.png</p>
+</li>
+<li><p>apple-touch-icon-57×57.png</p>
+</li>
+<li><p>apple-touch-icon-precomposed.png</p>
+</li>
+<li><p>apple-touch-icon.png</p>
+<p>在第三代 iPad 上有四种图标规格： 57x57, 72x72, 114x114, 144x144.</p>
+</li>
+</ul>
+<p>由于 retina 图标的尺寸是标准图标大小的2倍，因此实际上我们只需要只做2款图标即可：114 x 114 和 144 x 144 。 将retina 图标的大小设置成标准图标的尺寸，那么IOS就会根据情况自动进行缩放了。</p>
+<p><!-- Standard iPhone -->  </p>
+<p><link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png"><br><!-- Retina iPhone -->  </p>
+<p><link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png"><br><!-- Standard iPad -->  </p>
+<p><link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png"><br><!-- Retina iPad -->  </p>
+<link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png">  
+]]></content>
+    
+    
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/tags/iOS/"/>
+    
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Animation]]></title>
+    <link href="http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/03/30/animation.html"/>
+    <id>http://wfyh007.gitcafe.com/4fy8m0pduvu26ttq/2014/03/30/animation.html</id>
+    <published>2014-03-29T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:46.000Z</updated>
+    <content type="html"><![CDATA[]]></content>
+    
+    
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[惊喜总是来的那么忽然]]></title>
+    <link href="http://wfyh007.gitcafe.com/788pon931g4bt2aj/2014/03/30/mylove.html"/>
+    <id>http://wfyh007.gitcafe.com/788pon931g4bt2aj/2014/03/30/mylove.html</id>
+    <published>2014-03-29T16:00:00.000Z</published>
+    <updated>2014-08-03T18:29:43.000Z</updated>
+    <content type="html"><![CDATA[<p>今天周日，加班的第二天了，中午吃过饭，慵懒得刷了刷朋友圈儿，你一盘儿咸猪手和黑木耳下面赫然标着<code>北京·福来居</code>！心依来北京了？心依来北京了！</p>
+<p>打了个电话，果然是在北京了，唉~我咋这么迟钝，让我看相册！</p>
+<p>翻开相册，这28号已经开始在北京玩儿起来了，来了两三天，通着微信我竟然没发现》《，她也真够沉得住气的！</p>
+<p>这还让我怎么安心上班，下午在公司值守着，心里翻来覆去，坐不住。打算下午晚些时候申请一下，早点儿下班，我来啦~</p>
+<p>—</p>
+<p><img src="http://m3.img.srcdd.com/farm4/d/2014/0212/09/9DBE69BE9F2C058D5E97F1D0D5C6086F_B1280_1280_500_332.jpeg" alt="leave" title="say goodbye"></p>
+<p>If you’re brave enough to say goodbye, life will reward you with a new hello.</p>
+<blockquote>
+<p>如果你足够勇敢说再见，生活便会奖励你一个新的开始。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="爱情" scheme="http://wfyh007.gitcafe.com/tags/%E7%88%B1%E6%83%85/"/>
+    
+      <category term="心依" scheme="http://wfyh007.gitcafe.com/tags/%E5%BF%83%E4%BE%9D/"/>
+    
+      <category term="随笔" scheme="http://wfyh007.gitcafe.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
