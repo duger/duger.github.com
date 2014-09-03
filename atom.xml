@@ -4,7 +4,7 @@
   <subtitle><![CDATA[iOS小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://diandian.ga/"/>
-  <updated>2014-09-03T11:07:36.329Z</updated>
+  <updated>2014-09-03T11:29:34.616Z</updated>
   <id>http://diandian.ga/</id>
   
   <author>
@@ -40,115 +40,6 @@
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[在CentOS上搭建Phabricator]]></title>
-    <link href="http://diandian.ga/2014/04/26/setup-phabricator-on-aliyun.html"/>
-    <id>http://diandian.ga/2014/04/26/setup-phabricator-on-aliyun.html</id>
-    <published>2014-04-25T16:00:00.000Z</published>
-    <updated>2014-08-08T10:04:04.000Z</updated>
-    <content type="html"><![CDATA[<p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
-<p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
-<ul>
-<li>Facebook的Phabricator </li>
-<li>Google的Gerrit</li>
-</ul>
-<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br><a id="more"></a></p>
-<h3 id="安装">安装</h3>
-<p>本来想着应该是个软件吧，下下来就能用。去<a href="http://phabricator.org" target="_blank" rel="external">Phabricator官网</a>上溜达了一圈儿。翻了翻<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>，发现原来这厮还得要台Web服务器：</p>
-<blockquote>
-<ul>
-<li><strong>Apache</strong>: Many installs use Apache + mod_php.</li>
-<li><strong>nginx</strong>: Many installs use nginx + php-fpm.</li>
-<li><strong>lighttpd</strong> : lighttpd is less popular than Apache or nginx, but it works fine.</li>
-<li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
-<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.</li>
-</ul>
-</blockquote>
-<p>还需要:</p>
-<blockquote>
-<ul>
-<li><strong>MySQL</strong>: You need MySQL.</li>
-<li><strong>PHP</strong>: You need PHP 5.2 or newer.</li>
-</ul>
-</blockquote>
-<p>正想着蛮好，我那阿里云服务器不是为这货准备的嘛，接着看，湿了，这家伙还要个域名<code>domain name</code>，还必须是整个域名或者子域名：</p>
-<blockquote>
-<p><strong>NOTE</strong>: Phabricator must be installed on an entire domain. You can not install it to a path on an existing domain, like <code>example.com/phabricator/</code>. Instead, install it to an entire domain or subdomain, like <code>phabricator.example.com</code>.</p>
-</blockquote>
-<p>唉，要求那么高，非得把我的服务器给霸占了？再说我也没域名，就一个IP地址啊！！ 咋办，想了想，能不能跟Openfire的管理后台一样，也给分配个端口可以不。就这么干，先试试呗~</p>
-<p>按着<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>走，哇~ 有脚本，太好了，好省事儿。</p>
-<blockquote>
-<p><strong>RedHat Derivatives</strong>: <a href="http://www.phabricator.com/rsrc/install/install_rhel-derivs.sh" target="_blank" rel="external">http://www.phabricator.com/rsrc/install/install_rhel-derivs.sh</a><br>    脚本包含了配置LAMP环境和下载Phabricator!</p>
-</blockquote>
-<p>找个合适的地儿运行一下，命令行输入<code>sh rhel-derivs.sh</code>。很快执行完成，对应目录下多出了三个文件夹：<code>libphutil</code>、<code>arcanist</code>、<code>arcanist</code>。这就是Phabricator的主要文件，是从gitHub上clone下来的，手动的操作对应：</p>
-<pre><code>  <span class="variable">$cd</span> somewhere/ <span class="comment"># pick some install directory</span>
-  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/libphutil.git</span>
-  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/arcanist.git</span>
-  somewhere/ $ git <span class="keyword">clone</span> git:<span class="comment">//github.com/facebook/phabricator.git</span>
-</code></pre><p>还有一些选装的内容，就先忽略，这样安装就算完成啦。</p>
-<h3 id="更新Phabricator">更新Phabricator</h3>
-<p>Pharbricator经常会更新，如果想更新的话，手动方式是：</p>
-<ul>
-<li>Stop the webserver (including <code>php-fpm</code>, if you use it).</li>
-<li>Run <code>git pull</code> in <code>libphutil/</code>, <code>arcanist/</code> and <code>phabricator/</code>.</li>
-<li>Run <code>phabricator/bin/storage upgrade</code>.</li>
-<li>Restart the webserver (and <code>php-fpm</code>, if you stopped it earlier).</li>
-</ul>
-<p>当然也是有脚本滴！哈哈~</p>
-<p><a href="http://www.phabricator.com/rsrc/install/update_phabricator.sh" target="_blank" rel="external"><code>http://www.phabricator.com/rsrc/install/update_phabricator.sh</code></a></p>
-<p>文件目录下运行<code>sh update_phabricator.sh</code>就好啦!</p>
-<h2 id="配置">配置</h2>
-<h4 id="配置Apache">配置Apache</h4>
-<p>首先保证Apache可以正常访问，咱们是要设置个Apache虚拟主机,相同IP下不同端口(Port)的虚拟主机。<br>在服务器中找到目录<code>/etc/httpd/conf.d/</code>我的是<strong>CentOS系统</strong>，<br>它的特色之一就是如果你不想修改原始配置文件httpd.conf的话，那么你可以在此目录下创建一个<code>*.conf</code>文件，<br>将自己额外参数独立出来，启动apache时，这个文件就会被读入到主要配置文件。</p>
-<p>我这里创建<code>phabricator.conf</code>,增加一个7878端口，文件中写如下内容：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">//增加监听端口</div><div class="line">Listen 7878</div><div class="line">NameVirtualHost myIP:7878</div><div class="line"></div><div class="line">//更改虚拟主机设置</div><div class="line"><span class="variable">&lt;VirtualHost myIP:7878&gt;</span></div><div class="line">  <span class="comment"># Change this to the domain which points to your host.</span></div><div class="line">  ServerName myIP:7878</div><div class="line"></div><div class="line">  <span class="comment"># Change this to the path where you put 'phabricator' when you checked it</span></div><div class="line">  <span class="comment"># out from GitHub when following the Installation Guide.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Make sure you include "/webroot" at the end!</span></div><div class="line">  DocumentRoot /mnt/codeReview/phabricator/webroot</div><div class="line"></div><div class="line">  RewriteEngine on</div><div class="line">  RewriteRule ^/rsrc/(.<span class="keyword">*</span>)     -                       [L,QSA]</div><div class="line">  RewriteRule ^/favicon.ico   -                       [L,QSA]</div><div class="line">  RewriteRule ^(.<span class="keyword">*</span>)$          /index.php?__path__=$1  [B,L,QSA]</div><div class="line"><span class="variable">&lt;/VirtualHost&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="variable">&lt;Directory "/mnt/codeReview/phabricator/webroot"&gt;</span></div><div class="line">  DirectoryIndex index.php</div><div class="line">  AllowOverride None</div><div class="line">    Order allow,deny</div><div class="line">    Allow from all</div><div class="line"><span class="variable">&lt;/Directory&gt;</span></div></pre></td></tr></table></figure>
-
-<p>OK!WebServer配置好啦，现在我们可以启动啦~在浏览器中输入<code>http://myIP:7878</code>,哦喔~<br>怎么会报一个MySQL的错误！OK~还没完，继续！</p>
-<h4 id="配置MySQL">配置MySQL</h4>
-<p>配置一下phabricator中的信息，使他能连上咱们的MySQL。</p>
-<p>如果你的能正常连接MySQL，那么你只需要启动一下Phabricator schemata就可以了。<br>进入phabricator所在目录，运行如下命令：</p>
-<pre><code>phabricator/ <span class="variable">$ </span>./bin/storage upgrade
-</code></pre><p>如果你像我一样被一个无权限用户的错误挡在门外，那么就设置个MySQL中有权限的用户！<br>phabricator所在目录，运行如下命令：</p>
-<pre><code><span class="input"><span class="prompt">phabricator/ $ ./bin/storage upgrade --user &lt;user&gt;</span> --password &lt;password&gt;</span>
-</code></pre><p>OK！下一步，启动deamon,重启apache！</p>
-<pre><code>./bin/phd start
-<span class="class"><span class="keyword">service</span> <span class="title">apache2</span> restart</span>
-</code></pre><p>OK！重新进浏览器试试吧！大功告成！</p>
-<p>下面就是Phabricator咋配置咋用啦！官方有些文档可以参考一下：</p>
-<blockquote>
-<ul>
-<li>设置你的管理帐号和登陆/注册，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Accounts_and_Registration.html" target="_blank" rel="external">Configuring Accounts and Registration</a>; </li>
-<li>了解更高级的配置主题，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuration_User_Guide_Advanced_Configuration.html" target="_blank" rel="external">Configuration User Guide: Advanced Configuration</a>;</li>
-<li>配置上传的文件和附件的存储位置，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_File_Storage.html" target="_blank" rel="external">Configuring File Storage</a>;</li>
-<li>配置Phabricator以支持发送邮件，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Outbound_Email.html" target="_blank" rel="external">Configuring Outbound Email</a>;</li>
-<li>配置Phabricator以支持接收邮件，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Inbound_Email.html" target="_blank" rel="external">Configuring Inbound Email</a>;</li>
-<li>导入版本仓库，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Diffusion_User_Guide.html" target="_blank" rel="external">Diffusion User Guide</a>;</li>
-<li>了解守护进程工作，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Managing_Daemons_with_phd.html" target="_blank" rel="external">Managing Daemons with phd</a>;</li>
-<li>配置备份工作，请参见 <a href="http://www.phabricator.com/docs/phabricator/article/Configuring_Backups.html" target="_blank" rel="external">Configuring Backups</a>;</li>
-<li>为Phabricator贡献力量，请参见<a href="http://www.phabricator.com/docs/phabricator/article/Contributor_Introduction.html" target="_blank" rel="external">Contributor Introduction</a>.</li>
-</ul>
-</blockquote>
-]]></content>
-    <summary type="html"><![CDATA[<p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
-<p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
-<ul>
-<li>Facebook的Phabricator </li>
-<li>Google的Gerrit</li>
-</ul>
-<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br>]]></summary>
-    
-      <category term="code review" scheme="http://diandian.ga/tags/code-review/"/>
-    
-      <category term="Phabricator" scheme="http://diandian.ga/tags/Phabricator/"/>
-    
-      <category term="LAMP" scheme="http://diandian.ga/tags/LAMP/"/>
-    
-      <category term="ContOS" scheme="http://diandian.ga/tags/ContOS/"/>
-    
-      <category term="技术" scheme="http://diandian.ga/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -248,6 +139,46 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Spring]]></title>
+    <link href="http://diandian.ga/2014/03/31/spring.html"/>
+    <id>http://diandian.ga/2014/03/31/spring.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:30.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://m2.img.srcdd.com/farm4/d/2014/0330/23/B2D04EA8807E32381D69CDD1F0B149F5_B1280_1280_500_333.jpeg" alt="照片" title="spring"></p>
+<p>If we had no winter, the spring would not be so pleasant.</p>
+<blockquote>
+<p>如果没有冬天，春天不会如此悦人。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="春天" scheme="http://diandian.ga/tags/%E6%98%A5%E5%A4%A9/"/>
+    
+      <category term="只言片语" scheme="http://diandian.ga/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[随遇而安]]></title>
+    <link href="http://diandian.ga/2014/03/31/god-never-forgive-us.html"/>
+    <id>http://diandian.ga/2014/03/31/god-never-forgive-us.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-08-03T18:31:36.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://m1.img.srcdd.com/farm5/d/2014/0107/15/1732EAF028FDD7AC4357E08613F67AFB_B1280_1280_500_339.jpeg" alt="Life" title="Life is fair"></p>
+<p>Life rarely gives us what we want at the moment we consider appropriate. Miracles do occur but not punctually.</p>
+<blockquote>
+<p>生活很少在我们觉得合适的时候给我们想要的东西，奇迹确实会发生但通常很不守时。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="人生" scheme="http://diandian.ga/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+      <category term="只言片语" scheme="http://diandian.ga/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[apple touch icon]]></title>
     <link href="http://diandian.ga/2014/03/31/apple-touch-icon.html"/>
     <id>http://diandian.ga/2014/03/31/apple-touch-icon.html</id>
@@ -290,46 +221,6 @@
       <category term="iOS" scheme="http://diandian.ga/tags/iOS/"/>
     
       <category term="技术" scheme="http://diandian.ga/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Spring]]></title>
-    <link href="http://diandian.ga/2014/03/31/spring.html"/>
-    <id>http://diandian.ga/2014/03/31/spring.html</id>
-    <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-08-03T18:31:30.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://m2.img.srcdd.com/farm4/d/2014/0330/23/B2D04EA8807E32381D69CDD1F0B149F5_B1280_1280_500_333.jpeg" alt="照片" title="spring"></p>
-<p>If we had no winter, the spring would not be so pleasant.</p>
-<blockquote>
-<p>如果没有冬天，春天不会如此悦人。</p>
-</blockquote>
-]]></content>
-    
-    
-      <category term="春天" scheme="http://diandian.ga/tags/%E6%98%A5%E5%A4%A9/"/>
-    
-      <category term="只言片语" scheme="http://diandian.ga/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[随遇而安]]></title>
-    <link href="http://diandian.ga/2014/03/31/god-never-forgive-us.html"/>
-    <id>http://diandian.ga/2014/03/31/god-never-forgive-us.html</id>
-    <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-08-03T18:31:36.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://m1.img.srcdd.com/farm5/d/2014/0107/15/1732EAF028FDD7AC4357E08613F67AFB_B1280_1280_500_339.jpeg" alt="Life" title="Life is fair"></p>
-<p>Life rarely gives us what we want at the moment we consider appropriate. Miracles do occur but not punctually.</p>
-<blockquote>
-<p>生活很少在我们觉得合适的时候给我们想要的东西，奇迹确实会发生但通常很不守时。</p>
-</blockquote>
-]]></content>
-    
-    
-      <category term="人生" scheme="http://diandian.ga/tags/%E4%BA%BA%E7%94%9F/"/>
-    
-      <category term="只言片语" scheme="http://diandian.ga/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
     
   </entry>
   

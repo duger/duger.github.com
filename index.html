@@ -129,49 +129,6 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2014/04/26/setup-phabricator-on-aliyun.html">
-  <time datetime="2014-04-25T16:00:00.000Z">
-    4月 26 2014
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
-<p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
-<ul>
-<li>Facebook的Phabricator </li>
-<li>Google的Gerrit</li>
-</ul>
-<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br>
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-        <div class="alignleft">
-          <a href="/2014/04/26/setup-phabricator-on-aliyun.html#more" class="more-link">阅读全文</a>
-        </div>
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
       <a href="/2014/04/21/easy-comeeasy-go.html">
   <time datetime="2014-04-20T16:00:00.000Z">
     4月 21 2014
@@ -328,70 +285,6 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2014/03/31/apple-touch-icon.html">
-  <time datetime="2014-03-30T16:00:00.000Z">
-    3月 31 2014
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2014/03/31/apple-touch-icon.html">apple touch icon</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"shortcut icon"</span> /&gt;  </div><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"Bookmark"</span> /&gt;</div></pre></td></tr></table></figure>
-
-<p>现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。实现方法是在HTML文档的<code>&lt;head&gt;</code>标签加入下面代码即可。</p>
-<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">href=</span><span class="string">"/custom_icon.png"</span>/&gt;   
-</code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
-<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。</p>
-<p>所以最完善的写法应该是：</p>
-<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"57x57"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone.png"</span> /&gt;  
-&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"72x72"</span> <span class="variable">href=</span><span class="string">"touch-icon-ipad.png"</span> /&gt;  
-&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"114x114"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone4.png"</span> /&gt;    
-&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"144x144"</span> <span class="variable">href=</span><span class="string">"apple-touch-icon-ipad3-144.png"</span> /&gt;  
-</code></pre><p>虽然官方都用的png图片做说明，但实际测试jpg格式也可用（不推荐），图片无需做圆角和高光效果，同Native App一样，系统会自动为图标添加圆角及高光。如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon，这时我们提供的图标就要自己做圆角和高亮效果了。</p>
-<p>图标搜索的优先级如下：<br>如果没有跟相应设备推荐尺寸一致的图标，那个会优先使用比推荐尺寸大，但最接近推荐尺寸的图标。<br>如果没有比推荐尺寸大的图标，会优先选择最接近推荐尺寸的图标。<br>如些有多个图标符合推荐尺寸，会优先选择包含关键字precomposed的图标。<br>如果未在区域指定用link标签指定图标，会自动搜索网站根目录下有apple-touch-icon…或者 apple-touch-icon-precomposed…前缀的图标。 如设备推荐尺寸为57x57,优先级如下：</p>
-<ul>
-<li><p>apple-touch-icon-57×57-precomposed.png</p>
-</li>
-<li><p>apple-touch-icon-57×57.png</p>
-</li>
-<li><p>apple-touch-icon-precomposed.png</p>
-</li>
-<li><p>apple-touch-icon.png</p>
-<p>在第三代 iPad 上有四种图标规格： 57x57, 72x72, 114x114, 144x144.</p>
-</li>
-</ul>
-<p>由于 retina 图标的尺寸是标准图标大小的2倍，因此实际上我们只需要只做2款图标即可：114 x 114 和 144 x 144 。 将retina 图标的大小设置成标准图标的尺寸，那么IOS就会根据情况自动进行缩放了。</p>
-<p><!-- Standard iPhone -->  </p>
-<p><link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png"><br><!-- Retina iPhone -->  </p>
-<p><link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png"><br><!-- Standard iPad -->  </p>
-<p><link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png"><br><!-- Retina iPad -->  </p>
-<link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png">  
-
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
       <a href="/2014/03/31/spring.html">
   <time datetime="2014-03-30T16:00:00.000Z">
     3月 31 2014
@@ -468,6 +361,70 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2014/03/31/apple-touch-icon.html">
+  <time datetime="2014-03-30T16:00:00.000Z">
+    3月 31 2014
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/03/31/apple-touch-icon.html">apple touch icon</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"shortcut icon"</span> /&gt;  </div><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"Bookmark"</span> /&gt;</div></pre></td></tr></table></figure>
+
+<p>现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。实现方法是在HTML文档的<code>&lt;head&gt;</code>标签加入下面代码即可。</p>
+<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">href=</span><span class="string">"/custom_icon.png"</span>/&gt;   
+</code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
+<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。</p>
+<p>所以最完善的写法应该是：</p>
+<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"57x57"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone.png"</span> /&gt;  
+&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"72x72"</span> <span class="variable">href=</span><span class="string">"touch-icon-ipad.png"</span> /&gt;  
+&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"114x114"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone4.png"</span> /&gt;    
+&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"144x144"</span> <span class="variable">href=</span><span class="string">"apple-touch-icon-ipad3-144.png"</span> /&gt;  
+</code></pre><p>虽然官方都用的png图片做说明，但实际测试jpg格式也可用（不推荐），图片无需做圆角和高光效果，同Native App一样，系统会自动为图标添加圆角及高光。如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon，这时我们提供的图标就要自己做圆角和高亮效果了。</p>
+<p>图标搜索的优先级如下：<br>如果没有跟相应设备推荐尺寸一致的图标，那个会优先使用比推荐尺寸大，但最接近推荐尺寸的图标。<br>如果没有比推荐尺寸大的图标，会优先选择最接近推荐尺寸的图标。<br>如些有多个图标符合推荐尺寸，会优先选择包含关键字precomposed的图标。<br>如果未在区域指定用link标签指定图标，会自动搜索网站根目录下有apple-touch-icon…或者 apple-touch-icon-precomposed…前缀的图标。 如设备推荐尺寸为57x57,优先级如下：</p>
+<ul>
+<li><p>apple-touch-icon-57×57-precomposed.png</p>
+</li>
+<li><p>apple-touch-icon-57×57.png</p>
+</li>
+<li><p>apple-touch-icon-precomposed.png</p>
+</li>
+<li><p>apple-touch-icon.png</p>
+<p>在第三代 iPad 上有四种图标规格： 57x57, 72x72, 114x114, 144x144.</p>
+</li>
+</ul>
+<p>由于 retina 图标的尺寸是标准图标大小的2倍，因此实际上我们只需要只做2款图标即可：114 x 114 和 144 x 144 。 将retina 图标的大小设置成标准图标的尺寸，那么IOS就会根据情况自动进行缩放了。</p>
+<p><!-- Standard iPhone -->  </p>
+<p><link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png"><br><!-- Retina iPhone -->  </p>
+<p><link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png"><br><!-- Standard iPad -->  </p>
+<p><link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png"><br><!-- Retina iPad -->  </p>
+<link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png">  
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2014/03/30/mylove.html">
   <time datetime="2014-03-29T16:00:00.000Z">
     3月 30 2014
@@ -507,11 +464,55 @@
 
 
   
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/03/28/finish-work.html">
+  <time datetime="2014-03-27T16:00:00.000Z">
+    3月 28 2014
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/03/28/finish-work.html">Jekyll小窝搭好了</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>花了一天半，小窝终于搭好了，使用的是    <a href="http://www.jekyllbootstrap.com" target="_blank" rel="external">jekyllbootstrap</a>的模板，很好用，很效率。<br>在安装Jekyll的时候遇到了些问题,报错如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">sudo gem install jekyll</div><div class="line">Password:</div><div class="line">Building native extensions.  This could take <span class="operator">a</span> <span class="keyword">while</span>...</div><div class="line">ERROR:  Error installing jekyll:</div><div class="line">    ERROR: Failed <span class="built_in">to</span> build gem native extension.</div><div class="line"></div><div class="line">    /System/Library/Frameworks/Ruby.framework/Versions/<span class="number">2.0</span>/usr/bin/ruby extconf.rb</div><div class="line">creating Makefile</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span> clean</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span></div><div class="line">compiling porter.c</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: warning: <span class="string">'&&'</span> <span class="operator">within</span> <span class="string">'||'</span> [-Wlogical-op-parentheses]</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: note: place parentheses around <span class="operator">the</span> <span class="string">'&&'</span> expression <span class="built_in">to</span> silence this warning</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                          ^</div><div class="line">                   (                          )</div><div class="line"><span class="number">1</span> warning generated.</div><div class="line">compiling porter_wrap.c</div><div class="line">linking shared-object stemmer.bundle</div><div class="line">clang: error: unknown argument: <span class="string">'-multiply_definedsuppress'</span> [-Wunused-<span class="command"><span class="keyword">command</span>-line-argument-hard-error-in-future]</span></div><div class="line">clang: note: this will be <span class="operator">a</span> hard error (cannot be downgraded <span class="built_in">to</span> <span class="operator">a</span> warning) <span class="operator">in</span> <span class="operator">the</span> future</div><div class="line">make: *** [stemmer.bundle] Error <span class="number">1</span></div><div class="line"></div><div class="line">make failed, exit code <span class="number">2</span></div><div class="line"></div><div class="line">Gem <span class="built_in">files</span> will remain installed <span class="operator">in</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/gems/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span> <span class="keyword">for</span> inspection.</div><div class="line">Results logged <span class="built_in">to</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/extensions/universal-darwin-<span class="number">13</span>/<span class="number">2.0</span><span class="number">.0</span>/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span>/gem_make.out</div></pre></td></tr></table></figure>
+
+<p>This is due to Xcode 5.1 - its already reported as a bug to Ruby.</p>
+<p>I found three different ways to fix the bug:</p>
+<ul>
+<li>Install using:<br><code>sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll</code></li>
+<li>Install Ruby 2.1.1. You can do this using brew install <a href="http://brew.sh/" target="_blank" rel="external">ruby</a></li>
+<li>Follow the instructions from <a href="http://stackoverflow.com/a/22340285/1270034" target="_blank" rel="external">http://stackoverflow.com/a/22340285/1270034</a> to remove the offending arg from rbconfig.</li>
+</ul>
+<blockquote>
+<p>还有些有用的Jekyll命令：<br>    jekyll serve    <em>开启本地浏览服务 <localhost:4000></localhost:4000></em><br>    jekyll build —watch   内容或者设置有更改时 自动更新</p>
+</blockquote>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
 
   <nav id="pagination">
   
-  
-    <a href="/page/2/" class="next">下一页</a>
   
   <div class="clearfix"></div>
 </nav>
