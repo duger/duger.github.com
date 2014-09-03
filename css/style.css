@@ -421,6 +421,7 @@ article .entry .gist pre {
 article .entry table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 article .entry th,
 article .entry td {
