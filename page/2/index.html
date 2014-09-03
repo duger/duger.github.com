@@ -94,7 +94,7 @@
   <div class="entry">
     
       <p>花了一天半，小窝终于搭好了，使用的是    <a href="http://www.jekyllbootstrap.com" target="_blank" rel="external">jekyllbootstrap</a>的模板，很好用，很效率。<br>在安装Jekyll的时候遇到了些问题,报错如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">sudo gem install jekyll</div><div class="line">Password:</div><div class="line">Building native extensions.  This could take <span class="operator">a</span> <span class="keyword">while</span>...</div><div class="line">ERROR:  Error installing jekyll:</div><div class="line">    ERROR: Failed <span class="built_in">to</span> build gem native extension.</div><div class="line"></div><div class="line">    /System/Library/Frameworks/Ruby.framework/Versions/<span class="number">2.0</span>/usr/bin/ruby extconf.rb</div><div class="line">creating Makefile</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span> clean</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span></div><div class="line">compiling porter.c</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: warning: <span class="string">'&&'</span> <span class="operator">within</span> <span class="string">'||'</span> [-Wlogical-op-parentheses]</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: note: place parentheses around <span class="operator">the</span> <span class="string">'&&'</span> expression <span class="built_in">to</span> silence this warning</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                          ^</div><div class="line">                   (                          )</div><div class="line"><span class="number">1</span> warning generated.</div><div class="line">compiling porter_wrap.c</div><div class="line">linking shared-object stemmer.bundle</div><div class="line">clang: error: unknown argument: <span class="string">'-multiply_definedsuppress'</span> [-Wunused-<span class="command"><span class="keyword">command</span>-line-argument-hard-error-in-future]</span></div><div class="line">clang: note: this will be <span class="operator">a</span> hard error (cannot be downgraded <span class="built_in">to</span> <span class="operator">a</span> warning) <span class="operator">in</span> <span class="operator">the</span> future</div><div class="line">make: *** [stemmer.bundle] Error <span class="number">1</span></div><div class="line"></div><div class="line">make failed, exit code <span class="number">2</span></div><div class="line"></div><div class="line">Gem <span class="built_in">files</span> will remain installed <span class="operator">in</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/gems/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span> <span class="keyword">for</span> inspection.</div><div class="line">Results logged <span class="built_in">to</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/extensions/universal-darwin-<span class="number">13</span>/<span class="number">2.0</span><span class="number">.0</span>/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span>/gem_make.out</div></pre></td></tr></table></figure>
+<figure class="highlight"><pre><div class="line">sudo gem install jekyll</div><div class="line">Password:</div><div class="line">Building native extensions.  This could take <span class="operator">a</span> <span class="keyword">while</span>...</div><div class="line">ERROR:  Error installing jekyll:</div><div class="line">    ERROR: Failed <span class="built_in">to</span> build gem native extension.</div><div class="line"></div><div class="line">    /System/Library/Frameworks/Ruby.framework/Versions/<span class="number">2.0</span>/usr/bin/ruby extconf.rb</div><div class="line">creating Makefile</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span> clean</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span></div><div class="line">compiling porter.c</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: warning: <span class="string">'&&'</span> <span class="operator">within</span> <span class="string">'||'</span> [-Wlogical-op-parentheses]</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: note: place parentheses around <span class="operator">the</span> <span class="string">'&&'</span> expression <span class="built_in">to</span> silence this warning</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                          ^</div><div class="line">                   (                          )</div><div class="line"><span class="number">1</span> warning generated.</div><div class="line">compiling porter_wrap.c</div><div class="line">linking shared-object stemmer.bundle</div><div class="line">clang: error: unknown argument: <span class="string">'-multiply_definedsuppress'</span> [-Wunused-<span class="command"><span class="keyword">command</span>-line-argument-hard-error-in-future]</span></div><div class="line">clang: note: this will be <span class="operator">a</span> hard error (cannot be downgraded <span class="built_in">to</span> <span class="operator">a</span> warning) <span class="operator">in</span> <span class="operator">the</span> future</div><div class="line">make: *** [stemmer.bundle] Error <span class="number">1</span></div><div class="line"></div><div class="line">make failed, exit code <span class="number">2</span></div><div class="line"></div><div class="line">Gem <span class="built_in">files</span> will remain installed <span class="operator">in</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/gems/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span> <span class="keyword">for</span> inspection.</div><div class="line">Results logged <span class="built_in">to</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/extensions/universal-darwin-<span class="number">13</span>/<span class="number">2.0</span><span class="number">.0</span>/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span>/gem_make.out</div></pre></figure>
 
 <p>This is due to Xcode 5.1 - its already reported as a bug to Ruby.</p>
 <p>I found three different ways to fix the bug:</p>
@@ -130,6 +130,76 @@
 </nav>
 
 </div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/情感/">情感</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>4</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/ContOS/" style="font-size: NaNpx;">ContOS</a><a href="/tags/LAMP/" style="font-size: NaNpx;">LAMP</a><a href="/tags/Phabricator/" style="font-size: NaNpx;">Phabricator</a><a href="/tags/code-review/" style="font-size: NaNpx;">code review</a><a href="/tags/iOS/" style="font-size: NaNpx;">iOS</a><a href="/tags/jekyll/" style="font-size: NaNpx;">jekyll</a><a href="/tags/setter/" style="font-size: NaNpx;">setter</a><a href="/tags/人生/" style="font-size: NaNpx;">人生</a><a href="/tags/博客/" style="font-size: NaNpx;">博客</a><a href="/tags/心依/" style="font-size: NaNpx;">心依</a><a href="/tags/春天/" style="font-size: NaNpx;">春天</a><a href="/tags/爱情/" style="font-size: NaNpx;">爱情</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/21/easy-comeeasy-go.html">Easy come,easy go</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
   </div>
   <footer id="footer"><div class="copyright">
   

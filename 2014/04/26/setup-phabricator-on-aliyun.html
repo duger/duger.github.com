@@ -148,7 +148,7 @@
 <h4 id="配置Apache">配置Apache</h4>
 <p>首先保证Apache可以正常访问，咱们是要设置个Apache虚拟主机,相同IP下不同端口(Port)的虚拟主机。<br>在服务器中找到目录<code>/etc/httpd/conf.d/</code>我的是<strong>CentOS系统</strong>，<br>它的特色之一就是如果你不想修改原始配置文件httpd.conf的话，那么你可以在此目录下创建一个<code>*.conf</code>文件，<br>将自己额外参数独立出来，启动apache时，这个文件就会被读入到主要配置文件。</p>
 <p>我这里创建<code>phabricator.conf</code>,增加一个7878端口，文件中写如下内容：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">//增加监听端口</div><div class="line">Listen 7878</div><div class="line">NameVirtualHost myIP:7878</div><div class="line"></div><div class="line">//更改虚拟主机设置</div><div class="line"><span class="variable">&lt;VirtualHost myIP:7878&gt;</span></div><div class="line">  <span class="comment"># Change this to the domain which points to your host.</span></div><div class="line">  ServerName myIP:7878</div><div class="line"></div><div class="line">  <span class="comment"># Change this to the path where you put 'phabricator' when you checked it</span></div><div class="line">  <span class="comment"># out from GitHub when following the Installation Guide.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Make sure you include "/webroot" at the end!</span></div><div class="line">  DocumentRoot /mnt/codeReview/phabricator/webroot</div><div class="line"></div><div class="line">  RewriteEngine on</div><div class="line">  RewriteRule ^/rsrc/(.<span class="keyword">*</span>)     -                       [L,QSA]</div><div class="line">  RewriteRule ^/favicon.ico   -                       [L,QSA]</div><div class="line">  RewriteRule ^(.<span class="keyword">*</span>)$          /index.php?__path__=$1  [B,L,QSA]</div><div class="line"><span class="variable">&lt;/VirtualHost&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="variable">&lt;Directory "/mnt/codeReview/phabricator/webroot"&gt;</span></div><div class="line">  DirectoryIndex index.php</div><div class="line">  AllowOverride None</div><div class="line">    Order allow,deny</div><div class="line">    Allow from all</div><div class="line"><span class="variable">&lt;/Directory&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><pre><div class="line">//增加监听端口</div><div class="line">Listen 7878</div><div class="line">NameVirtualHost myIP:7878</div><div class="line"></div><div class="line">//更改虚拟主机设置</div><div class="line"><span class="variable">&lt;VirtualHost myIP:7878&gt;</span></div><div class="line">  <span class="comment"># Change this to the domain which points to your host.</span></div><div class="line">  ServerName myIP:7878</div><div class="line"></div><div class="line">  <span class="comment"># Change this to the path where you put 'phabricator' when you checked it</span></div><div class="line">  <span class="comment"># out from GitHub when following the Installation Guide.</span></div><div class="line">  <span class="comment">#</span></div><div class="line">  <span class="comment"># Make sure you include "/webroot" at the end!</span></div><div class="line">  DocumentRoot /mnt/codeReview/phabricator/webroot</div><div class="line"></div><div class="line">  RewriteEngine on</div><div class="line">  RewriteRule ^/rsrc/(.<span class="keyword">*</span>)     -                       [L,QSA]</div><div class="line">  RewriteRule ^/favicon.ico   -                       [L,QSA]</div><div class="line">  RewriteRule ^(.<span class="keyword">*</span>)$          /index.php?__path__=$1  [B,L,QSA]</div><div class="line"><span class="variable">&lt;/VirtualHost&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="variable">&lt;Directory "/mnt/codeReview/phabricator/webroot"&gt;</span></div><div class="line">  DirectoryIndex index.php</div><div class="line">  AllowOverride None</div><div class="line">    Order allow,deny</div><div class="line">    Allow from all</div><div class="line"><span class="variable">&lt;/Directory&gt;</span></div></pre></figure>
 
 <p>OK!WebServer配置好啦，现在我们可以启动啦~在浏览器中输入<code>http://myIP:7878</code>,哦喔~<br>怎么会报一个MySQL的错误！OK~还没完，继续！</p>
 <h4 id="配置MySQL">配置MySQL</h4>
@@ -202,6 +202,76 @@
   </div>
 </section>
 </div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/情感/">情感</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>4</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/ContOS/" style="font-size: NaNpx;">ContOS</a><a href="/tags/LAMP/" style="font-size: NaNpx;">LAMP</a><a href="/tags/Phabricator/" style="font-size: NaNpx;">Phabricator</a><a href="/tags/code-review/" style="font-size: NaNpx;">code review</a><a href="/tags/iOS/" style="font-size: NaNpx;">iOS</a><a href="/tags/jekyll/" style="font-size: NaNpx;">jekyll</a><a href="/tags/setter/" style="font-size: NaNpx;">setter</a><a href="/tags/人生/" style="font-size: NaNpx;">人生</a><a href="/tags/博客/" style="font-size: NaNpx;">博客</a><a href="/tags/心依/" style="font-size: NaNpx;">心依</a><a href="/tags/春天/" style="font-size: NaNpx;">春天</a><a href="/tags/爱情/" style="font-size: NaNpx;">爱情</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/21/easy-comeeasy-go.html">Easy come,easy go</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
   </div>
   <footer id="footer"><div class="copyright">
   
