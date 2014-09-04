@@ -3,9 +3,9 @@
   <title><![CDATA[Duger 博客]]></title>
   <subtitle><![CDATA[iOS小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://localhost:4000/"/>
-  <updated>2014-09-04T11:33:14.105Z</updated>
-  <id>http://localhost:4000/</id>
+  <link href="http://wfyh007.gitcafe.com/"/>
+  <updated>2014-09-04T11:45:58.681Z</updated>
+  <id>http://wfyh007.gitcafe.com/</id>
   
   <author>
     <name><![CDATA[Duger wang]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://localhost:4000/2014/08/01/hello-world.html"/>
-    <id>http://localhost:4000/2014/08/01/hello-world.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/08/01/hello-world.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/08/01/hello-world.html</id>
     <published>2014-07-31T16:00:00.000Z</published>
     <updated>2014-08-03T18:23:32.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -45,8 +45,8 @@
   
   <entry>
     <title><![CDATA[在CentOS上搭建Phabricator]]></title>
-    <link href="http://localhost:4000/2014/04/26/setup-phabricator-on-aliyun.html"/>
-    <id>http://localhost:4000/2014/04/26/setup-phabricator-on-aliyun.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/04/26/setup-phabricator-on-aliyun.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/04/26/setup-phabricator-on-aliyun.html</id>
     <published>2014-04-25T16:00:00.000Z</published>
     <updated>2014-09-04T09:41:09.000Z</updated>
     <content type="html"><![CDATA[<p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
@@ -144,22 +144,22 @@
 <li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
 <li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.<br>]]></summary>
     
-      <category term="code review" scheme="http://localhost:4000/tags/code-review/"/>
+      <category term="code review" scheme="http://wfyh007.gitcafe.com/tags/code-review/"/>
     
-      <category term="Phabricator" scheme="http://localhost:4000/tags/Phabricator/"/>
+      <category term="Phabricator" scheme="http://wfyh007.gitcafe.com/tags/Phabricator/"/>
     
-      <category term="LAMP" scheme="http://localhost:4000/tags/LAMP/"/>
+      <category term="LAMP" scheme="http://wfyh007.gitcafe.com/tags/LAMP/"/>
     
-      <category term="ContOS" scheme="http://localhost:4000/tags/ContOS/"/>
+      <category term="ContOS" scheme="http://wfyh007.gitcafe.com/tags/ContOS/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[香八拉徒步]]></title>
-    <link href="http://localhost:4000/2014/04/10/shanbala.html"/>
-    <id>http://localhost:4000/2014/04/10/shanbala.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/04/10/shanbala.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/04/10/shanbala.html</id>
     <published>2014-04-09T16:00:00.000Z</published>
     <updated>2014-09-04T10:07:07.000Z</updated>
     <content type="html"><![CDATA[<p>清明假期第二天，我和小伙伴小鑫鑫高圆圆小芳一起去香八拉徒步。</p>
@@ -193,16 +193,16 @@
 <p>从上午9点出发，总的走下来到下午4点左右到达香山。</p>
 <p>开始爬山啦，到达虎头山！<br>]]></summary>
     
-      <category term="香八拉" scheme="http://localhost:4000/tags/%E9%A6%99%E5%85%AB%E6%8B%89/"/>
+      <category term="香八拉" scheme="http://wfyh007.gitcafe.com/tags/%E9%A6%99%E5%85%AB%E6%8B%89/"/>
     
-      <category term="随笔" scheme="http://localhost:4000/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://wfyh007.gitcafe.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Beauly fade Love stay]]></title>
-    <link href="http://localhost:4000/2014/04/04/beauly-fade-love-stay.html"/>
-    <id>http://localhost:4000/2014/04/04/beauly-fade-love-stay.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/04/04/beauly-fade-love-stay.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/04/04/beauly-fade-love-stay.html</id>
     <published>2014-04-03T16:00:00.000Z</published>
     <updated>2014-09-04T04:08:00.000Z</updated>
     <content type="html"><![CDATA[<p><img src="/images/bueatyFadeLoveStay.JPG" alt="pic" title="bueatyFadeLoveStay"></p>
@@ -210,14 +210,14 @@
 ]]></content>
     
     
-      <category term="随笔" scheme="http://localhost:4000/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://wfyh007.gitcafe.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[setter=nil and saferelease]]></title>
-    <link href="http://localhost:4000/2014/04/02/setternil-and-saferelease.html"/>
-    <id>http://localhost:4000/2014/04/02/setternil-and-saferelease.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/04/02/setternil-and-saferelease.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/04/02/setternil-and-saferelease.html</id>
     <published>2014-04-01T16:00:00.000Z</published>
     <updated>2014-09-04T11:24:49.000Z</updated>
     <content type="html"><![CDATA[<p>如果一个界面内有个arr暂时存储数据，在这个界面类中，不对这个arr进行alloc,给这个界面传值时简单调用其<code>setter方法</code>，那么在这个界面类的dealoc方法中，我还能直接写成<code>_Pointer release,_Pointer = nil;</code>呢？</p>
@@ -232,58 +232,18 @@
 ]]></content>
     
     
-      <category term="setter" scheme="http://localhost:4000/tags/setter/"/>
+      <category term="setter" scheme="http://wfyh007.gitcafe.com/tags/setter/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Spring]]></title>
-    <link href="http://localhost:4000/2014/03/31/spring.html"/>
-    <id>http://localhost:4000/2014/03/31/spring.html</id>
-    <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-09-04T03:51:02.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://m2.img.srcdd.com/farm4/d/2014/0330/23/B2D04EA8807E32381D69CDD1F0B149F5_B1280_1280_500_333.jpeg" alt="照片" title="spring"></p>
-<p>If we had no winter, the spring would not be so pleasant.</p>
-<blockquote>
-<p>如果没有冬天，春天不会如此悦人。</p>
-</blockquote>
-]]></content>
-    
-    
-      <category term="春天" scheme="http://localhost:4000/tags/%E6%98%A5%E5%A4%A9/"/>
-    
-      <category term="只言片语" scheme="http://localhost:4000/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[随遇而安]]></title>
-    <link href="http://localhost:4000/2014/03/31/god-never-forgive-us.html"/>
-    <id>http://localhost:4000/2014/03/31/god-never-forgive-us.html</id>
-    <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-09-04T04:07:28.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://m1.img.srcdd.com/farm5/d/2014/0107/15/1732EAF028FDD7AC4357E08613F67AFB_B1280_1280_500_339.jpeg" alt="Life" title="Life is fair"></p>
-<p>Life rarely gives us what we want at the moment we consider appropriate. Miracles do occur but not punctually.</p>
-<blockquote>
-<p>生活很少在我们觉得合适的时候给我们想要的东西，奇迹确实会发生但通常很不守时。</p>
-</blockquote>
-]]></content>
-    
-    
-      <category term="人生" scheme="http://localhost:4000/tags/%E4%BA%BA%E7%94%9F/"/>
-    
-      <category term="只言片语" scheme="http://localhost:4000/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apple touch icon]]></title>
-    <link href="http://localhost:4000/2014/03/31/apple-touch-icon.html"/>
-    <id>http://localhost:4000/2014/03/31/apple-touch-icon.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/03/31/apple-touch-icon.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/03/31/apple-touch-icon.html</id>
     <published>2014-03-30T16:00:00.000Z</published>
     <updated>2014-09-04T11:24:38.000Z</updated>
     <content type="html"><![CDATA[<p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
@@ -325,18 +285,58 @@
 </code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
 <p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。<br>]]></summary>
     
-      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/tags/iOS/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[随遇而安]]></title>
+    <link href="http://wfyh007.gitcafe.com/2014/03/31/god-never-forgive-us.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/03/31/god-never-forgive-us.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-09-04T04:07:28.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://m1.img.srcdd.com/farm5/d/2014/0107/15/1732EAF028FDD7AC4357E08613F67AFB_B1280_1280_500_339.jpeg" alt="Life" title="Life is fair"></p>
+<p>Life rarely gives us what we want at the moment we consider appropriate. Miracles do occur but not punctually.</p>
+<blockquote>
+<p>生活很少在我们觉得合适的时候给我们想要的东西，奇迹确实会发生但通常很不守时。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="人生" scheme="http://wfyh007.gitcafe.com/tags/%E4%BA%BA%E7%94%9F/"/>
+    
+      <category term="只言片语" scheme="http://wfyh007.gitcafe.com/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Spring]]></title>
+    <link href="http://wfyh007.gitcafe.com/2014/03/31/spring.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/03/31/spring.html</id>
+    <published>2014-03-30T16:00:00.000Z</published>
+    <updated>2014-09-04T03:51:02.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://m2.img.srcdd.com/farm4/d/2014/0330/23/B2D04EA8807E32381D69CDD1F0B149F5_B1280_1280_500_333.jpeg" alt="照片" title="spring"></p>
+<p>If we had no winter, the spring would not be so pleasant.</p>
+<blockquote>
+<p>如果没有冬天，春天不会如此悦人。</p>
+</blockquote>
+]]></content>
+    
+    
+      <category term="春天" scheme="http://wfyh007.gitcafe.com/tags/%E6%98%A5%E5%A4%A9/"/>
+    
+      <category term="只言片语" scheme="http://wfyh007.gitcafe.com/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Jekyll小窝搭好了]]></title>
-    <link href="http://localhost:4000/2014/03/28/finish-work.html"/>
-    <id>http://localhost:4000/2014/03/28/finish-work.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/03/28/finish-work.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/03/28/finish-work.html</id>
     <published>2014-03-27T16:00:00.000Z</published>
     <updated>2014-08-08T10:05:12.000Z</updated>
     <content type="html"><![CDATA[<p>花了一天半，小窝终于搭好了，使用的是    <a href="http://www.jekyllbootstrap.com" target="_blank" rel="external">jekyllbootstrap</a>的模板，很好用，很效率。<br>在安装Jekyll的时候遇到了些问题,报错如下：</p>
@@ -355,18 +355,18 @@
 ]]></content>
     
     
-      <category term="jekyll" scheme="http://localhost:4000/tags/jekyll/"/>
+      <category term="jekyll" scheme="http://wfyh007.gitcafe.com/tags/jekyll/"/>
     
-      <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://wfyh007.gitcafe.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger]]></title>
-    <link href="http://localhost:4000/2014/03/26/OS-X-109-XCode51%E5%8D%87%E7%BA%A7%E5%90%8E-%E5%AE%89%E8%A3%85Jekyll%E6%8A%A5%E9%94%99---duger.html"/>
-    <id>http://localhost:4000/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/03/26/OS-X-109-XCode51%E5%8D%87%E7%BA%A7%E5%90%8E-%E5%AE%89%E8%A3%85Jekyll%E6%8A%A5%E9%94%99---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html</id>
     <published>2014-03-26T12:55:00.000Z</published>
     <updated>2014-09-04T09:44:54.000Z</updated>
     <content type="html"><![CDATA[<p>报错如下：</p>
@@ -386,18 +386,18 @@
     <summary type="html"><![CDATA[<p>报错如下：</p>
 <div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br>]]></summary>
     
-      <category term="XCode" scheme="http://localhost:4000/tags/XCode/"/>
+      <category term="XCode" scheme="http://wfyh007.gitcafe.com/tags/XCode/"/>
     
-      <category term="Jekyll" scheme="http://localhost:4000/tags/Jekyll/"/>
+      <category term="Jekyll" scheme="http://wfyh007.gitcafe.com/tags/Jekyll/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Xcode升级5.1 iOS升级7.1无法真机调试 - duger]]></title>
-    <link href="http://localhost:4000/2014/03/25/Xcode%E5%8D%87%E7%BA%A751-iOS%E5%8D%87%E7%BA%A771%E6%97%A0%E6%B3%95%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95---duger.html"/>
-    <id>http://localhost:4000/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/03/25/Xcode%E5%8D%87%E7%BA%A751-iOS%E5%8D%87%E7%BA%A771%E6%97%A0%E6%B3%95%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html</id>
     <published>2014-03-25T03:49:00.000Z</published>
     <updated>2014-09-04T09:45:41.000Z</updated>
     <content type="html"><![CDATA[<p><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">warning: ignoring debug info with an invalid version (<span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br></span><span style="color: #800080;">0</span>  <span style="color: #800080;">0x10fca9f93</span>  __assert_rtn + <span style="color: #800080;">144</span><br><span style="color: #800080;">1</span>  <span style="color: #800080;">0x10fd4ced4</span>  ld::passes::stubs::Pass::makeStub(ld::Atom <span style="color: #0000ff;">const</span>&amp;, <span style="color: #0000ff;">bool</span>) + <span style="color: #800080;">0</span><br><span style="color: #800080;">2</span>  <span style="color: #800080;">0x10fd4d5f7</span>  ld::passes::stubs::Pass::process(ld::Internal&amp;) + <span style="color: #800080;">497</span><br><span style="color: #800080;">3</span>  <span style="color: #800080;">0x10fd4dc07</span>  ld::passes::stubs::doPass(Options <span style="color: #0000ff;">const</span>&amp;, ld::Internal&amp;) + <span style="color: #800080;">111</span><br><span style="color: #800080;">4</span>  <span style="color: #800080;">0x10fcaab50</span>  main + <span style="color: #800080;">772</span><br><span style="color: #800080;">5</span>  <span style="color: #800080;">0x7fff8a3af5fd</span>  start + <span style="color: #800080;">1</span><span style="color: #000000;"><br>A linker snapshot was created at:<br>     </span>/tmp/MyApp-<span style="color: #800080;">2014</span>-<span style="color: #800080;">02</span>-<span style="color: #800080;">11</span>-<span style="color: #800080;">123906</span>.ld-<span style="color: #000000;">snapshot<br>ld: Assertion failed: (target </span>!= NULL), function stubableFixup, file /SourceCache/ld64/ld64-<span style="color: #800080;">236.3</span>/src/ld/passes/stubs/stubs.cpp, line <span style="color: #800080;">126</span><span style="color: #000000;">.<br>clang: error: linker command failed with exit code </span><span style="color: #800080;">1</span> (use -v to see invocation)</div><br><a id="more"></a><br>手机升级完7.1，XCode升级到5.1后，真机调试时遇到编译不过，报以上错误！</p>
@@ -412,18 +412,18 @@
 ]]></content>
     <summary type="html"><![CDATA[<p><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">warning: ignoring debug info with an invalid version (<span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br></span><span style="color: #800080;">0</span>  <span style="color: #800080;">0x10fca9f93</span>  __assert_rtn + <span style="color: #800080;">144</span><br><span style="color: #800080;">1</span>  <span style="color: #800080;">0x10fd4ced4</span>  ld::passes::stubs::Pass::makeStub(ld::Atom <span style="color: #0000ff;">const</span>&amp;, <span style="color: #0000ff;">bool</span>) + <span style="color: #800080;">0</span><br><span style="color: #800080;">2</span>  <span style="color: #800080;">0x10fd4d5f7</span>  ld::passes::stubs::Pass::process(ld::Internal&amp;) + <span style="color: #800080;">497</span><br><span style="color: #800080;">3</span>  <span style="color: #800080;">0x10fd4dc07</span>  ld::passes::stubs::doPass(Options <span style="color: #0000ff;">const</span>&amp;, ld::Internal&amp;) + <span style="color: #800080;">111</span><br><span style="color: #800080;">4</span>  <span style="color: #800080;">0x10fcaab50</span>  main + <span style="color: #800080;">772</span><br><span style="color: #800080;">5</span>  <span style="color: #800080;">0x7fff8a3af5fd</span>  start + <span style="color: #800080;">1</span><span style="color: #000000;"><br>A linker snapshot was created at:<br>     </span>/tmp/MyApp-<span style="color: #800080;">2014</span>-<span style="color: #800080;">02</span>-<span style="color: #800080;">11</span>-<span style="color: #800080;">123906</span>.ld-<span style="color: #000000;">snapshot<br>ld: Assertion failed: (target </span>!= NULL), function stubableFixup, file /SourceCache/ld64/ld64-<span style="color: #800080;">236.3</span>/src/ld/passes/stubs/stubs.cpp, line <span style="color: #800080;">126</span><span style="color: #000000;">.<br>clang: error: linker command failed with exit code </span><span style="color: #800080;">1</span> (use -v to see invocation)</div><br>]]></summary>
     
-      <category term="Xcode" scheme="http://localhost:4000/tags/Xcode/"/>
+      <category term="Xcode" scheme="http://wfyh007.gitcafe.com/tags/Xcode/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/tags/iOS/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[使用SourceTree和GitHub共同开发 - duger]]></title>
-    <link href="http://localhost:4000/2014/01/21/%E4%BD%BF%E7%94%A8SourceTree%E5%92%8CGitHub%E5%85%B1%E5%90%8C%E5%BC%80%E5%8F%91---duger.html"/>
-    <id>http://localhost:4000/2014/01/21/使用SourceTree和GitHub共同开发---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/01/21/%E4%BD%BF%E7%94%A8SourceTree%E5%92%8CGitHub%E5%85%B1%E5%90%8C%E5%BC%80%E5%8F%91---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/01/21/使用SourceTree和GitHub共同开发---duger.html</id>
     <published>2014-01-21T15:10:00.000Z</published>
     <updated>2014-09-04T09:46:09.000Z</updated>
     <content type="html"><![CDATA[<p><span><strong>GitHub详细教程</strong></span></p>
@@ -634,22 +634,22 @@
 <p>&nbsp;</p>
 <p><span>当你对本地的源代码进行了修改，你可以标注他们跟下一个版本相关（将他们加到index中），然后提交到仓库中来（commit）。Git保存了所有的版本信息，所以你可以转换你的源代码到任何的历史版本。你可以对本地的仓库进行代码的提交，然后与其他的仓库进行同步。你可以使用Git来进行仓库的克隆（clone）操作，完整的复制一个已有的仓库。仓库的所有者可以通过push操作（推送变更到别处的仓库）或者Pull操作（从别处的仓库拉取变更）来同步变更。</span><br>]]></summary>
     
-      <category term="GitHub" scheme="http://localhost:4000/tags/GitHub/"/>
+      <category term="GitHub" scheme="http://wfyh007.gitcafe.com/tags/GitHub/"/>
     
-      <category term="SourceTree" scheme="http://localhost:4000/tags/SourceTree/"/>
+      <category term="SourceTree" scheme="http://wfyh007.gitcafe.com/tags/SourceTree/"/>
     
-      <category term="Git" scheme="http://localhost:4000/tags/Git/"/>
+      <category term="Git" scheme="http://wfyh007.gitcafe.com/tags/Git/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="Git" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/Git/"/>
+      <category term="Git" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/Git/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[iOS中 nil Nil NULL 的区别 - duger]]></title>
-    <link href="http://localhost:4000/2014/01/19/iOS%E4%B8%AD-nil-Nil-NULL-%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
-    <id>http://localhost:4000/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2014/01/19/iOS%E4%B8%AD-nil-Nil-NULL-%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html</id>
     <published>2014-01-19T03:51:00.000Z</published>
     <updated>2014-09-04T11:24:09.000Z</updated>
     <content type="html"><![CDATA[<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
@@ -774,18 +774,18 @@
 <li>if&nbsp;((NSNull&nbsp;*)value&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
 <li>} &nbsp;<div><span><span>欢迎大家继续补充他们的区别。<br></span></span></div><div><span><span>加深理解一</span></span></div><div><span><span>&nbsp;</span></span></div><div><br>]]></summary>
     
-      <category term="nil" scheme="http://localhost:4000/tags/nil/"/>
+      <category term="nil" scheme="http://wfyh007.gitcafe.com/tags/nil/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[[转]ios中关于delegate （委托）的使用心得 - duger]]></title>
-    <link href="http://localhost:4000/2013/09/11/%5B%E8%BD%AC%5Dios%E4%B8%AD%E5%85%B3%E4%BA%8Edelegate-%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97---duger.html"/>
-    <id>http://localhost:4000/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2013/09/11/%5B%E8%BD%AC%5Dios%E4%B8%AD%E5%85%B3%E4%BA%8Edelegate-%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html</id>
     <published>2013-09-11T12:24:00.000Z</published>
     <updated>2014-09-04T11:23:59.000Z</updated>
     <content type="html"><![CDATA[<div id="article_content" class="article_content"><span style="font-size: 15px;">从开始从事OC工作到现在大概1年多了，从当初接触oc的”协议”的不明白，到现在代码中随处可见的委托，协议，其中感悟颇多。</span><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">首先，大家应该都明白的是委托是协议的一种，顾名思义，就是委托他人帮自己去做什么事。也就是当自己做什么事情不方便的时候，就可以建立一个委托，这样就可以委托他人帮自己去实现什么方法。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">其次，我简单的总结了一下自己用到的委托的作用有两个，一个是传值，一个是传事件。</span></div><div><span style="font-size: 15px;">1.所谓传值经常用在b类要把自己的一个数据或者对象传给a类，让a类去展示或者处理。（切分紧耦合，和代码分块的时候经常用）</span></div><div><span style="font-size: 15px;">2.所谓传事件就是a类发生了什么事，把这件事告诉关注自己的人，也就是委托的对象，由委托的对象去考虑发生这个事件后应该做出什么反映。（这个经常见，例如在异步请求中，界面事件触发数据层改变等等）</span></div><div><span style="font-size: 15px;">3.利用委托赋值，这种方法感觉是为了不暴露自己的属性就可以给自己复值，而且这样更方便了类的管理，只有在你想要让别人给你赋值的时候才调用，这样的赋值更可控一些。（例如tableView中的委托（dateSource）中常见）。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">最后，我想分享一下在使用委托的时候的一些心得和注意事项。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">心得：delegate的命名要准确，尽量看名字就知道用法。delegate和通知有的用法有些象，但是前者是单对单的，后者是单对多的情况。</span></div><div><span style="font-size: 15px;">注意：在dealloc要把delegate至为nil，还有就是delegate设置属性的时候要用assign，不要用retain。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;"><strong>委托</strong></span><br><br><span style="font-size: 15px;">在IOS中委托通过一种@protocol的方式实现,所以又称为协议.协议是多个类共享的一个方法列表,在协议中所列出的方法没有响应的实现，由其它人来实现.这叫好比我想买个手机，所以我有个buyIphone 方法,但是我不知道谁那买手机,所以把这个需求发布出去(比如公布在网站上),如果有卖手机的商人(也就是说他能实现buyIphone这个方法)看到，他就会接受我的委托,(在商人自己的类中实现&lt;XXXdelegate&gt;),那么我的委托对象就指向了这个商人..当我要买手机的时候，直接找他就行了.</span><br><a id="more"></a><br><span style="font-size: 15px;">例如:</span><br><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">@protocol MyDelegate<br>-(void)buyIphone:(NSString <em>)iphoneType money:(NSString </em>)money;<br><br>@end<br>@interface My : NSObject<br>{<br>    id&lt;MyDelegate&gt; deleage;<br>}<br>@property(assign,nonatomic)id&lt;MyDelegate&gt; delegate;<br>@end</span></div>
@@ -853,18 +853,18 @@
 ]]></content>
     <summary type="html"><![CDATA[<div id="article_content" class="article_content"><span style="font-size: 15px;">从开始从事OC工作到现在大概1年多了，从当初接触oc的”协议”的不明白，到现在代码中随处可见的委托，协议，其中感悟颇多。</span><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">首先，大家应该都明白的是委托是协议的一种，顾名思义，就是委托他人帮自己去做什么事。也就是当自己做什么事情不方便的时候，就可以建立一个委托，这样就可以委托他人帮自己去实现什么方法。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">其次，我简单的总结了一下自己用到的委托的作用有两个，一个是传值，一个是传事件。</span></div><div><span style="font-size: 15px;">1.所谓传值经常用在b类要把自己的一个数据或者对象传给a类，让a类去展示或者处理。（切分紧耦合，和代码分块的时候经常用）</span></div><div><span style="font-size: 15px;">2.所谓传事件就是a类发生了什么事，把这件事告诉关注自己的人，也就是委托的对象，由委托的对象去考虑发生这个事件后应该做出什么反映。（这个经常见，例如在异步请求中，界面事件触发数据层改变等等）</span></div><div><span style="font-size: 15px;">3.利用委托赋值，这种方法感觉是为了不暴露自己的属性就可以给自己复值，而且这样更方便了类的管理，只有在你想要让别人给你赋值的时候才调用，这样的赋值更可控一些。（例如tableView中的委托（dateSource）中常见）。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">最后，我想分享一下在使用委托的时候的一些心得和注意事项。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">心得：delegate的命名要准确，尽量看名字就知道用法。delegate和通知有的用法有些象，但是前者是单对单的，后者是单对多的情况。</span></div><div><span style="font-size: 15px;">注意：在dealloc要把delegate至为nil，还有就是delegate设置属性的时候要用assign，不要用retain。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;"><strong>委托</strong></span><br><br><span style="font-size: 15px;">在IOS中委托通过一种@protocol的方式实现,所以又称为协议.协议是多个类共享的一个方法列表,在协议中所列出的方法没有响应的实现，由其它人来实现.这叫好比我想买个手机，所以我有个buyIphone 方法,但是我不知道谁那买手机,所以把这个需求发布出去(比如公布在网站上),如果有卖手机的商人(也就是说他能实现buyIphone这个方法)看到，他就会接受我的委托,(在商人自己的类中实现&lt;XXXdelegate&gt;),那么我的委托对象就指向了这个商人..当我要买手机的时候，直接找他就行了.</span><br>]]></summary>
     
-      <category term="delegate" scheme="http://localhost:4000/tags/delegate/"/>
+      <category term="delegate" scheme="http://wfyh007.gitcafe.com/tags/delegate/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Example of [NSDictionary getObjects:andKeys:] 的示范 - duger]]></title>
-    <link href="http://localhost:4000/2013/09/09/Example-of-%5BNSDictionary-getObjectsandKeys%5D-%E7%9A%84%E7%A4%BA%E8%8C%83---duger.html"/>
-    <id>http://localhost:4000/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2013/09/09/Example-of-%5BNSDictionary-getObjectsandKeys%5D-%E7%9A%84%E7%A4%BA%E8%8C%83---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html</id>
     <published>2013-09-09T07:20:00.000Z</published>
     <updated>2014-09-04T11:23:41.000Z</updated>
     <content type="html"><![CDATA[<p><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
@@ -881,18 +881,18 @@ id __unsafe_unretained keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/
 ]]></content>
     
     
-      <category term="NSDictionary" scheme="http://localhost:4000/tags/NSDictionary/"/>
+      <category term="NSDictionary" scheme="http://wfyh007.gitcafe.com/tags/NSDictionary/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[initWithString和initWithFormat的区别 - duger]]></title>
-    <link href="http://localhost:4000/2013/09/06/initWithString%E5%92%8CinitWithFormat%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
-    <id>http://localhost:4000/2013/09/06/initWithString和initWithFormat的区别---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2013/09/06/initWithString%E5%92%8CinitWithFormat%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2013/09/06/initWithString和initWithFormat的区别---duger.html</id>
     <published>2013-09-06T06:02:00.000Z</published>
     <updated>2014-09-04T11:23:33.000Z</updated>
     <content type="html"><![CDATA[<p><span><span>网上看到一篇文章，分析initWithString和initWithFormat的区别，用一下他的用例。</span></span></p>
@@ -930,20 +930,20 @@ id __unsafe_unretained keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/
     <summary type="html"><![CDATA[<p><span><span>网上看到一篇文章，分析initWithString和initWithFormat的区别，用一下他的用例。</span></span></p>
 <div>&nbsp;</div><div>下面是测试代码：</div><div><br><br><span>NSString</span>&nbsp;<span>* str =[[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithString</span><span>:</span>@”this is from initWithString function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>&nbsp;<br><br><span>str = [[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithFormat</span><span>:</span>@”this is from initWithFormat function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithFormat] m_addr is %ld retainCount is %d”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br><span><span>&nbsp;</span></span><br></div><br>]]></summary>
     
-      <category term="NSString" scheme="http://localhost:4000/tags/NSString/"/>
+      <category term="NSString" scheme="http://wfyh007.gitcafe.com/tags/NSString/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/tags/iOS/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger]]></title>
-    <link href="http://localhost:4000/2013/08/29/%E5%9C%A8Mac-OS-X%E4%B8%AD%E9%85%8D%E7%BD%AEApache-%EF%BC%8B-PHP-%EF%BC%8B-MySQL---duger.html"/>
-    <id>http://localhost:4000/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2013/08/29/%E5%9C%A8Mac-OS-X%E4%B8%AD%E9%85%8D%E7%BD%AEApache-%EF%BC%8B-PHP-%EF%BC%8B-MySQL---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html</id>
     <published>2013-08-29T05:44:00.000Z</published>
     <updated>2014-09-04T09:48:58.000Z</updated>
     <content type="html"><![CDATA[<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
@@ -1083,20 +1083,20 @@ Server built:   Jun 20 2012 13:57:09</code></li>
 </ol>
 <p><span style="font-size: 14px;">如此在浏览器中输入&ldquo;<a href="http://localhost&rdquo;，就可以看到一个内容为&ldquo;It" target="_blank" rel="external">http://localhost&rdquo;，就可以看到一个内容为&ldquo;It</a> works<strong>!</strong>&rdquo;的页面，其位于&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;下，这就是Apache的默认根目录<strong>。</strong></span><br>]]></summary>
     
-      <category term="LAMP" scheme="http://localhost:4000/tags/LAMP/"/>
+      <category term="LAMP" scheme="http://wfyh007.gitcafe.com/tags/LAMP/"/>
     
-      <category term="Mac" scheme="http://localhost:4000/tags/Mac/"/>
+      <category term="Mac" scheme="http://wfyh007.gitcafe.com/tags/Mac/"/>
     
-      <category term="Apache" scheme="http://localhost:4000/tags/Apache/"/>
+      <category term="Apache" scheme="http://wfyh007.gitcafe.com/tags/Apache/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[realloc 工作原理 - duger]]></title>
-    <link href="http://localhost:4000/2013/08/29/realloc-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86---duger.html"/>
-    <id>http://localhost:4000/2013/08/29/realloc-工作原理---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2013/08/29/realloc-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2013/08/29/realloc-工作原理---duger.html</id>
     <published>2013-08-29T05:40:00.000Z</published>
     <updated>2014-09-04T11:23:20.000Z</updated>
     <content type="html"><![CDATA[<div id="box"><div id="box_inner"><div id="text"><div id="pages"><div id="page1" class="page"><div class="page_content"><div id="articleHeader"><br><br><strong><span style="font-size: 16px;">realloc 用过很多次了<strong id="speechFragmentSeparator__1_1" class="speechFragmentSeparator">。</strong>无非就是将已经存在的一块内存扩大。</span></strong><br></div>
@@ -1159,18 +1159,18 @@ Server built:   Jun 20 2012 13:57:09</code></li>
 <p><span style="font-size: 16px;">这样也就是说 realloc 有时候会产生一个新的内存地址 有的时候不会<strong>。</strong>所以在分配完成后。我们需要判断下 p 是否等于 q。并做相应的处理。</span></p>
 <p><span style="font-size: 16px;">这里有点要注意的是要避免 p = realloc(p,2048); 这种写法<strong>。</strong>有可能会造成 realloc 分配失败后，p原先所指向的内存地址丢失。</span><br>]]></summary>
     
-      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/tags/iOS/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+      <category term="iOS" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[字节对齐详解 - duger]]></title>
-    <link href="http://localhost:4000/2013/08/22/%E5%AD%97%E8%8A%82%E5%AF%B9%E9%BD%90%E8%AF%A6%E8%A7%A3---duger.html"/>
-    <id>http://localhost:4000/2013/08/22/字节对齐详解---duger.html</id>
+    <link href="http://wfyh007.gitcafe.com/2013/08/22/%E5%AD%97%E8%8A%82%E5%AF%B9%E9%BD%90%E8%AF%A6%E8%A7%A3---duger.html"/>
+    <id>http://wfyh007.gitcafe.com/2013/08/22/字节对齐详解---duger.html</id>
     <published>2013-08-22T05:10:00.000Z</published>
     <updated>2014-09-04T09:49:20.000Z</updated>
     <content type="html"><![CDATA[<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
@@ -1246,11 +1246,11 @@ Server built:   Jun 20 2012 13:57:09</code></li>
 <p><span>#pragma pack()</span></p>
 <p><span>sizeof(S2)结果为24.</span><br>]]></summary>
     
-      <category term="C" scheme="http://localhost:4000/tags/C/"/>
+      <category term="C" scheme="http://wfyh007.gitcafe.com/tags/C/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="C" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/C/"/>
+      <category term="C" scheme="http://wfyh007.gitcafe.com/categories/%E6%8A%80%E6%9C%AF/C/"/>
     
   </entry>
   
