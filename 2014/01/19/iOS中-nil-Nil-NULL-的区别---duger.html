@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>iOS中 nil Nil NULL 的区别 - duger | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。
+示例如下：
+
+id&amp;nbsp;object&amp;nbsp;=&amp;nbsp;nil;&amp;nbsp;&amp;n">
+  
+  <meta name="description" content="nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。
+示例如下：
+
+id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS中 nil Nil NULL 的区别 - duger">
+<meta property="og:url" content="http://localhost:4000/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。
+示例如下：
+
+id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&n">
+<meta property="og:image" content="http://counter.cnblogs.com/blog/rss/3525818">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS中 nil Nil NULL 的区别 - duger">
+<meta name="twitter:description" content="nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。
+示例如下：
+
+id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&n">
+
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html">
+  <time datetime="2014-01-19T03:51:00.000Z">
+    2014年 1月 19日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">iOS中 nil Nil NULL 的区别 - duger</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<p>nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。</p>
+<p><span>示例如下：</span></p>
+<ol>
+<li>id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象不为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object&nbsp;==&nbsp;nil)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;数组初始化，空值结束&nbsp;&nbsp;</li>
+<li>NSArray&nbsp;*array&nbsp;=&nbsp;[[NSArray&nbsp;alloc]&nbsp;initWithObjects:@”First”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>//&nbsp;判断数组元素是否为空&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*element&nbsp;=&nbsp;[array&nbsp;objectAtIndex:2];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)element&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li><p>}&nbsp;&nbsp;<div><span><span>今天做项目的时候就遇到，要判断数组元素是否为空，我的以下写法，都无效</span></span></div><div><span><span>if(!element)</span></span></div><div><span><span>if([element length]&gt;0)</span></span></div><div><span><span>if(element== NULL)</span></span></div><div><span><span>if(element == Nil)</span></span></div><div><span><span>&nbsp;</span></span></div><div><span><span>&nbsp;</span></span></div></p>
+</li>
+<li><p>&nbsp;&nbsp;</p>
+</li>
+<li>//&nbsp;判断字典对象的元素是否为空&nbsp;&nbsp;</li>
+<li>NSDictionary&nbsp;*dictionary&nbsp;=&nbsp;[NSDictionary&nbsp;dictionaryWithObjectsAndKeys:&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;@”iPhone”,&nbsp;@”First”,&nbsp;@”iPad”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*value&nbsp;=&nbsp;[dictionary&nbsp;objectForKey:@”First”];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)value&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li>} &nbsp;<div><span><span>欢迎大家继续补充他们的区别。<br></span></span></div><div><span><span>加深理解一</span></span></div><div><span><span>&nbsp;</span></span></div><div><br><a id="more"></a><br>1、nil：一般赋值给空对象；</div></li>
+</ol>
+<p>2、NULL：一般赋值给nil之外的其他空值。如SEL等；</p>
+<p>　　举个栗子（好重啊~）：</p>
+<p>　　　　[NSApp beginSheet:sheet<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　&nbsp;modalForWindow:mainWindow</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　modalDelegate:nil //pointing to an object</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　didEndSelector:NULL&nbsp;//pointing to a non object/class</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　contextInfo:NULL]; //pointing to a non object/class</p>
+<p>3、NSNULL：NSNull只有一个方法：+ (NSNull *) null;</p>
+<p>　　[NSNull null]用来在NSArray和NSDictionary中加入非nil（表示列表结束）的空值.&nbsp;&nbsp;&nbsp;<strong>[NSNull null]是一个对象，他用在不能使用nil的场合。</strong></p>
+<p>4、当向nil发送消息时，返回NO，不会有异常，程序将继续执行下去；</p>
+<p>　　而向NSNull的对象发送消息时会收到异常。</p>
+<p>&nbsp;</p>
+<p>因为在NSArray和NSDictionary中nil中有特殊的含义（表示列表结束），所以不能在集合中放入nil值。如要确实需要存储一个表示&ldquo;什么都没有&rdquo;的值，可以使用NSNull类。NSNull只有一个方法：</p>
+<ul>
+<li>(NSNull *) null;</li>
+</ul>
+<p><code>&lt;span&gt;nil是一个对象指针为空，Nil是一个类指针为空，NULL是基本数据类型为空。这些可以理解为nil，Nil， NULL的区别吧。&lt;/span&gt;</code><br><div><span><span>&nbsp;</span></span></div><div><span><span>加深理解二</span></span></div><div><span><span>&nbsp;</span></span></div><div></div></p>
+<p>浅谈关于nil和 null区别及相关问题</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>1、nil和null从字面意思来理解比较简单，nil是一个对象，而NULL是一个值，我的理解为nil是将对象设置为空，而null是将基本类型设置为空的，个人感觉有点像属性当中，基本类型分配为assign NSString类型一般分配copy，而对象一般用retain。而且我们对于nil调用方法，不会产生crash或者抛出异常。</p>
+<p>看一段</p>
+<p>nil -&gt; Null-pointer to objective- c object</p>
+<p>NIL -&gt; Null-pointer to objective- c class</p>
+<p>null-&gt; null pointer to primitive type or absence of data.</p>
+<p>看一下用法</p>
+<p>NSURL *url = nil；</p>
+<p>Class&nbsp;&nbsp;class = Nil；</p>
+<p>int *pointerInt = NULL；</p>
+<p>nil是一个对象指针为空，Nil是一个类指针为空，NULL是基本数据类型为空。这些可以理解为nil，Nil， NULL的区别吧。</p>
+<p>2、一个可以研究一下的问题</p>
+<p>在dealloc中</p>
+<p>-（void） dealloc</p>
+<p>{</p>
+<p>self.test = nil;&nbsp;</p>
+<p>[_test release];</p>
+<p>test = nil;</p>
+<p>}</p>
+<p>这几个的区别</p>
+<p>先说最简单的&nbsp;&nbsp;[_test release]; 这个就是将引用技术减1，所谓的引用计数就是看看有多个指针指向一块内存实体，当release一次，就是指针减少一个，release到了0的时候，就是真正把这块内存归还给系统的时候了</p>
+<p>&nbsp;</p>
+<p>再说self.test = nil;说明一下 属性和setter和getter方法就不难理解了</p>
+<p>&nbsp;</p>
+<p>-（void） setTest：（NSString *）newString</p>
+<p>{</p>
+<p>if（_test != newString）</p>
+<p>[_test release];</p>
+<p>_test = [newString retain];</p>
+<p>}</p>
+<p>-（NSString *）test</p>
+<p>{</p>
+<p>return&nbsp;&nbsp;_test;</p>
+<p>}</p>
+<p>这个是setter和getter方法，而在这个问题中相当于刚才的代码改变为</p>
+<p>if（_test != nil）</p>
+<p>[_test release];</p>
+<p>_test = nil;</p>
+<p>现在就比较容易解释了，setter方法会retain nil对象，在这之前已经先release了旧的对象，这个方法优点是成员变量连指向随机数据的机会都没有，而通过别的方式，就可能会出现指向随机数据的情况。当release了之后，万一有别的方法要用要存取它，如果它已经dealloc了，可能就会crash，而指向nil之后，就不会发生错误了。nil说白了就是计数器为0，这么说吧，当真正release一个对象的时候，NSLog是打印不了它指向的内存控件的，而当nil的时候，是可以打印出来指向的一个内存空间。</p>
+<p>那么现在也不难解释test = nil;&nbsp;&nbsp;单纯的这种用法可以说是自己给自己制造内存泄露，这里可以这么理解，就是相当于将指向对象的指针直接和对象一刀两断了。直接让test指向nil，而内存实体不会消失，也不会有系统回收。<br><img src="http://counter.cnblogs.com/blog/rss/3525818" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3525818.html" target="_blank" rel="external">iOS中 nil Nil NULL 的区别</a>，转载请注明。</p>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/iOS/">iOS</a>, <a class="categories-link" href="/categories/iOS/技术/">技术</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/nil/">nil</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="iOS中 nil Nil NULL 的区别 - duger">
+  </div>
+</section>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
+  
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>

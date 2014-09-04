@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="&amp;nbsp;
+
+Mac OS X 内置Apache 和 PHP，使用起来非常方便。本文以Mac OS X 10.6.3和&amp;nbsp;10.8.1为例。主要内容包括：
+启动Apache&amp;nbsp;
+有两种方法：
+
+打开&amp;ldquo;系统设置偏好（System Preferences）&amp;rdquo; -&amp;gt; &amp;ldquo;共享（Sharing）&amp;rdquo; -&amp;gt; &amp;ldquo;Web共享">
+  
+  <meta name="description" content="&nbsp;
+
+Mac OS X 内置Apache 和 PHP，使用起来非常方便。本文以Mac OS X 10.6.3和&nbsp;10.8.1为例。主要内容包括：
+启动Apache&nbsp;
+有两种方法：
+
+打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger">
+<meta property="og:url" content="http://localhost:4000/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="&nbsp;
+
+Mac OS X 内置Apache 和 PHP，使用起来非常方便。本文以Mac OS X 10.6.3和&nbsp;10.8.1为例。主要内容包括：
+启动Apache&nbsp;
+有两种方法：
+
+打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享">
+<meta property="og:image" content="http://counter.cnblogs.com/blog/rss/3288982">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger">
+<meta name="twitter:description" content="&nbsp;
+
+Mac OS X 内置Apache 和 PHP，使用起来非常方便。本文以Mac OS X 10.6.3和&nbsp;10.8.1为例。主要内容包括：
+启动Apache&nbsp;
+有两种方法：
+
+打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享">
+
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html">
+  <time datetime="2013-08-29T05:44:00.000Z">
+    2013年 8月 29日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
+<div><br><br><strong><span style="font-size: 14px;">&nbsp;</span></strong><br></div>
+
+<p><span style="font-size: 14px;">Mac OS X 内置Apache 和 PHP，使用起来非常方便<strong>。</strong>本文以Mac OS X 10.6.3和<ins>&nbsp;10.8<strong>.</strong>1</ins>为例。主要内容包括：</span></p>
+<p><strong><span style="font-size: 14px;">启动Apache<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;">有两种方法：</span></p>
+<ol>
+<li><span style="font-size: 14px;">打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong><ins>注意，从Mac OS X从10.8开始取消了 &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong></ins></span></li>
+<li><p><span style="font-size: 14px;">打开&ldquo;终端（terminal）&rdquo;，然后（注意，sudo需要的密码就是系统的root帐号密码）</span></p>
+<pre><code>1.  运行&amp;ldquo;`sudo apachectl start`&amp;rdquo;，再输入帐号密码，这样Apache就运行了<span class="keyword">*</span><span class="keyword">*</span>。<span class="keyword">*</span><span class="keyword">*</span>
+</code></pre><ol>
+<li>运行&ldquo;<code>sudo apachectl －v</code>&rdquo;，你会看到Mac OS X的Apache版本信息，如10<strong>.</strong>8.1中：<code>Server version: Apache/2.2.22 (Unix)
+Server built:   Jun 20 2012 13:57:09</code></li>
+</ol>
+</li>
+</ol>
+<p><span style="font-size: 14px;">如此在浏览器中输入&ldquo;<a href="http://localhost&rdquo;，就可以看到一个内容为&ldquo;It" target="_blank" rel="external">http://localhost&rdquo;，就可以看到一个内容为&ldquo;It</a> works<strong>!</strong>&rdquo;的页面，其位于&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;下，这就是Apache的默认根目录<strong>。</strong></span><br><a id="more"></a><br><span style="font-size: 14px;">注意：开启了Apache就是开启了&ldquo;Web共享&rdquo;，这时联网用户就会通过&ldquo;<a href="http://[本地IP]/&rdquo;来访问&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;目录，通过&ldquo;http://[本地IP]/~[用户名]&rdquo;来访问&ldquo;/Users/[用户名]/Sites/&rdquo;目录**。**" target="_blank" rel="external">http://[本地IP]/&rdquo;来访问&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;目录，通过&ldquo;http://[本地IP]/~[用户名]&rdquo;来访问&ldquo;/Users/[用户名]/Sites/&rdquo;目录**。**</a><ins>值得注意的是，Mac OS X在10.8中取消&rdquo;Web共享（Web Sharing）&rdquo;时，也移除了&ldquo;/Users/[用户名]/Sites/&rdquo;目录，所以10<strong>.</strong>8中访问&ldquo;<a href="http://[本地IP]/~[用户名]&rdquo;会显示&ldquo;403" target="_blank" rel="external">http://[本地IP]/~[用户名]&rdquo;会显示&ldquo;403</a> Forbidden&rdquo;，但<a href="http://[本地IP]/依旧可以访问**。**" target="_blank" rel="external">http://[本地IP]/依旧可以访问**。**</a></ins>可以到&ldquo;系统偏好设置&rdquo; -&gt; &ldquo;安全（Security）&rdquo; -&gt; &ldquo;防火墙（Firewall）&rdquo;，开启防火墙，然后在&ldquo;防火墙选项（Firewall Options）&rdquo;中勾上&ldquo;组织所有进入连接（block all incoming connections）&rdquo;即可<strong>。</strong>也可以通过设置httpd.conf来只允许localhost和127.0<strong>.</strong>0.1访问&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;。</span><br><span style="font-size: 14px;">`&lt;Directory “/Library/WebServer/Documents”&gt;<br>    ……<br>    #</span></p>
+<pre><code><span class="comment"># Controls who can get stuff from this server**.**</span>
+<span class="comment">#</span>
+Order allow,deny
+<span class="comment">#Allow from all</span>
+Allow from 127<span class="keyword">*</span><span class="keyword">*</span>.<span class="keyword">*</span><span class="keyword">*</span>0.0<span class="keyword">*</span><span class="keyword">*</span>.<span class="keyword">*</span><span class="keyword">*</span>1
+Allow from localhost 
+</code></pre><p>&lt;/Directory&gt;<br>`</p>
+<p><strong><span style="font-size: 14px;">运行PHP<strong>&nbsp;</strong></span></strong></p>
+<ol>
+<li><span style="font-size: 14px;">在终端中运行&ldquo;<code>sudo vi /etc/apache2/httpd.conf</code>&rdquo;，打开Apache的配置文件<strong>。</strong>（如果不习惯操作终端和vi，可以设置<a href="http://apple.tgbus.com/tutorial/soft/200811/20081125100105.shtml" target="_blank" rel="external">在Finder中显示所有系统隐藏文件&nbsp;</a>，记得设置完毕后需要<a href="http://www.macdocks.com/2009/07/14/mac-tips-%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%E9%87%8D%E5%90%AFmac-os-x-finder/" target="_blank" rel="external">重启Finder&nbsp;</a>，然后就可以找到对应文件，随心所欲编辑了，需要注意的是某些文件的修改还是需要<a href="http://support.apple.com/kb/HT1528?viewlocale=zh_CN" target="_blank" rel="external">开启root帐号&nbsp;</a>，但整体上还是在终端上使用<code>sudo</code>来临时获取root权限比较安全<strong>。</strong>）</span></li>
+<li><span style="font-size: 14px;">找到&ldquo;<code>#LoadModule php5_module libexec/apache2/libphp5**.**so</code>&rdquo;，把前面的#号去掉，保存（在命令行输入<code>:w</code>）并退出vi（在命令行输入<code>:q</code>）<strong>。</strong></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo cp /etc/php.ini.default /etc/php.ini</code>&rdquo;，这样就可以运行<code>sudo vi /etc/php.ini</code>来编辑php.ini配置各种功能了<strong>。</strong>比如：</span><span style="font-size: 14px;"><code>;通过下面两项来调整PHP提交文件的最大值，如phpMyAdmin中导入数据的最大值
+upload_max_filesize = 2M
+post_max_size = 8M
+;通过display_errors来控制是否显示PHP程序的报错信息，这在调试PHP程序时非常有用
+display_errors = Off</code></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo apachectl restart</code>&rdquo;，重启Apache，这样PHP就可以用了<strong>。</strong></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo cp /Library/WebServer/Documents/index.html**.**en /Library/WebServer/Documents/info.php</code>&rdquo;，即在Apache的根目录下复制index.html<strong>.</strong>en文件并重命名为info.php。</span></li>
+<li><span style="font-size: 14px;">在终端中运行&ldquo;<code>sudo vi /Library/WebServer/Document/info.php</code>&rdquo;，这样就可以在vi中编辑info.php文件了<strong>。</strong>在&ldquo;It&rsquo;s works!&rdquo;后面加上&ldquo;<code>&amp;lt;**?**php phpinfo(); ?&amp;gt;</code>&rdquo;，然后保存之。如此就可以在<a href="http://localhost/info.php中看到有关PHP的信息，比如10**.**8中内置PHP版本号是5.3.13**。**" target="_blank" rel="external">http://localhost/info.php中看到有关PHP的信息，比如10**.**8中内置PHP版本号是5.3.13**。**</a></span></li>
+</ol>
+<p><strong><span style="font-size: 14px;">安装MySQL<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;">Mac OS X没有内置MySQL，所以需要自己手动安装，目前MySQL的最稳定版本是5<strong>.</strong>5<strong>。</strong><a href="http://dev.mysql.com/doc/refman/5.5/en/macosx-installation.html" target="_blank" rel="external">MySQL提供了Mac OS X下的安装说明&nbsp;</a>。</span></p>
+<ol>
+<li><span style="font-size: 14px;"><a href="http://dev.mysql.com/downloads/mysql/5.5.html" target="_blank" rel="external">下载MySQL 5<strong>.</strong>5&nbsp;</a>。选择合适版本，如这里选择了mysql-5<strong>.</strong>5.27-osx10.6-x86_64.dmg。</span></li>
+<li><span style="font-size: 14px;">运行dmg，会发现里面有4个文件<strong>。</strong>首先点击安装mysql-5.5.27-osx10.6-x86_64.pkg，这是MySQL主安装包<strong>。</strong>一般情况下，安装文件会自动把MySQL安装到<code>/usr/local</code>下的同名文件夹下<strong>。</strong>如运行&ldquo;<code>mysql-5**.**5.27-osx10.6-x86_64.dmg</code>&rdquo;会把MySQL安装到&ldquo;<code>/usr/local/mysql-5**.**5.27-osx10.6-x86_64</code>&rdquo;中，一路默认安装完毕<strong>。</strong>（注意，从10.8开始Mac OS X的权限更加严格，直接点击会提示&ldquo;mysql-5.5.27-osx10<strong>.</strong>6-x86_64.pkg can&rsquo;t be opened because it is from an unidentified developer<strong>.</strong>&nbsp;Your security preferences allow installation of only apps from the Mac App Store and identified developers<strong>.</strong>&rdquo;阻止了安装，你可以使用双指单击该安装文件，在弹出菜单中选择&ldquo;用&hellip;打开（open with）&rdquo;，再选择&ldquo;安装（Installer）&rdquo;就可以接着安装了<strong>。</strong>）</span></li>
+<li><span style="font-size: 14px;">安装第2个文件MySQLStartupItem.pkg，MySQL就会自动在开机时启动了<strong>。</strong>（注意，10.8的安装方法同上。）</span></li>
+<li><span style="font-size: 14px;">安装第3个文件MySQL.prefPane，就会在&ldquo;系统设置偏好&rdquo;中看到&ldquo;MySQL&rdquo;的ICON，通过它就可以控制MySQL是否开启，以及开机时是否自动运行<strong>。</strong>到这里MySQL就基本安装完毕了。（注意，10.8中用双指单击该安装文件，在弹出的菜单中选择&ldquo;用&hellip;打开（open with）&rdquo;，然后选择&ldquo;系统偏好（System Perference）&rdquo;就可以接着安装了<strong>。</strong>）</span></li>
+<li><p><span style="font-size: 14px;">通过运行&ldquo;<code>sudo vi /etc/bashrc</code>&rdquo;，在bash配置文件中加入<code>mysqlstart</code><strong>、</strong><code>mysql</code>和<code>mysqladmin</code>的别名（注意：修改完毕之后需要退出&ldquo;终端（Terminal）&rdquo;之后重新进入，这些命令才会生效）：</span><span style="font-size: 14px;"><code>#mysql
+alias mysqlstart=&#39;sudo /Library/StartupItems/MySQLCOM/MySQLCOM restart&#39;
+alias mysql=&#39;/usr/local/mysql/bin/mysql&#39;
+alias mysqladmin=&#39;/usr/local/mysql/bin/mysqladmin&#39;</code></span></p>
+<p><span style="font-size: 14px;">这样就可以在终端中比较简单地通过命令进行相应的操作<strong>。</strong>由于开始安装MySQLStartupItem.pkg到&ldquo;<code>/Library/StartupItems/MySQLCOM/</code>&rdquo;来控制MySQL的运行<strong>、</strong>自动运行<strong>、</strong>停止、关闭之类。在MySQL没有启动时，直接运行<code>mysql</code>或<code>mysqladmin</code>命令会提示&ldquo;<code>Can&#39;t connect to local MySQL server through socket &#39;/tmp/mysql.sock&#39; (2)</code>&rdquo;，所以我们可以通过控制面板或者直接运行<code>mysqlstart</code>命令来启动MySQL，之后再运行<code>mysql</code>或<code>mysqladmin</code>命令就正常了<strong>。</strong>比如安装完毕后MySQL的<code>root</code>默认密码为空，如果要设置密码可以在终端运行&ldquo;<code>mysqladmin -u root password &quot;mysqlpassword&quot;</code>&rdquo;来设置，其中mysqlpassword即root的密码<strong>。</strong>更多相关内容可以参考<a href="http://dev.mysql.com/doc/refman/5.5/en/resetting-permissions.html" target="_blank" rel="external">B.5<strong>.</strong>4.1. How to Reset the Root Password&nbsp;</a>。</span></p>
+</li>
+</ol>
+<p><span style="font-size: 14px;">注意：Mac OS X的升级或其他原因可能会导致ＭySQL启动或开机自动运行时，在ＭySQL操作面板上会提示&ldquo;<code>Warning:The /usr/local/mysql/data directory is not owned by the &#39;mysql&#39; or &#39;_mysql&#39;&amp;nbsp;</code>&rdquo;，这应该是某种情况下导致<code>/usr/local/mysql/data</code>的宿主发生了改变，只需要运行&ldquo;<code>sudo chown -R mysql /usr/local/mysql/data</code>&rdquo;即可<strong>。</strong></span></p>
+<p><span style="font-size: 14px;">另外，<a href="http://www.exp2up.com/2009/03/11/mac%E4%B8%8A%E7%9A%84php%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5mysql/" target="_blank" rel="external">使用PHP连接MySQL可能会报错&nbsp;</a>&ldquo;Can&rsquo;t connect to local MySQL server through socket &lsquo;/var/mysql/mysql.sock&rsquo;&rdquo;，或使用localhost无法连接MySQL而需要127<strong>.</strong>0<strong>.</strong>0.1，原因是连接时php默认去找<code>/var/mysql/mysql.sock</code>了，但MAC版的MYSQL改动了文件位置，放在/tmp下了<strong>。</strong>处理办法是按如下修改php.ini：</span><br><span style="font-size: 14px;"><code>mysql.default_socket = /tmp/mysql.sock</code></span></p>
+<p><strong><span style="font-size: 14px;">使用phpMyAdmin<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;"><a href="http://www.phpmyadmin.net/" target="_blank" rel="external">phpMyAdmin&nbsp;</a>是用PHP开发的管理MySQL的程序，非常的流行和实用<strong>。</strong>能够使用phpMyAdmin管理MySQL是检验前面几步效果的非常有效方式。</span></p>
+<ol>
+<li><span style="font-size: 14px;"><a href="http://www.phpmyadmin.net/home_page/downloads.php" target="_blank" rel="external">下载phpMyAdmin&nbsp;</a><strong>。</strong>选择合适的版本，比如这里选择phpMyAdmin-3.5.22-all-languages.tar<strong>.</strong>bz2这个版本。</span></li>
+<li><p><span style="font-size: 14px;">把&ldquo;下载（downloads）&rdquo;中phpMyAdmin-3<strong>.</strong>5.22-all-languages.tar<strong>.</strong>bz2文件解压到&ldquo;<code>&amp;nbsp;/Library/WebServer/Documents/</code>&rdquo;中，并改名为phpmyadmin<strong>。</strong></span><span style="font-size: 14px;">`sudo tar -xf ~/Downloads/phpMyAdmin-3<strong>.</strong>5.2.2-all-languages.tar.bz2 -C</span></p>
+<pre><code>     <span class="regexp">/Library/</span>WebServer<span class="regexp">/Documents/</span>
+</code></pre><p>sudo mv /Library/WebServer/Documents/phpMyAdmin-3<strong>.</strong>5.2.2-all-languages</p>
+<pre><code>    <span class="regexp">/Library/</span>WebServer<span class="regexp">/Documents/</span>phpmyadmin
+</code></pre><p>`</p>
+<p></p>
+</li>
+<li><span style="font-size: 14px;">复制&ldquo;<code>/Library/WebServer/Documents/phpmyadmin/</code>&rdquo;中的config.sample.inc.php，并命名为config.inc.php</span></li>
+<li><p><span style="font-size: 14px;">编辑config.inc.php，修改如下：</span><span style="font-size: 14px;">`用于Cookie加密，随意的长字符串<br>$cfg[‘blowfish_secret’] = ‘a8b7c6d’;</span></p>
+<p>当phpMyAdmin中出现&ldquo;#2002 无法登录 MySQL 服务器（#2002 Cannot log in to the MySQL server）&rdquo;时，<br><a href="http://achan.me/2010/04/mysql-error-2002.html" target="_blank" rel="external">请把localhost改成127<strong>.</strong>0.0.1就ok了 </a>，<br>这是因为MySQL守护程序做了IP绑定（bind-address =127<strong>.</strong>0.0.1）造成的<br>$cfg[‘Servers’][$i][‘host’] = ‘localhost’;</p>
+<p>把false改成true，这样就可以访问无密码的MySQL了，<br>即使MySQL设置了密码也可以这样设置，然后登录phpMyAdmin时输入密码<br>$cfg[‘Servers’][$i][‘AllowNoPassword’] = false;<br>`</p>
+</li>
+<li><span style="font-size: 14px;">这样就可以通过<code>http://localhost/phpmyadmin</code>访问phpMyAdmin了<strong>。</strong>此时会看到一个提示&ldquo;无法加载 mcrypt 扩展，请检查您的 PHP 配置。（The mcrypt extension is missing. Please check your PHP configuration<strong>.</strong>）&rdquo;，这会涉及到下一节安装MCrypt扩展了。</span></li>
+</ol>
+<p><strong><span style="font-size: 14px;">配置PHP的MCrypt<strong>&nbsp;</strong>扩展</span></strong></p>
+<p><span style="font-size: 14px;"><a href="http://mcrypt.sourceforge.net/" target="_blank" rel="external">MCrypt&nbsp;</a>是一个功能强大的加密算法扩展库，它包括有22种算法，phpMyAdmin依赖这个PHP扩展库<strong>。</strong>但在Mac OS X下的安装却不那么友善，具体如下：</span></p>
+<ol>
+<li><span style="font-size: 14px;">下载<a href="http://sourceforge.net/projects/mcrypt/files/Libmcrypt/" target="_blank" rel="external">libmcrypt-2<strong>.</strong>5.8.tar.gz&nbsp;</a><strong>。</strong></span></li>
+<li><span style="font-size: 14px;">在终端执行如下命令（注意如下命令需要安装<a href="http://developer.apple.com/xcode/" target="_blank" rel="external">Xcode&nbsp;</a>支持，可直接去Mac App Store下载，安装完毕后可能会发现在终端运行<code>**.**/configure --disable-posix-threads --enable-static</code>会报错，运行<code>make</code>会提示命令不存在，此时还需要打开Xcode，然后在Xcode的软件&ldquo;配置（Preference&hellip;）&rdquo;）-&gt; &ldquo;下载（Downloads）&rdquo; 中安装 &ldquo;命令行工具（Command Line Tools）&rdquo;：</span><span style="font-size: 14px;"><code>cd ~/Downloads
+tar -zxvf libmcrypt-2**.**5.8.tar.bz2
+cd libmcrypt-2.5**.**8
+./configure --disable-posix-threads --enable-static
+make
+sudo make install</code></span></li>
+<li><span style="font-size: 14px;">下载<a href="http://us2.php.net/get/php-5.3.13.tar.bz2/from/a/mirror" target="_blank" rel="external">PHP源码文件php-5<strong>.</strong>3.13.tar<strong>.</strong>bz2&nbsp;</a>，记得选择中国镜像会比较快。Mac OS X 10.6.3中预装的PHP版本是5<strong>.</strong>3.1，10.8的版本是5.3<strong>.</strong>13，而现在<a href="http://us2.php.net/downloads.php" target="_blank" rel="external">最新的PHP版本是5.4.6&nbsp;</a>，所以需要依据自己的实际情况选择对应的版本，本文以10.8的PHP版本为例<strong>。</strong></span></li>
+<li><p><span style="font-size: 14px;">在终端执行如下命令，把php-5.3.13.tar.bz2，并<a href="http://www.coolestguyplanettech.com/how-to-install-mcrypt-for-php-on-mac-osx-lion-10-7-development-server/" target="_blank" rel="external">配置autoconf&nbsp;</a>（在新的Mac OS X的Xcode中需要自己配置），然后才能运行<code>phpize</code>命令：</span><span style="font-size: 14px;">`cd ~/Downloads<br>tar -zxvf php-5<strong>.</strong>3.13.tar.bz2</span></p>
+<p>cd php-5.3<strong>.</strong>13/ext/mcrypt<br>curl -O <a href="http://ftp.gnu.org/gnu/autoconf/autoconf-latest.tar**.**gz" target="_blank" rel="external">http://ftp.gnu.org/gnu/autoconf/autoconf-latest.tar**.**gz</a><br>tar -zxvf autoconf-latest.tar<strong>.</strong>gz<br>cd autoconf-2.69<br>./configure<br>make<br>sudo make install</p>
+<p>cd ..<br>phpize<br><strong>.</strong>/configure<br>make<br>sudo make install<br>`</p>
+</li>
+<li><p><span style="font-size: 14px;">打开php.ini</span><span style="font-size: 14px;"><code>sudo vi /etc/php.ini</code></span></p>
+<p><span style="font-size: 14px;">在php.ini中加入如下代码，并保存后退出，然后重启Apache</span><br><span style="font-size: 14px;"><code>extension=mcrypt**.**so</code></span></p>
+</li>
+</ol>
+<p><span style="font-size: 14px;">当你再访问<code>http://localhost/phpmyadmin</code>时，会发现&ldquo;无法加载 mcrypt 扩展，请检查您的 PHP 配置<strong>。</strong>&rdquo;提示没有了，这就表示MCrypt扩展库安装成功了。如果还不能加载，尝试把php.ini中的加入的<code>extension</code>修改为：</span><br><span style="font-size: 14px;"><code>extension=/usr/lib/php/extensions/no-debug-non-zts-20090626/mcrypt**.**so</code></span></p>
+<p><span style="font-size: 14px;">Mac OS X下安装MCrypt扩展的确比较复杂，而且稍微不小心会有各种小问题出现，大家还可以参考<a href="http://www.coolestguyplanettech.com/how-to-install-mcrypt-for-php-on-mac-osx-lion-10-7-development-server/" target="_blank" rel="external">How to Install mcrypt for php on Mac OSX Lion 10<strong>.</strong>8 &amp; 10.7 Development Server&nbsp;</a>和<a href="http://remonpel.nl/2012/01/adding-mcrypt-to-your-osx-lion-php-install/" target="_blank" rel="external">Adding MCRYPT to your OSX Lion PHP install</a></span></p>
+<p><strong><span style="font-size: 14px;">设置虚拟主机</span></strong></p>
+<ol>
+<li><span style="font-size: 14px;">在终端运行&ldquo;<code>sudo vi /etc/apache2/httpd.conf</code>&rdquo;，打开Apche的配置文件</span></li>
+<li><span style="font-size: 14px;">在httpd.conf中找到&ldquo;<code>#Include /private/etc/apache2/extra/httpd-vhosts.conf</code>&rdquo;，去掉前面的&ldquo;<code>＃</code>&rdquo;，保存并退出<strong>。</strong></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo apachectl restart</code>&rdquo;，重启Apache后就开启了虚拟主机配置功能<strong>。</strong></span></li>
+<li><p><span style="font-size: 14px;">运行&ldquo;<code>sudo vi /etc/apache2/extra/httpd-vhosts.conf</code>&rdquo;，就打开了配置虚拟主机文件httpd-vhost.conf，配置虚拟主机了<strong>。</strong>需要注意的是该文件默认开启了两个作为例子的虚拟主机：</span><span style="font-size: 14px;">`&lt;VirtualHost *:80&gt;<br>ServerAdmin webmaster@dummy-host.example.com<br>DocumentRoot “/usr/docs/dummy-host.example.com”<br>ServerName dummy-host.example.com<br>ErrorLog “/private/var/log/apache2/dummy-host.example.com-error_log”<br>CustomLog “/private/var/log/apache2/dummy-host.example.com-access_log” common<br>&lt;/VirtualHost&gt;</span></p>
+<p>&lt;VirtualHost *:80&gt;<br>ServerAdmin webmaster@dummy-host2.example.com<br>DocumentRoot “/usr/docs/dummy-host2.example.com”<br>ServerName dummy-host2.example.com<br>ErrorLog “/private/var/log/apache2/dummy-host2.example.com-error_log”<br>CustomLog “/private/var/log/apache2/dummy-host2.example.com-access_log” common<br>&lt;/VirtualHost&gt; `</p>
+<p><span style="font-size: 14px;">而实际上，这两个虚拟主机是不存在的，在没有配置任何其他虚拟主机时，可能会导致访问localhost时出现如下提示：</span><br><span style="font-size: 14px;"><code>Forbidden
+You don&#39;t have permission to access /index.php on this server</code></span></p>
+<p><span style="font-size: 14px;">最简单的办法就是在它们每行前面加上#，注释掉就好了，这样既能参考又不导致其他问题<strong>。</strong></span></p>
+</li>
+<li><p><span style="font-size: 14px;">增加如下配置</span><span style="font-size: 14px;">`&lt;VirtualHost <em>:80&gt;<br>DocumentRoot “/Library/WebServer/Documents”<br>ServerName localhost<br>ErrorLog “/private/var/log/apache2/localhost-error_log”<br>CustomLog “/private/var/log/apache2/localhost-access_log” common<br>&lt;/VirtualHost&gt;<br>&lt;VirtualHost </em>:80&gt;<br>DocumentRoot “/Users/[用户名]/Sites”<br>ServerName sites<br>ErrorLog “/private/var/log/apache2/sites-error_log”<br>CustomLog “/private/var/log/apache2/sites-access_log” common<br>&lt;Directory /&gt;</span></p>
+<pre><code>        <span class="keyword"><span class="common">Options</span></span> Indexes FollowSymLinks MultiViews
+        <span class="keyword">AllowOverride</span> None
+        <span class="keyword"><span class="common">Order</span></span> deny,allow
+        <span class="keyword"><span class="common">Allow</span></span> from <span class="literal">all</span>
+</code></pre><p>  &lt;/Directory&gt;<br>&lt;/VirtualHost&gt; `</p>
+<p><span style="font-size: 14px;">保存退出，并重启Apache<strong>。</strong></span></p>
+</li>
+<li><p><span style="font-size: 14px;">运行&ldquo;<code>sudo vi /etc/hosts</code>&rdquo;，打开hosts配置文件，加入”<code>127**.**0**.**0.1 sites</code>“，这样就可以配置完成sites虚拟主机了，可以访问&ldquo;<a href="http://sites&rdquo;了，在10**.**8之前Mac" target="_blank" rel="external">http://sites&rdquo;了，在10**.**8之前Mac</a> OS X版本其内容和&ldquo;<a href="http://localhost/~[用户名]&rdquo;完全一致。" target="_blank" rel="external">http://localhost/~[用户名]&rdquo;完全一致。</a></span></p>
+</li>
+<li><span style="font-size: 14px;">注意，记录log的&ldquo;<code>ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</code>&rdquo;也可以删掉，但记录日志其实是一个好习惯，在出现问题时可以帮助我们判断<strong>。</strong>如果保留这些log代码，一定log文件路径都是存在的，如果随便修改一个不存在的，会导致Apache无法服务而没有错误提示，这个比较恶心<strong>。</strong></span></li>
+</ol>
+<p><span style="font-size: 14px;">这里利用Mac OS X 10<strong>.</strong>6.3和10.8.1中原生支持的方式来实现的配置，也可以参考&ldquo;<a href="http://blog.csdn.net/afatgoat/archive/2008/12/26/3615026.aspx" target="_blank" rel="external">Mac OS X Leopard: 配置Apache, PHP, SQLite, MySQL, and phpMyAdmin(一)&nbsp;</a>&rdquo;和&ldquo;<a href="http://blog.csdn.net/afatgoat/archive/2008/12/28/3628710.aspx" target="_blank" rel="external">Mac OS X Leopard: 配置Apache, PHP, SQLite, MySQL, and phpMyAdmin(二)&nbsp;</a>&rdquo;<strong>。</strong>实际上，还可以使用<a href="http://www.apachefriends.org/en/xampp-macosx.html" target="_blank" rel="external">XAMPP&nbsp;</a>或<a href="http://www.macports.org/" target="_blank" rel="external">MacPorts&nbsp;</a>这种第三方提供的集成方案来实现简单的安装和使用<strong>。</strong></span></p>
+<p><strong><span style="font-size: 14px;">&nbsp;</span></strong><br><img src="http://counter.cnblogs.com/blog/rss/3288982" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3288982.html" target="_blank" rel="external">在Mac OS X中配置Apache ＋ PHP ＋ MySQL</a>，转载请注明。</p>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/技术/">技术</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/Apache/">Apache</a>, <a class="tags-link" href="/tags/LAMP/">LAMP</a>, <a class="tags-link" href="/tags/Mac/">Mac</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger">
+  </div>
+</section>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
+  
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>

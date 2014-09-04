@@ -4,7 +4,7 @@
   <subtitle><![CDATA[iOS小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://localhost:4000/"/>
-  <updated>2014-09-03T16:37:30.684Z</updated>
+  <updated>2014-09-04T09:51:36.199Z</updated>
   <id>http://localhost:4000/</id>
   
   <author>
@@ -48,14 +48,14 @@
     <link href="http://localhost:4000/2014/04/26/setup-phabricator-on-aliyun.html"/>
     <id>http://localhost:4000/2014/04/26/setup-phabricator-on-aliyun.html</id>
     <published>2014-04-25T16:00:00.000Z</published>
-    <updated>2014-09-03T13:32:00.000Z</updated>
+    <updated>2014-09-04T09:41:09.000Z</updated>
     <content type="html"><![CDATA[<p>前段时间在阿里云上租了个ECS云服务器，试着自己搭建个XMPP+Openfire的即时通讯平台。服务器系统是CentOS 6.3的，同时配置好了<code>LAMP(Linux+Apache+MySQL+PHP)</code>环境和管理MySQL的phpMyAdmin，在<strong>mysite/phpMyAdmin</strong>下。Openfire平台也顺利的搭建好了，在<strong>9090端口</strong>。</p>
 <p>今天看到个讲Code Review的文章，分析了两个CodeReview软件：</p>
 <ul>
 <li>Facebook的Phabricator </li>
 <li>Google的Gerrit</li>
 </ul>
-<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br><a id="more"></a></p>
+<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。</p>
 <h3 id="安装">安装</h3>
 <p>本来想着应该是个软件吧，下下来就能用。去<a href="http://phabricator.org" target="_blank" rel="external">Phabricator官网</a>上溜达了一圈儿。翻了翻<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>，发现原来这厮还得要台Web服务器：</p>
 <blockquote>
@@ -64,12 +64,7 @@
 <li><strong>Nnginx</strong>: Many installs use nginx + php-fpm.</li>
 <li><strong>lighttpd</strong> : lighttpd is less popular than Apache or nginx, but it works fine.</li>
 <li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
-<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.</li>
-</ul>
-</blockquote>
-<p>还需要:</p>
-<blockquote>
-<ul>
+<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.<br><a id="more"></a><br>还需要:</li>
 <li><strong>MySQL</strong>: You need MySQL.</li>
 <li><strong>PHP</strong>: You need PHP 5.2 or newer.</li>
 </ul>
@@ -138,7 +133,16 @@
 <li>Facebook的Phabricator </li>
 <li>Google的Gerrit</li>
 </ul>
-<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br>]]></summary>
+<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。</p>
+<h3 id="安装">安装</h3>
+<p>本来想着应该是个软件吧，下下来就能用。去<a href="http://phabricator.org" target="_blank" rel="external">Phabricator官网</a>上溜达了一圈儿。翻了翻<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>，发现原来这厮还得要台Web服务器：</p>
+<blockquote>
+<ul>
+<li><strong>Apache</strong>: Many installs use Apache + mod_php.</li>
+<li><strong>Nnginx</strong>: Many installs use nginx + php-fpm.</li>
+<li><strong>lighttpd</strong> : lighttpd is less popular than Apache or nginx, but it works fine.</li>
+<li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
+<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.<br>]]></summary>
     
       <category term="code review" scheme="http://localhost:4000/tags/code-review/"/>
     
@@ -153,36 +157,19 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Easy come,easy go]]></title>
-    <link href="http://localhost:4000/2014/04/21/easy-comeeasy-go.html"/>
-    <id>http://localhost:4000/2014/04/21/easy-comeeasy-go.html</id>
-    <published>2014-04-20T16:00:00.000Z</published>
-    <updated>2014-08-03T18:31:08.000Z</updated>
-    <content type="html"><![CDATA[<p>三月25日鼓起勇气相识，到今天4月21日，整整的四周时间，其实也就四周。</p>
-<p>从开始就打的火热，你来我往的，聊得来，有话说。</p>
-<p>约出来，一起吃饭，爬山，处着很舒服。</p>
-<p>慢慢从好感到喜欢，从喜欢到牵挂，付出了感情，希望能走到一起。</p>
-]]></content>
-    
-    
-      <category term="情感" scheme="http://localhost:4000/categories/%E6%83%85%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[香八拉徒步]]></title>
     <link href="http://localhost:4000/2014/04/10/shanbala.html"/>
     <id>http://localhost:4000/2014/04/10/shanbala.html</id>
     <published>2014-04-09T16:00:00.000Z</published>
-    <updated>2014-08-07T15:09:06.000Z</updated>
-    <content type="html"><![CDATA[<p>清明假期第二天，我、顾鑫、高圆圆和她的小伙伴小芳一起去香八拉徒步。</p>
+    <updated>2014-09-04T09:41:43.000Z</updated>
+    <content type="html"><![CDATA[<p>清明假期第二天，我和小伙伴小鑫鑫高圆圆小芳一起去香八拉徒步。</p>
 <blockquote>
 <p>香八拉就是指香山至八大处之间的一段徒步山路，徒友爱称香八拉。</p>
 </blockquote>
 <p>驱车八大处，路线是：雍王府——虎头山——八大处——翠微山——陈家沟——香山水库——北马场——上满是松树的山——挂甲塔——碧云寺——公主坟——香山。</p>
-<p><img src="/images/shanbala/IMG_1746.PNG" alt="路程" title="20公里啊！" width="600"><br><a id="more"></a><br>从上午9点出发，总的走下来到下午4点左右到达香山。</p>
-<p>开始爬山啦，到达虎头山！</p>
-<p><img src="/images/shanbala/IMG_1672.jpg" alt="虎头山合影" title="虎头山合影" width="600"></p>
+<p><img src="http://duger.qiniudn.com/dalian/DSC03807.JPG" alt="路程" title="20公里啊！" width="600"></p>
+<p>从上午9点出发，总的走下来到下午4点左右到达香山。</p>
+<p>开始爬山啦，到达虎头山！<br><a id="more"></a><br><img src="/images/shanbala/IMG_1672.jpg" alt="虎头山合影" title="虎头山合影" width="600"></p>
 <p>偷偷拍一张~</p>
 <p><img src="/images/shanbala/IMG_1677.jpg" alt="偷拍" title="干嘛不看镜头" width="600"></p>
 <p>野果子，某个傻妞说像屁股~你说呢~嘿嘿~</p>
@@ -197,12 +184,16 @@
 <p>然后慢慢~慢慢~挪到香山，挪回家~</p>
 <p><img src="/images/shanbala/IMG_4563.JPG" alt="回家" title="回家喽！" width="600"></p>
 ]]></content>
-    <summary type="html"><![CDATA[<p>清明假期第二天，我、顾鑫、高圆圆和她的小伙伴小芳一起去香八拉徒步。</p>
+    <summary type="html"><![CDATA[<p>清明假期第二天，我和小伙伴小鑫鑫高圆圆小芳一起去香八拉徒步。</p>
 <blockquote>
 <p>香八拉就是指香山至八大处之间的一段徒步山路，徒友爱称香八拉。</p>
 </blockquote>
 <p>驱车八大处，路线是：雍王府——虎头山——八大处——翠微山——陈家沟——香山水库——北马场——上满是松树的山——挂甲塔——碧云寺——公主坟——香山。</p>
-<p><img src="/images/shanbala/IMG_1746.PNG" alt="路程" title="20公里啊！" width="600"><br>]]></summary>
+<p><img src="http://duger.qiniudn.com/dalian/DSC03807.JPG" alt="路程" title="20公里啊！" width="600"></p>
+<p>从上午9点出发，总的走下来到下午4点左右到达香山。</p>
+<p>开始爬山啦，到达虎头山！<br>]]></summary>
+    
+      <category term="香八拉" scheme="http://localhost:4000/tags/%E9%A6%99%E5%85%AB%E6%8B%89/"/>
     
       <category term="随笔" scheme="http://localhost:4000/categories/%E9%9A%8F%E7%AC%94/"/>
     
@@ -213,7 +204,7 @@
     <link href="http://localhost:4000/2014/04/04/beauly-fade-love-stay.html"/>
     <id>http://localhost:4000/2014/04/04/beauly-fade-love-stay.html</id>
     <published>2014-04-03T16:00:00.000Z</published>
-    <updated>2014-08-03T18:31:22.000Z</updated>
+    <updated>2014-09-04T04:08:00.000Z</updated>
     <content type="html"><![CDATA[<p><img src="/images/bueatyFadeLoveStay.JPG" alt="pic" title="bueatyFadeLoveStay"></p>
 <p>美貌、青春是短暂的，慢慢滋润出来的爱是永恒的，用心爱吧！</p>
 ]]></content>
@@ -228,7 +219,7 @@
     <link href="http://localhost:4000/2014/04/02/setternil-and-saferelease.html"/>
     <id>http://localhost:4000/2014/04/02/setternil-and-saferelease.html</id>
     <published>2014-04-01T16:00:00.000Z</published>
-    <updated>2014-08-08T10:01:21.000Z</updated>
+    <updated>2014-09-04T09:42:53.000Z</updated>
     <content type="html"><![CDATA[<p>如果一个界面内有个arr暂时存储数据，在这个界面类中，不对这个arr进行alloc,给这个界面传值时简单调用其<code>setter方法</code>，那么在这个界面类的dealoc方法中，我还能直接写成<code>_Pointer release,_Pointer = nil;</code>呢？</p>
 <p>在一个界面类dealloc方法中，有两种常用的retainCount减一方法：</p>
 <pre><code>*    <span class="comment">#define SAFERELEASE(_Pointer){[_Pointer release],_Pointer = nil;} </span>
@@ -245,6 +236,8 @@
     
       <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
     
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+    
   </entry>
   
   <entry>
@@ -252,15 +245,14 @@
     <link href="http://localhost:4000/2014/03/31/apple-touch-icon.html"/>
     <id>http://localhost:4000/2014/03/31/apple-touch-icon.html</id>
     <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-08-27T06:36:45.000Z</updated>
+    <updated>2014-09-04T09:43:45.000Z</updated>
     <content type="html"><![CDATA[<p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
 <figure class="highlight"><pre><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"shortcut icon"</span> /&gt;  </div><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"Bookmark"</span> /&gt;</div></pre></figure>
 
 <p>现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。实现方法是在HTML文档的<code>&lt;head&gt;</code>标签加入下面代码即可。</p>
 <pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">href=</span><span class="string">"/custom_icon.png"</span>/&gt;   
 </code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
-<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。</p>
-<p>所以最完善的写法应该是：</p>
+<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。<br><a id="more"></a><br>所以最完善的写法应该是：</p>
 <pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"57x57"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone.png"</span> /&gt;  
 &lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"72x72"</span> <span class="variable">href=</span><span class="string">"touch-icon-ipad.png"</span> /&gt;  
 &lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"114x114"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone4.png"</span> /&gt;    
@@ -285,11 +277,19 @@
 <p><link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png"><br><!-- Retina iPad -->  </p>
 <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png">  
 ]]></content>
-    
+    <summary type="html"><![CDATA[<p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
+<figure class="highlight"><pre><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"shortcut icon"</span> /&gt;  </div><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"Bookmark"</span> /&gt;</div></pre></figure>
+
+<p>现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。实现方法是在HTML文档的<code>&lt;head&gt;</code>标签加入下面代码即可。</p>
+<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">href=</span><span class="string">"/custom_icon.png"</span>/&gt;   
+</code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
+<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。<br>]]></summary>
     
       <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
     
       <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
@@ -298,7 +298,7 @@
     <link href="http://localhost:4000/2014/03/31/spring.html"/>
     <id>http://localhost:4000/2014/03/31/spring.html</id>
     <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-08-03T18:31:30.000Z</updated>
+    <updated>2014-09-04T03:51:02.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://m2.img.srcdd.com/farm4/d/2014/0330/23/B2D04EA8807E32381D69CDD1F0B149F5_B1280_1280_500_333.jpeg" alt="照片" title="spring"></p>
 <p>If we had no winter, the spring would not be so pleasant.</p>
 <blockquote>
@@ -318,7 +318,7 @@
     <link href="http://localhost:4000/2014/03/31/god-never-forgive-us.html"/>
     <id>http://localhost:4000/2014/03/31/god-never-forgive-us.html</id>
     <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-08-03T18:31:36.000Z</updated>
+    <updated>2014-09-04T04:07:28.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://m1.img.srcdd.com/farm5/d/2014/0107/15/1732EAF028FDD7AC4357E08613F67AFB_B1280_1280_500_339.jpeg" alt="Life" title="Life is fair"></p>
 <p>Life rarely gives us what we want at the moment we consider appropriate. Miracles do occur but not punctually.</p>
 <blockquote>
@@ -330,33 +330,6 @@
       <category term="人生" scheme="http://localhost:4000/tags/%E4%BA%BA%E7%94%9F/"/>
     
       <category term="只言片语" scheme="http://localhost:4000/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[惊喜总是来的那么忽然]]></title>
-    <link href="http://localhost:4000/2014/03/30/mylove.html"/>
-    <id>http://localhost:4000/2014/03/30/mylove.html</id>
-    <published>2014-03-29T16:00:00.000Z</published>
-    <updated>2014-08-03T18:29:43.000Z</updated>
-    <content type="html"><![CDATA[<p>今天周日，加班的第二天了，中午吃过饭，慵懒得刷了刷朋友圈儿，你一盘儿咸猪手和黑木耳下面赫然标着<code>北京·福来居</code>！心依来北京了？心依来北京了！</p>
-<p>打了个电话，果然是在北京了，唉~我咋这么迟钝，让我看相册！</p>
-<p>翻开相册，这28号已经开始在北京玩儿起来了，来了两三天，通着微信我竟然没发现》《，她也真够沉得住气的！</p>
-<p>这还让我怎么安心上班，下午在公司值守着，心里翻来覆去，坐不住。打算下午晚些时候申请一下，早点儿下班，我来啦~</p>
-<p>—</p>
-<p><img src="http://m3.img.srcdd.com/farm4/d/2014/0212/09/9DBE69BE9F2C058D5E97F1D0D5C6086F_B1280_1280_500_332.jpeg" alt="leave" title="say goodbye"></p>
-<p>If you’re brave enough to say goodbye, life will reward you with a new hello.</p>
-<blockquote>
-<p>如果你足够勇敢说再见，生活便会奖励你一个新的开始。</p>
-</blockquote>
-]]></content>
-    
-    
-      <category term="爱情" scheme="http://localhost:4000/tags/%E7%88%B1%E6%83%85/"/>
-    
-      <category term="心依" scheme="http://localhost:4000/tags/%E5%BF%83%E4%BE%9D/"/>
-    
-      <category term="随笔" scheme="http://localhost:4000/categories/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -387,6 +360,897 @@
       <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger]]></title>
+    <link href="http://localhost:4000/2014/03/26/OS-X-109-XCode51%E5%8D%87%E7%BA%A7%E5%90%8E-%E5%AE%89%E8%A3%85Jekyll%E6%8A%A5%E9%94%99---duger.html"/>
+    <id>http://localhost:4000/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html</id>
+    <published>2014-03-26T12:55:00.000Z</published>
+    <updated>2014-09-04T09:44:54.000Z</updated>
+    <content type="html"><![CDATA[<p>报错如下：</p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br><a id="more"></a><br>make failed</span>, exit code 2<span style="color: #000000;"><br><br>Gem files will remain installed in /Library/Ruby/Gems/</span>2.0.0/gems/fast-stemmer-1.0.2<span style="color: #000000;"> for inspection.<br>Results logged to /Library/Ruby/Gems/</span>2.0.0/extensions/universal-darwin-13/2.0.0/fast-stemmer-1.0.2/gem_make.out</div>
+
+<p><span>This is due to Xcode 5.1 - its already reported as a bug to Ruby.</span></p>
+<p>I&nbsp;found three different ways to fix the bug:</p>
+<ul>
+<li><p>Install using:<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-<span style="color: #0000ff;">in</span>-future gem install cheatset</div></p>
+</li>
+<li><p>Install Ruby 2.1.1. You can do this using&nbsp;<code>brew install ruby</code>&nbsp;(<a href="http://brew.sh/" target="_blank" rel="external">http://brew.sh/</a>)</p>
+</li>
+<li>Follow the instructions from&nbsp;<a href="http://stackoverflow.com/a/22340285/1270034" target="_blank" rel="external">http://stackoverflow.com/a/22340285/1270034</a>&nbsp;to remove the offending arg from rbconfig.<img src="http://counter.cnblogs.com/blog/rss/3626969" alt=""></li>
+</ul>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3626969.html" target="_blank" rel="external">OS X 10.9 XCode5.1升级后 安装Jekyll报错</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>报错如下：</p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br>]]></summary>
+    
+      <category term="XCode" scheme="http://localhost:4000/tags/XCode/"/>
+    
+      <category term="Jekyll" scheme="http://localhost:4000/tags/Jekyll/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Xcode升级5.1 iOS升级7.1无法真机调试 - duger]]></title>
+    <link href="http://localhost:4000/2014/03/25/Xcode%E5%8D%87%E7%BA%A751-iOS%E5%8D%87%E7%BA%A771%E6%97%A0%E6%B3%95%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95---duger.html"/>
+    <id>http://localhost:4000/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html</id>
+    <published>2014-03-25T03:49:00.000Z</published>
+    <updated>2014-09-04T09:45:41.000Z</updated>
+    <content type="html"><![CDATA[<p><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">warning: ignoring debug info with an invalid version (<span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br></span><span style="color: #800080;">0</span>  <span style="color: #800080;">0x10fca9f93</span>  __assert_rtn + <span style="color: #800080;">144</span><br><span style="color: #800080;">1</span>  <span style="color: #800080;">0x10fd4ced4</span>  ld::passes::stubs::Pass::makeStub(ld::Atom <span style="color: #0000ff;">const</span>&amp;, <span style="color: #0000ff;">bool</span>) + <span style="color: #800080;">0</span><br><span style="color: #800080;">2</span>  <span style="color: #800080;">0x10fd4d5f7</span>  ld::passes::stubs::Pass::process(ld::Internal&amp;) + <span style="color: #800080;">497</span><br><span style="color: #800080;">3</span>  <span style="color: #800080;">0x10fd4dc07</span>  ld::passes::stubs::doPass(Options <span style="color: #0000ff;">const</span>&amp;, ld::Internal&amp;) + <span style="color: #800080;">111</span><br><span style="color: #800080;">4</span>  <span style="color: #800080;">0x10fcaab50</span>  main + <span style="color: #800080;">772</span><br><span style="color: #800080;">5</span>  <span style="color: #800080;">0x7fff8a3af5fd</span>  start + <span style="color: #800080;">1</span><span style="color: #000000;"><br>A linker snapshot was created at:<br>     </span>/tmp/MyApp-<span style="color: #800080;">2014</span>-<span style="color: #800080;">02</span>-<span style="color: #800080;">11</span>-<span style="color: #800080;">123906</span>.ld-<span style="color: #000000;">snapshot<br>ld: Assertion failed: (target </span>!= NULL), function stubableFixup, file /SourceCache/ld64/ld64-<span style="color: #800080;">236.3</span>/src/ld/passes/stubs/stubs.cpp, line <span style="color: #800080;">126</span><span style="color: #000000;">.<br>clang: error: linker command failed with exit code </span><span style="color: #800080;">1</span> (use -v to see invocation)</div><br><a id="more"></a><br>手机升级完7.1，XCode升级到5.1后，真机调试时遇到编译不过，报以上错误！</p>
+<p>原因是XCode的LTO 的bug，暂时的解决方法是关掉它！！</p>
+<p>将XCode BuildSettings 中，Link 下的DEAD_CODE_STRIPPING 至为NO！</p>
+<p><img src="http://images.cnitblog.com/i/557746/201403/251147469676647.png" alt=""></p>
+<p><span>This is a bug with LTO and -dead_strip.&nbsp; The workaround is to stop using one of them.</span></p>
+<p><span><span>way Link Time Optimization (LTO) works is that the compiler stops half way through and emits the .o file as “bit code” (the internal clang IR) instead of compiling down to mach-o.&nbsp; This is drive by the -flto compiler option. When the linker encounters bit-code .o files, it loads up the back end of clang (libLTO.dylib) and merges/compiles all the bit-code files into mach-o then completes the link.</span></span></p>
+<p>参见：</p>
+<p><a href="https://devforums.apple.com/message/950372#950372" target="_blank" rel="external">https://devforums.apple.com/message/950372#950372</a><br><img src="http://counter.cnblogs.com/blog/rss/3622799" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3622799.html" target="_blank" rel="external">Xcode升级5.1 iOS升级7.1无法真机调试</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">warning: ignoring debug info with an invalid version (<span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br></span><span style="color: #800080;">0</span>  <span style="color: #800080;">0x10fca9f93</span>  __assert_rtn + <span style="color: #800080;">144</span><br><span style="color: #800080;">1</span>  <span style="color: #800080;">0x10fd4ced4</span>  ld::passes::stubs::Pass::makeStub(ld::Atom <span style="color: #0000ff;">const</span>&amp;, <span style="color: #0000ff;">bool</span>) + <span style="color: #800080;">0</span><br><span style="color: #800080;">2</span>  <span style="color: #800080;">0x10fd4d5f7</span>  ld::passes::stubs::Pass::process(ld::Internal&amp;) + <span style="color: #800080;">497</span><br><span style="color: #800080;">3</span>  <span style="color: #800080;">0x10fd4dc07</span>  ld::passes::stubs::doPass(Options <span style="color: #0000ff;">const</span>&amp;, ld::Internal&amp;) + <span style="color: #800080;">111</span><br><span style="color: #800080;">4</span>  <span style="color: #800080;">0x10fcaab50</span>  main + <span style="color: #800080;">772</span><br><span style="color: #800080;">5</span>  <span style="color: #800080;">0x7fff8a3af5fd</span>  start + <span style="color: #800080;">1</span><span style="color: #000000;"><br>A linker snapshot was created at:<br>     </span>/tmp/MyApp-<span style="color: #800080;">2014</span>-<span style="color: #800080;">02</span>-<span style="color: #800080;">11</span>-<span style="color: #800080;">123906</span>.ld-<span style="color: #000000;">snapshot<br>ld: Assertion failed: (target </span>!= NULL), function stubableFixup, file /SourceCache/ld64/ld64-<span style="color: #800080;">236.3</span>/src/ld/passes/stubs/stubs.cpp, line <span style="color: #800080;">126</span><span style="color: #000000;">.<br>clang: error: linker command failed with exit code </span><span style="color: #800080;">1</span> (use -v to see invocation)</div><br>]]></summary>
+    
+      <category term="Xcode" scheme="http://localhost:4000/tags/Xcode/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[使用SourceTree和GitHub共同开发 - duger]]></title>
+    <link href="http://localhost:4000/2014/01/21/%E4%BD%BF%E7%94%A8SourceTree%E5%92%8CGitHub%E5%85%B1%E5%90%8C%E5%BC%80%E5%8F%91---duger.html"/>
+    <id>http://localhost:4000/2014/01/21/使用SourceTree和GitHub共同开发---duger.html</id>
+    <published>2014-01-21T15:10:00.000Z</published>
+    <updated>2014-09-04T09:46:09.000Z</updated>
+    <content type="html"><![CDATA[<p><span><strong>GitHub详细教程</strong></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span><strong>1&nbsp;Git详细教程</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1&nbsp;Git简介</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1.1&nbsp;Git是何方神圣?</strong></span></p>
+<p>&nbsp;</p>
+<p><span>Git是用C语言开发的分布版本控制系统。版本控制系统可以保留一个文件集合的历史记录，并能回滚文件集合到另一个状态（历史记录状态）。另一个状态可以是不同的文件，也可以是不同的文件内容。举个例子，你可以将文件集合转换到两天之前的状态，或者你可以在生产代码和实验性质的代码之间进行切换。文件集合往往被称作是&ldquo;源代码&rdquo;。在一个分布版本控制系统中，每个人都有一份完整的源代码（包括源代码所有的历史记录信息），而且可以对这个本地的数据进行操作。分布版本控制系统不需要一个集中式的代码仓库。</span></p>
+<p>&nbsp;</p>
+<p><span>当你对本地的源代码进行了修改，你可以标注他们跟下一个版本相关（将他们加到index中），然后提交到仓库中来（commit）。Git保存了所有的版本信息，所以你可以转换你的源代码到任何的历史版本。你可以对本地的仓库进行代码的提交，然后与其他的仓库进行同步。你可以使用Git来进行仓库的克隆（clone）操作，完整的复制一个已有的仓库。仓库的所有者可以通过push操作（推送变更到别处的仓库）或者Pull操作（从别处的仓库拉取变更）来同步变更。</span><br><a id="more"></a><br>&nbsp;</p>
+<p><span>Git支持分支功能（branch）。如果你想开发一个新的产品功能，你可以建立一个分支，对这个分支的进行修改，而不至于会影响到主支上的代码。</span></p>
+<p>&nbsp;</p>
+<p><span>Git提供了命令行工具；这个教程会使用命令行。你也可以找到图形工具，譬如与Eclipse配套的EGit工具，但是这些都不会在这个教程中进行描述。</span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1.2&nbsp;重要的术语</strong></span></p>
+<p>&nbsp;</p>
+<p><span>Git 术语</span></p>
+<p><span><strong>术语</strong></span></p>
+<p><span><strong>定义</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>仓库</strong></span></p>
+<p><span>一个仓库包括了所有的版本信息、所有的分支和标记信息.</span></p>
+<p><span><strong>Repository</strong></span></p>
+<p><span>在Git中仓库的每份拷贝都是完整的。仓库让你可以从中</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>取得你的工作副本。</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>一个分支意味着一个独立的、拥有自己历史信息的代码线</span></p>
+<p><span><strong>分支</strong></span></p>
+<p><span>（code line）。你可以从已有的代码中生成一个新的分支</span></p>
+<p><span>Branches</span></p>
+<p><span>，这个分支与剩余的分支完全独立。默认的分支往往是叫</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>master。用户可以选择一个分支，选择一个分支叫做</span></p>
+<p><span>&nbsp;</span></p>
+<p><span><strong>checkout</strong>.</span></p>
+<p><span>标记</span></p>
+<p><span>一个标记指的是某个分支某个特定时间点的状态。通过标</span></p>
+<p><span>Tags</span></p>
+<p><span>记，可以很方便的切换到标记时的状态，例如2009年1月25</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>号在testing分支上的代码状态</span></p>
+<p><span><strong>提交</strong></span></p>
+<p><span>提交代码后，仓库会创建一个新的版本。这个版本可以在</span></p>
+<p><span>Commit</span></p>
+<p><span>后续被重新获得。每次提交都包括作者和提交者，作者和</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>提交者可以是不同的人</span></p>
+<p><span>URL</span></p>
+<p><span>URl用来标识一个仓库的位置</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>用来表示代码的一个版本状态。Git通过用SHA1 hash算法</span></p>
+<p><span>修订</span></p>
+<p><span>表示的id来标识不同的版本。每一个 SHA1 id都是160位长</span></p>
+<p><span>Revision</span></p>
+<p><span>,16进制标识的字符串.最新的版本可以通过HEAD来获取.</span></p>
+<p><span>&nbsp;</span></p>
+<p><span>之前的版本可以通过”HEAD~1”来获取，以此类推。</span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1.3&nbsp;索引</strong></span></p>
+<p>&nbsp;</p>
+<p><span>Git 需要将代码的变化显示的与下一次提交进行关联。举个例子，如果你对一个文件继续了修改，然后想将这些修改提交到下一次提交中，你必须将这个文件提交到索引中，通过git add file命令。这样索引可以保存所有变化的快照。</span></p>
+<p>&nbsp;</p>
+<p><span>新增的文件总是要显示的添加到索引中来。对于那些之前已经提交过的文件，可以在commit命令中使用-a 选项达到提交到索引的目的。</span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.2&nbsp;Git 安装 配置</strong></span></p>
+<p>&nbsp;</p>
+<p><span>我们使用SourceTree这个软件，他将Git已经配置好了，我们只需要用就可以了。</span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.3&nbsp;开始操作Git</strong></span></p>
+<p><span>后续将通过一个典型的Git工作流来学习。在这个过程中，你会使用SourceTree创建一些文件、创建一个本地的Git仓库、提交你的文件到这个仓库中。这之后，你会克隆一个仓库、在仓库之间通过pull和push操作来交换代码的修改。</span></p>
+<p><span><strong>1.3.1&nbsp;创建仓库、添加文件和提交更改</strong></span></p>
+<p><span>每个Git仓库都是放置在.git文件夹下.这个目录包含了仓库的所有历史记录，.git/config文件包含了仓库的本地配置。</span></p>
+<p><span>以下我们会创建一个本地Git工程仓库。</span></p>
+<p><span>Xcode自带有Git管理，在创建工程时，勾选Source Control即可。</span></p>
+<p><span><img src="webkit-fake-url://4E7B7AFF-CB51-47FC-9F4D-33B81868BB1F/image.tiff" alt=""></span></p>
+<p><span>此工程将自带git配置，但是由于Xcode 在git管理上优化有问题，会让电脑出现卡顿，所以我们不建议用Xcode管理git仓库。</span></p>
+<p><span>我们一般采用的方式是，用Xcode建立好工程之后，再运行终端，将此工程变为Git仓库，使用git init命令：</span></p>
+<p><span><img src="webkit-fake-url://573A3325-F19F-4ED9-989B-992E1293A0D4/image.tiff" alt=""></span></p>
+<p><span>然后，我们将此工程添加入SourceTree进行管理。</span></p>
+<p><span><img src="webkit-fake-url://313E10D2-3405-4169-BA5F-388FBDABA39E/image.tiff" alt=""></span></p>
+<p><span>一个本地工程已经添加进来了。</span></p>
+<p><span><img src="webkit-fake-url://9B96EEF3-E9D8-4E82-8DA5-88ADA19BF99C/image.tiff" alt=""></span></p>
+<p><span>点击进入TuYaPRO工程：</span></p>
+<p>&nbsp;<img src="webkit-fake-url://F9A1CDA9-375B-49C9-97A8-8869ACC1577F/image.tiff" alt=""></p>
+<p><span><strong>1.3.2&nbsp;commit更改</strong></span></p>
+<p><span>下方有问号的就是我们的工程文件，现在我们将他们添加到Git仓库内。全选他们，点击Commit键。</span></p>
+<p><span>Commit成功后，出现一条记录和描述。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://3D5A6A5F-B64E-4A17-89FB-DCAC649FEE05/image.tiff" alt=""></p>
+<p>&nbsp;</p>
+<p><span><strong>1.4&nbsp;远端仓库（remote repositories）</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.4.1&nbsp;设置一个远端的GitHub仓库</strong></span></p>
+<p>&nbsp;</p>
+<p><span>我们将创建一个远端的GitHub仓库。这个仓库可以存储在本地或者是网络上。</span></p>
+<p>&nbsp;</p>
+<p><span>远端Git仓库和标准的Git仓库有如下差别：一个标准的Git仓库包括了源代码和历史信息记录。我们可以直接在这个基础上修改代码，因为它已经包含了一个工作副本。但是远端仓库没有包括工作副本，只包括了历史信息。</span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.4.2&nbsp;添加远端仓库</strong></span></p>
+<p><span>首先我们需要创建一个Repository;</span></p>
+<p>&nbsp;<img src="webkit-fake-url://B99D9AE0-D4B6-4B39-808F-586C26B4DEE3/image.tiff" alt=""></p>
+<p><span>填写工程信息：</span></p>
+<p>&nbsp;<img src="webkit-fake-url://381B2A89-CC05-4E3F-AF58-2AA19F6EC68F/image.tiff" alt=""></p>
+<p><span>创建完成后，Clone此工程下来，复制此工程的URL：</span></p>
+<p>&nbsp;<img src="webkit-fake-url://98922CF5-63F4-4286-A390-1FC2A71DD7D4/image.tiff" alt="">&nbsp;</p>
+<p><span>在SourceTree中Clone Repository。</span></p>
+<p><span><img src="webkit-fake-url://6D63622A-2FEF-40C5-AE15-1C6A3B67B7B3/image.tiff" alt=""></span></p>
+<p><img src="webkit-fake-url://B231F988-E6A0-442E-998C-A77B512FE840/image.tiff" alt=""></p>
+<p><span>将原来的工程文件拖入TuYaPRO目录中。</span></p>
+<p><img src="webkit-fake-url://2B49FFFF-6278-437C-897B-DDA9F9224C8D/image.tiff" alt=""></p>
+<p><span>全选下面的工程文件，点击commit提交到本地仓库。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://5B63F70D-7AA9-4D23-87FE-D73163DFCA4A/image.tiff" alt=""></p>
+<p><span>master中出现一个pull标记，同时多了一条记录：</span></p>
+<p>&nbsp;<img src="webkit-fake-url://E72CB933-BF39-4B1C-BB84-6BD950C1484F/image.tiff" alt=""></p>
+<p><span><strong>1.4.3&nbsp;推送更改到GitHub的仓库</strong></span></p>
+<p><span>在下方的Origin中，显示的是GitHub服务器上的工程，它显示的进度还在第一条Initial commit;这时我们需要将本地master中的更改Push到GitHub服务器。</span></p>
+<p><span><img src="webkit-fake-url://3EDC009B-E4BA-41D6-8BBB-24DBE69D5C01/image.tiff" alt=""></span></p>
+<p><span>点击右上方的Push按钮。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://162FE251-B8FA-47E6-875C-DA74CEC6A6BA/image.tiff" alt=""></p>
+<p><span>提交成功后，我们看到服务器端的进度已经和我们本地同步了。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://6AD108DF-F309-4E13-B305-4B0B6335C45D/image.tiff" alt=""></p>
+<p><span><strong>1.4.4&nbsp;拉取（Pull）更改</strong></span></p>
+<p><span>通过拉取，可以从GitHub的仓库中获取最新的更改。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://BF5674A0-98F6-43A2-B32B-B51E745CA2F4/image.tiff" alt=""></p>
+<p><span><strong>1.4.5&nbsp;还原更改</strong></span></p>
+<p><span>如果你还未把更改加入到索引中，你也可以直接还原所有的更改；也可以通过revert命令进行还原操作 。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://9430373C-3AA0-40F2-AD3C-1DF42701369A/image.tiff" alt=""></p>
+<p><span>即使你删除了一个未添加到索引和提交的文件，你也可以还原出这个文件，点击Checkout。</span></p>
+<p><span><img src="webkit-fake-url://4290AFE6-1E22-4E8D-B9F5-EB26E5F03780/image.tiff" alt=""></span></p>
+<p><span>如果你已经添加一个文件到索引中，但是未提交。可以通过git resetfile 命令将这个文件从索引中删除。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://1BF91582-68F1-41FF-B1D6-92FED18638DA/image.tiff" alt=""></p>
+<p>&nbsp;</p>
+<p><span><strong>1.5&nbsp;分支、合并</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.5.1&nbsp;分支</strong></span></p>
+<p><span>通过分支，可以创造独立的代码副本。默认的分支叫master。Git消耗很少的资源就能创建分支。Git鼓励开发人员多使用分支。</span></p>
+<p><span>点击Branch添加分支;</span></p>
+<p><span><img src="webkit-fake-url://71DAA4FC-359E-4FDB-9A71-A7CC556B49E7/image.tiff" alt="">&nbsp; &nbsp; &nbsp; &nbsp;<img src="webkit-fake-url://007E1B0A-131E-43EA-843F-15862518A1F3/image.tiff" alt=""></span></p>
+<p><span>Branches列表会出现Dev分支，我们可以在此分支开发我们负责的部分。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://26242A6C-EF1B-47E5-9B7D-226E4AA7086B/image.tiff" alt=""></p>
+<p><span><strong>1.5.2&nbsp;合并</strong></span></p>
+<p><span>通过Merge我们可以合并两个不同分支的结果。Merge通过所谓的三路合并来完成。分别来自两个分支的最新commit和两个分支的最新公共commit。</span></p>
+<p><span>我们在Dev分支进行进行一些工作之后，可以看到Dev和master的进度是不一样的。</span></p>
+<p><span><img src="webkit-fake-url://C0D4C6C7-6643-4B08-A953-03FD6C3FE310/image.tiff" alt=""></span></p>
+<p><span>这时我们返回master分支，点击merge；</span></p>
+<p><span><img src="webkit-fake-url://33F52041-539E-4B1D-A0AA-2EA83B5997F3/image.tiff" alt=""></span></p>
+<p><span>合并之后我们发现，master已经和Dev同步了。</span></p>
+<p><span><img src="webkit-fake-url://1BD436FC-AE55-4EC9-9635-61844CB6B3CA/image.tiff" alt=""></span></p>
+<p><span>这时我们发现orgin和master并不同步，这时因为我们的更改并没有推送到在线的GitHub服务器，这时我们可以把我们的更改Push到Github上，点击Push。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://E44D6FFF-4549-46B2-980C-110B9D348C3B/image.tiff" alt=""></p>
+<p><span>这时我们可以看到服务器和本地都同步了。</span></p>
+<p><span>但是有时多人开发时，有可能会发生合并冲突。</span></p>
+<p><span>一旦合并发生了冲突，Git会标志出来，开发人员需要手工的去解决这些冲突。解决冲突以后，就可以将文件添加到索引中，然后提交更改。</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span><strong>1.5.3&nbsp;合并请求（pull Requests）一个分支到源仓库</strong></span></p>
+<p><span>我们在Github上Fork的项目，当一个人完成开发后，需要提出一个合并请求，请求把自己写的部分与主项目合并。</span></p>
+<p><span>在Github上的自己Fork的工程右边点击Pull Requests，点击New pull request。</span></p>
+<p>&nbsp;<img src="webkit-fake-url://4757F9BB-D6F6-4DA2-90CC-4E8D0EE8A744/image.tiff" alt=""></p>
+<p><img src="webkit-fake-url://4E9F7DC4-7A54-4384-ADD4-94CBE68B59AD/image.tiff" alt=""></p>
+<p><span>这里会比较你和主项目的不同，然后点击创建pull request。</span></p>
+<p><span><img src="webkit-fake-url://E2F35A47-0430-411B-879B-F66C57556C6D/image.tiff" alt=""></span></p>
+<p><span>这里写入你要合并部分的介绍，完成了什么功能等等，点击发送。</span></p>
+<p><span><img src="webkit-fake-url://2C8570F0-027C-47B6-8745-D8E870F844E3/image.tiff" alt=""></span></p>
+<p><span>项目拥有者收到你的请求，根据你完成的功能，和你沟通后可以选择合并或者否决你的请求。</span></p>
+<p><span>合并需要手工完成，具体请向度娘了解。</span></p>
+<p><span><strong>1.6&nbsp;解决合并冲突</strong></span></p>
+<p>&nbsp;</p>
+<p><span>如果两个不同的开发人员对同一个文件进行了修改，那么合并冲突就会发生。而Git没有智能到自动解决合并两个修改。</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span><strong>1.7&nbsp;链接和文章</strong></span></p>
+<p><span>1.<a href="http://download.csdn.net/detail/tangbin330/5625037" target="_blank" rel="external"><span>Git相关学习资源</span></a></span></p>
+<p><span>Github&nbsp; <a href="http://www.github.com" target="_blank" rel="external"><span>www.github.com</span></a></span></p>
+<p><span>SourceTree出的Git教程：<a href="http://www.atlassian.com/git" target="_blank" rel="external"><span>www.atlassian.com/git</span></a></span></p>
+<p><span>某个台湾人写的Git教程：<a href="http://pan.baidu.com/s/1eQBUIe2" target="_blank" rel="external"><span>http://pan.baidu.com/s/1eQBUIe2</span></a></span></p>
+<p><span>一些GitHub资料：<a href="http://pan.baidu.com/s/1qW8m5fY" target="_blank" rel="external"><span>http://pan.baidu.com/s/1qW8m5fY</span></a></span></p>
+<p><span>吴丽和王帅帅拍的片儿：</span></p>
+<p><span><a href="http://pan.baidu.com/share/link?shareid=422160084&amp;uk=2922146712" target="_blank" rel="external">http://pan.baidu.com/share/link?shareid=422160084&amp;uk=2922146712</a></span></p>
+<p><span><a href="http://pan.baidu.com/s/128WT3" target="_blank" rel="external">http://pan.baidu.com/s/128WT3</a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span>Author: Duger.Wang&lt;<a href="mailto:wfyh007@gmail.com" target="_blank" rel="external"><span>wfyh007@gmail.com</span></a>&gt;</span></p>
+<p><span>Date:2013年12月29日 星期日</span></p>
+<p><span>Github:&lt;<a href="http://github.com/duger" target="_blank" rel="external"><span>github.com/duger</span></a>&gt;</span></p>
+<p><span>&nbsp;</span><br><img src="http://counter.cnblogs.com/blog/rss/3496495" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3496495.html" target="_blank" rel="external">使用SourceTree和GitHub共同开发</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p><span><strong>GitHub详细教程</strong></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span><strong>1&nbsp;Git详细教程</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1&nbsp;Git简介</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1.1&nbsp;Git是何方神圣?</strong></span></p>
+<p>&nbsp;</p>
+<p><span>Git是用C语言开发的分布版本控制系统。版本控制系统可以保留一个文件集合的历史记录，并能回滚文件集合到另一个状态（历史记录状态）。另一个状态可以是不同的文件，也可以是不同的文件内容。举个例子，你可以将文件集合转换到两天之前的状态，或者你可以在生产代码和实验性质的代码之间进行切换。文件集合往往被称作是&ldquo;源代码&rdquo;。在一个分布版本控制系统中，每个人都有一份完整的源代码（包括源代码所有的历史记录信息），而且可以对这个本地的数据进行操作。分布版本控制系统不需要一个集中式的代码仓库。</span></p>
+<p>&nbsp;</p>
+<p><span>当你对本地的源代码进行了修改，你可以标注他们跟下一个版本相关（将他们加到index中），然后提交到仓库中来（commit）。Git保存了所有的版本信息，所以你可以转换你的源代码到任何的历史版本。你可以对本地的仓库进行代码的提交，然后与其他的仓库进行同步。你可以使用Git来进行仓库的克隆（clone）操作，完整的复制一个已有的仓库。仓库的所有者可以通过push操作（推送变更到别处的仓库）或者Pull操作（从别处的仓库拉取变更）来同步变更。</span><br>]]></summary>
+    
+      <category term="GitHub" scheme="http://localhost:4000/tags/GitHub/"/>
+    
+      <category term="SourceTree" scheme="http://localhost:4000/tags/SourceTree/"/>
+    
+      <category term="Git" scheme="http://localhost:4000/tags/Git/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Git" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[iOS中 nil Nil NULL 的区别 - duger]]></title>
+    <link href="http://localhost:4000/2014/01/19/iOS%E4%B8%AD-nil-Nil-NULL-%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
+    <id>http://localhost:4000/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html</id>
+    <published>2014-01-19T03:51:00.000Z</published>
+    <updated>2014-09-04T09:46:54.000Z</updated>
+    <content type="html"><![CDATA[<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<p>nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。</p>
+<p><span>示例如下：</span></p>
+<ol>
+<li>id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象不为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object&nbsp;==&nbsp;nil)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;数组初始化，空值结束&nbsp;&nbsp;</li>
+<li>NSArray&nbsp;*array&nbsp;=&nbsp;[[NSArray&nbsp;alloc]&nbsp;initWithObjects:@”First”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>//&nbsp;判断数组元素是否为空&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*element&nbsp;=&nbsp;[array&nbsp;objectAtIndex:2];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)element&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li><p>}&nbsp;&nbsp;<div><span><span>今天做项目的时候就遇到，要判断数组元素是否为空，我的以下写法，都无效</span></span></div><div><span><span>if(!element)</span></span></div><div><span><span>if([element length]&gt;0)</span></span></div><div><span><span>if(element== NULL)</span></span></div><div><span><span>if(element == Nil)</span></span></div><div><span><span>&nbsp;</span></span></div><div><span><span>&nbsp;</span></span></div></p>
+</li>
+<li><p>&nbsp;&nbsp;</p>
+</li>
+<li>//&nbsp;判断字典对象的元素是否为空&nbsp;&nbsp;</li>
+<li>NSDictionary&nbsp;*dictionary&nbsp;=&nbsp;[NSDictionary&nbsp;dictionaryWithObjectsAndKeys:&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;@”iPhone”,&nbsp;@”First”,&nbsp;@”iPad”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*value&nbsp;=&nbsp;[dictionary&nbsp;objectForKey:@”First”];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)value&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li>} &nbsp;<div><span><span>欢迎大家继续补充他们的区别。<br></span></span></div><div><span><span>加深理解一</span></span></div><div><span><span>&nbsp;</span></span></div><div><br><a id="more"></a><br>1、nil：一般赋值给空对象；</div></li>
+</ol>
+<p>2、NULL：一般赋值给nil之外的其他空值。如SEL等；</p>
+<p>　　举个栗子（好重啊~）：</p>
+<p>　　　　[NSApp beginSheet:sheet<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　&nbsp;modalForWindow:mainWindow</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　modalDelegate:nil //pointing to an object</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　didEndSelector:NULL&nbsp;//pointing to a non object/class</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;　　contextInfo:NULL]; //pointing to a non object/class</p>
+<p>3、NSNULL：NSNull只有一个方法：+ (NSNull *) null;</p>
+<p>　　[NSNull null]用来在NSArray和NSDictionary中加入非nil（表示列表结束）的空值.&nbsp;&nbsp;&nbsp;<strong>[NSNull null]是一个对象，他用在不能使用nil的场合。</strong></p>
+<p>4、当向nil发送消息时，返回NO，不会有异常，程序将继续执行下去；</p>
+<p>　　而向NSNull的对象发送消息时会收到异常。</p>
+<p>&nbsp;</p>
+<p>因为在NSArray和NSDictionary中nil中有特殊的含义（表示列表结束），所以不能在集合中放入nil值。如要确实需要存储一个表示&ldquo;什么都没有&rdquo;的值，可以使用NSNull类。NSNull只有一个方法：</p>
+<ul>
+<li>(NSNull *) null;</li>
+</ul>
+<p><code>&lt;span&gt;nil是一个对象指针为空，Nil是一个类指针为空，NULL是基本数据类型为空。这些可以理解为nil，Nil， NULL的区别吧。&lt;/span&gt;</code><br><div><span><span>&nbsp;</span></span></div><div><span><span>加深理解二</span></span></div><div><span><span>&nbsp;</span></span></div><div></div></p>
+<p>浅谈关于nil和 null区别及相关问题</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>1、nil和null从字面意思来理解比较简单，nil是一个对象，而NULL是一个值，我的理解为nil是将对象设置为空，而null是将基本类型设置为空的，个人感觉有点像属性当中，基本类型分配为assign NSString类型一般分配copy，而对象一般用retain。而且我们对于nil调用方法，不会产生crash或者抛出异常。</p>
+<p>看一段</p>
+<p>nil -&gt; Null-pointer to objective- c object</p>
+<p>NIL -&gt; Null-pointer to objective- c class</p>
+<p>null-&gt; null pointer to primitive type or absence of data.</p>
+<p>看一下用法</p>
+<p>NSURL *url = nil；</p>
+<p>Class&nbsp;&nbsp;class = Nil；</p>
+<p>int *pointerInt = NULL；</p>
+<p>nil是一个对象指针为空，Nil是一个类指针为空，NULL是基本数据类型为空。这些可以理解为nil，Nil， NULL的区别吧。</p>
+<p>2、一个可以研究一下的问题</p>
+<p>在dealloc中</p>
+<p>-（void） dealloc</p>
+<p>{</p>
+<p>self.test = nil;&nbsp;</p>
+<p>[_test release];</p>
+<p>test = nil;</p>
+<p>}</p>
+<p>这几个的区别</p>
+<p>先说最简单的&nbsp;&nbsp;[_test release]; 这个就是将引用技术减1，所谓的引用计数就是看看有多个指针指向一块内存实体，当release一次，就是指针减少一个，release到了0的时候，就是真正把这块内存归还给系统的时候了</p>
+<p>&nbsp;</p>
+<p>再说self.test = nil;说明一下 属性和setter和getter方法就不难理解了</p>
+<p>&nbsp;</p>
+<p>-（void） setTest：（NSString *）newString</p>
+<p>{</p>
+<p>if（_test != newString）</p>
+<p>[_test release];</p>
+<p>_test = [newString retain];</p>
+<p>}</p>
+<p>-（NSString *）test</p>
+<p>{</p>
+<p>return&nbsp;&nbsp;_test;</p>
+<p>}</p>
+<p>这个是setter和getter方法，而在这个问题中相当于刚才的代码改变为</p>
+<p>if（_test != nil）</p>
+<p>[_test release];</p>
+<p>_test = nil;</p>
+<p>现在就比较容易解释了，setter方法会retain nil对象，在这之前已经先release了旧的对象，这个方法优点是成员变量连指向随机数据的机会都没有，而通过别的方式，就可能会出现指向随机数据的情况。当release了之后，万一有别的方法要用要存取它，如果它已经dealloc了，可能就会crash，而指向nil之后，就不会发生错误了。nil说白了就是计数器为0，这么说吧，当真正release一个对象的时候，NSLog是打印不了它指向的内存控件的，而当nil的时候，是可以打印出来指向的一个内存空间。</p>
+<p>那么现在也不难解释test = nil;&nbsp;&nbsp;单纯的这种用法可以说是自己给自己制造内存泄露，这里可以这么理解，就是相当于将指向对象的指针直接和对象一刀两断了。直接让test指向nil，而内存实体不会消失，也不会有系统回收。<br><img src="http://counter.cnblogs.com/blog/rss/3525818" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3525818.html" target="_blank" rel="external">iOS中 nil Nil NULL 的区别</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<p>nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。</p>
+<p><span>示例如下：</span></p>
+<ol>
+<li>id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象不为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object&nbsp;==&nbsp;nil)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;数组初始化，空值结束&nbsp;&nbsp;</li>
+<li>NSArray&nbsp;*array&nbsp;=&nbsp;[[NSArray&nbsp;alloc]&nbsp;initWithObjects:@”First”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>//&nbsp;判断数组元素是否为空&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*element&nbsp;=&nbsp;[array&nbsp;objectAtIndex:2];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)element&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li><p>}&nbsp;&nbsp;<div><span><span>今天做项目的时候就遇到，要判断数组元素是否为空，我的以下写法，都无效</span></span></div><div><span><span>if(!element)</span></span></div><div><span><span>if([element length]&gt;0)</span></span></div><div><span><span>if(element== NULL)</span></span></div><div><span><span>if(element == Nil)</span></span></div><div><span><span>&nbsp;</span></span></div><div><span><span>&nbsp;</span></span></div></p>
+</li>
+<li><p>&nbsp;&nbsp;</p>
+</li>
+<li>//&nbsp;判断字典对象的元素是否为空&nbsp;&nbsp;</li>
+<li>NSDictionary&nbsp;*dictionary&nbsp;=&nbsp;[NSDictionary&nbsp;dictionaryWithObjectsAndKeys:&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;@”iPhone”,&nbsp;@”First”,&nbsp;@”iPad”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*value&nbsp;=&nbsp;[dictionary&nbsp;objectForKey:@”First”];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)value&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li>} &nbsp;<div><span><span>欢迎大家继续补充他们的区别。<br></span></span></div><div><span><span>加深理解一</span></span></div><div><span><span>&nbsp;</span></span></div><div><br>]]></summary>
+    
+      <category term="nil" scheme="http://localhost:4000/tags/nil/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/categories/iOS/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/iOS/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[[转]ios中关于delegate （委托）的使用心得 - duger]]></title>
+    <link href="http://localhost:4000/2013/09/11/%5B%E8%BD%AC%5Dios%E4%B8%AD%E5%85%B3%E4%BA%8Edelegate-%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97---duger.html"/>
+    <id>http://localhost:4000/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html</id>
+    <published>2013-09-11T12:24:00.000Z</published>
+    <updated>2014-09-04T09:47:22.000Z</updated>
+    <content type="html"><![CDATA[<div id="article_content" class="article_content"><span style="font-size: 15px;">从开始从事OC工作到现在大概1年多了，从当初接触oc的”协议”的不明白，到现在代码中随处可见的委托，协议，其中感悟颇多。</span><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">首先，大家应该都明白的是委托是协议的一种，顾名思义，就是委托他人帮自己去做什么事。也就是当自己做什么事情不方便的时候，就可以建立一个委托，这样就可以委托他人帮自己去实现什么方法。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">其次，我简单的总结了一下自己用到的委托的作用有两个，一个是传值，一个是传事件。</span></div><div><span style="font-size: 15px;">1.所谓传值经常用在b类要把自己的一个数据或者对象传给a类，让a类去展示或者处理。（切分紧耦合，和代码分块的时候经常用）</span></div><div><span style="font-size: 15px;">2.所谓传事件就是a类发生了什么事，把这件事告诉关注自己的人，也就是委托的对象，由委托的对象去考虑发生这个事件后应该做出什么反映。（这个经常见，例如在异步请求中，界面事件触发数据层改变等等）</span></div><div><span style="font-size: 15px;">3.利用委托赋值，这种方法感觉是为了不暴露自己的属性就可以给自己复值，而且这样更方便了类的管理，只有在你想要让别人给你赋值的时候才调用，这样的赋值更可控一些。（例如tableView中的委托（dateSource）中常见）。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">最后，我想分享一下在使用委托的时候的一些心得和注意事项。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">心得：delegate的命名要准确，尽量看名字就知道用法。delegate和通知有的用法有些象，但是前者是单对单的，后者是单对多的情况。</span></div><div><span style="font-size: 15px;">注意：在dealloc要把delegate至为nil，还有就是delegate设置属性的时候要用assign，不要用retain。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;"><strong>委托</strong></span><br><br><span style="font-size: 15px;">在IOS中委托通过一种@protocol的方式实现,所以又称为协议.协议是多个类共享的一个方法列表,在协议中所列出的方法没有响应的实现，由其它人来实现.这叫好比我想买个手机，所以我有个buyIphone 方法,但是我不知道谁那买手机,所以把这个需求发布出去(比如公布在网站上),如果有卖手机的商人(也就是说他能实现buyIphone这个方法)看到，他就会接受我的委托,(在商人自己的类中实现&lt;XXXdelegate&gt;),那么我的委托对象就指向了这个商人..当我要买手机的时候，直接找他就行了.</span><br><a id="more"></a><br><span style="font-size: 15px;">例如:</span><br><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">@protocol MyDelegate<br>-(void)buyIphone:(NSString <em>)iphoneType money:(NSString </em>)money;<br><br>@end<br>@interface My : NSObject<br>{<br>    id&lt;MyDelegate&gt; deleage;<br>}<br>@property(assign,nonatomic)id&lt;MyDelegate&gt; delegate;<br>@end</span></div>
+
+<p><span style="font-size: 15px;">代码中声明了一个协议 名叫Mydelegate,在其中有一个buyIphone方法，即一个委托项。当我要购买手机的时候只需要通过delegate 调用 BuyIphone方法即可.</span></p>
+<p><span style="font-size: 15px;">如下:</span></p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">-(void)willbuy<br>{<br>    [delegate buyIphone:@”iphone 4s” money:@”4888”];<br><br>}</span></div>
+
+<p><span style="font-size: 15px;">我不必关心谁现实了这一委托，只要实现了这个委托的类，并且buyIphone是声明的委托中必须实现的方法，那么就一定能够得到结果.</span></p>
+<p><span style="font-size: 15px;">例如:商人类实现了这一委托(用&lt;Mydelegate&gt;表示实现)</span></p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">#import &lt;Foundation/Foundation.h&gt;<br>#import “My.h”<br>@interface Business : NSObject&lt;MyDelegate&gt;<br><br>@end</span></div>
+
+<p><span style="font-size: 15px;">然后在 @implementation Business 中调用 buyIphone方法</span></p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">#import “Business.h”<br><br>@implementation Business<br><br>-(void)buyIphone:(NSString <em>)iphoneType money:(NSString </em>)money<br>{<br>    NSLog(@”手机有货，这个价钱卖你了，发货中!!”);<br>}<br>@end</span><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy" style="font-size: 15px;">委托是Cocoa中最简单、最灵活的模式之一。委托是指给一个对象提供机会对另一个对象中的变化做出反应或者影响另一个对象的行为。其基本思想是：两个对象协同解决问题。一个对象非常普通，并且打算在广泛的情形中重用。它存储指向另一个对象（即它的委托）的引用，并在关键时刻给委托发消息。消息可能只是通知委托发生了某件事情，给委托提供机会执行额外的处理，或者消息可能要求委托提供一些关键的信息以控制所发生的事情。<br><img src="http://www.1000phone.net/data/attachment/forum/201112/23/191755zeji8jas6qyidyqe.jpg" alt="">&nbsp;4 天前 上传下载附件 (18 KB) 委托方法通常包括3种动词：should、will、did。<br><br>should表示一个动作发生前，通常带有返回值，可以在动作发生之前改变对象状态。<br>will在动作发生前，委托可以对动作做出响应，但不带有返回值。<br>did在动作发生后做出的响应。<br><br>从方法的定义我们不难看出委托模式能够起到两方面的作用：<br><br>第一：委托协助对象主体完成某项操作，将需要定制化的操作通过委托对象来自定义实现，达到和子类化对象主体同样的作用。<br>第二：事件监听，委托对象监听对象主体的某些重要事件，对事件做出具体响应或广播事件交给需要作出响应的对象。<br><br>个人理解采用委托模式的好处在于：<br><br>1、避免子类化带来的过多的子类以及子类与父类的耦合<br>2、通过委托传递消息机制实现分层解耦<br><br>委托模式的实现思路：<br><br>1、通常是在对象主体包含一个委托对象的弱引用：<br><a href="http://tieba.baidu.com/i/sys/jump?un=interface" target="_blank" rel="external">@interface</a>&nbsp;A : NSObject<br>{<br>IBOutlet id delegate;<br>} -(id) delegate;<br>-(void) setDelegate:(id)obj;<br>2、委托对象的实现有两种方式：正式协议和非正式协议，对象主体在协议中定义委托方法，委托对象可以选择实现其中某些委托方法，因此如果通过正式协议定义委托方法需要使用@option。<br><a href="http://tieba.baidu.com/i/sys/jump?un=protocol" target="_blank" rel="external">@protocol</a>&nbsp;NSSearchDelegate<br>@option<br>-(void)didSearchFinish:(<em>NSNotification) aNotification;<br>@end<br>3、连接对象主体和委托，无非就是通过setDelegate:(id)obj来实现。<br><br>4、触发委托方法。<br></em></span><br><br><span style="font-size: 15px;">昨天做了一个demo，用到了简单代理。</span><br><br><span style="font-size: 15px;">delegate是ios编程的一种设计模式。我们可以用这个设计模式来让单继承的objective-c类表现出它父类之外类的特征。昨天这个代理实现如下：</span><br><br><span style="font-size: 15px;">&nbsp;</span><br><br><span style="font-size: 15px;">类GifView是继承自UIView的，它加载在RootViewController上来通过一个Timer播放动画。同时，RootViewController需要知道Timer的每次执行。</span><br><br><span style="font-size: 15px;">代码如下。</span><br><br><span style="font-size: 15px;">首先，定义GifView，在其头文件中定义代理EveryFrameDelegate，同时声明方法- (void)DoSomethingEveryFrame;</span><br><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">#import &lt;UIKit/UIKit.h&gt;<br><br>@protocol EveryFrameDelegate &lt;NSObject&gt;<br><br>- (void)DoSomethingEveryFrame;<br><br>@end<br><br>@interface GifView : UIView<br>{<br>    NSTimer timer;<br>    id &lt;EveryFrameDelegate&gt; delegate;<br>    NSInteger currentIndex;<br>}<br><br>@property (nonatomic, retain) id &lt;EveryFrameDelegate&gt; delegate;<br><br>@end</span></div>
+
+<p><span style="font-size: 15px;">然后，只要在GifView.m中让Timer在每次执行的时候调用delegate来执行DoSomethingEveryFrame，代码如下</span></p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">- (id)initWithFrame:(CGRect)frame<br>{<br><br>    self = [super initWithFrame:frame];<br>    if (self)<br>    {<br>        timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(play) userInfo:nil repeats:YES];<br>        [timer fire];<br>    }<br>    return self;<br>}<br><br>-(void)play<br>{<br>        [delegate DoSomethingEveryFrame];<br><br>}</span></div>
+
+<p><span style="font-size: 15px;">GifView上的工作就完成了。</span></p>
+<p><span style="font-size: 15px;">下面是RootViewController中的代码，RootViewController只要在定义GifView的时候指定其代理为自身，就可以知道Timer的每次执行：</span></p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">- (void)viewDidLoad<br>{<br>    [super viewDidLoad];<br>    // Do any additional setup after loading the view, typically from a nib.    CGRect rect = CGRectMake(0, 0, 200, 200);<br>    GifView *tmp = [[GifView alloc] initWithFrame:rect];<br>    tmp.delegate = self;<br>    [self.view addSubview:tmp];<br>    [tmp release];<br>}<br><br>- (void)DoSomethingEveryFrame<br>{<br>    NSLog(@”I’m the delegate! I’m doing printing!”);<br>}</span></div>
+
+<p><span style="font-size: 15px;">GifView中Timer每次执行都会打印一行</span></p>
+<p><span style="font-size: 15px;">I’m the delegate! I’m doing printing!</span></p>
+<p><span style="font-size: 15px;">故，RootViewController就知道Timer的每次执行了。</span><br></p></div><div class="cnblogs_code_toolbar"><p></p>
+<p><span style="font-size: 15px;">做程序时，经常会碰到这样一种情况：在对象A中有一个对象B，在B中做某个操作时需要调用A对象的某个方法。这时，我们就需要用<a href="http://www.wuleilei.com/" target="_blank" rel="external">代理机制</a>，也叫委托机制。</span></p>
+<p><span style="font-size: 15px;">还记得刚接触面向对象的时候，居然在B对象中又alloc了一个A对象，发现执行方法时没有works，那时不理解新alloc的对象和原来的对象A不是一个东东。</span><br><span style="font-size: 15px;">今天专门补习了一下哈，在网上找了一些资料，综合了一下，写了这篇菜鸟教程。</span></p>
+<p><span style="font-size: 15px;"><a href="http://www.wuleilei.com/" target="_blank" rel="external">委托代理</a>（delegate），顾名思义，把某个对象要做的事情委托给别的对象去做。那么别的对象就是这个对象的代理，代替它来打理要做的事。反映到程序中， 首先要明确一个对象的委托方是哪个对象，委托所做的内容是什么。委托机制在很多语言中都用到的，这只是个通用的思想，网上会有很多关于这方面的<a href="http://www.wuleilei.com/" target="_blank" rel="external">介绍</a>。</span></p>
+<p><span style="font-size: 15px;">下面以一个简单的例子介绍一下委托：</span></p>
+<p><span style="font-size: 15px;">一、新建iPhone项目DelegateDemo；</span></p>
+<p><span style="font-size: 15px;">二、添加UIView类ViewA；</span></p>
+<p><span style="font-size: 15px;">三、ViewA.h的内容如下：</span></p>
+<div class="dp-highlighter bg_cpp"><div class="bar"><div class="tools"><span style="font-size: 15px;"><strong>[cpp]</strong>&nbsp;<a href="http://blog.csdn.net/huifeidexin_1/article/details/7567731" title="view plain" target="_blank" rel="external">view plain</a><a href="http://blog.csdn.net/huifeidexin_1/article/details/7567731" title="copy" target="_blank" rel="external">copy</a></span><div><span style="font-size: 15px;">&nbsp;</span></div></div></div>
+
+<ol>
+<li><span style="font-size: 15px;"><span class="preprocessor">#import&nbsp;&lt;UIKit/UIKit.h&gt;</span>&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">@protocol&nbsp;&lt;a&nbsp;href=<span class="string">“<a href="http://www.wuleilei.com/" target="_blank" rel="external">http://www.wuleilei.com/</a>“</span>&nbsp;target=<span class="string">“_blank”</span>&gt;&lt;span&nbsp;style=<span class="string">“color:#ff0000”</span>&gt;ViewADelegate&lt;/span&gt;&lt;/a&gt;;&nbsp;//申明代理协议&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">@interface&nbsp;ViewA&nbsp;:&nbsp;UIView&nbsp;{&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;&lt;&lt;a&nbsp;href=<span class="string">“<a href="http://www.wuleilei.com/" target="_blank" rel="external">http://www.wuleilei.com/</a>“</span>&nbsp;target=<span class="string">“_blank”</span>&gt;&lt;span&nbsp;style=<span class="string">“color:#ff0000”</span>&gt;ViewADelegate&lt;/span&gt;&lt;/a&gt;&gt;&nbsp;_viewADelegate;&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">}&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">@property&nbsp;(nonatomic,&nbsp;assign)&nbsp;id&nbsp;viewADelegate;&nbsp;<span class="comment">//定义代理的属性，同时要在.m加中</span>&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">@end&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;"><span class="comment">//代理协议的内容</span>&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">@protocol&nbsp;&lt;a&nbsp;href=<span class="string">“<a href="http://www.wuleilei.com/" target="_blank" rel="external">http://www.wuleilei.com/</a>“</span>&nbsp;target=<span class="string">“_blank”</span>&gt;&lt;span&nbsp;style=<span class="string">“color:#ff0000”</span>&gt;ViewADelegate&lt;/span&gt;&lt;/a&gt;&nbsp;&lt;NSObject&gt;&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">-&nbsp;(<span class="keyword">void</span>)&lt;span&nbsp;style=<span class="string">“color:#008080”</span>&gt;viewACallBack&lt;/span&gt;;&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">@end&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">View.m中：&nbsp;&nbsp;</span></li>
+<li><span style="font-size: 15px;">&lt;span&gt;&nbsp;&lt;/span&gt;@synthesize&nbsp;viewADelegate&nbsp;=&nbsp;_viewADelegate;&nbsp;&nbsp;</span></li></ol></div>
+
+<p><span style="font-size: 15px;">三、在DelegateDemoViewController.m中：</span><br><span style="font-size: 15px;">- (void)viewDidLoad {<br>ViewA *viewA = [[ViewA alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];<br>viewA.viewADelegate = self; //<a href="http://www.wuleilei.com/" target="_blank" rel="external">设置viewA的代理为当前对象自己</a><br>[self.view addSubview:viewA];<br>[viewA release];<br>[super viewDidLoad];<br>}</span></p>
+<ul>
+<li>(void)viewACallBack {<br>NSLog(@”Hi, I am back!”);<br>}</li>
+</ul>
+<p><span style="font-size: 15px;">四、</span></p>
+<p><span style="font-size: 15px;">点击<a href="http://www.wuleilei.com/Public/download.php?id=28" target="_blank" rel="external">此处</a>下载示例。</span><br></p></div></div></div></div><div id="sharePanel" class="share_buttons"><span style="font-size: 15px;">分享到：&nbsp;<a class="share_sina" title="分享到新浪微博" name="sina"></a><a class="share_qq" title="分享到腾讯微博" name="qq"></a></span></div><p></p>
+<p><span style="font-size: 15px;">&nbsp;</span></p>
+<p><div class="article_next_prev"><span style="font-size: 15px;">&nbsp;</span></div><img src="http://counter.cnblogs.com/blog/rss/3315494" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3315494.html" target="_blank" rel="external">[转]ios中关于delegate （委托）的使用心得</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<div id="article_content" class="article_content"><span style="font-size: 15px;">从开始从事OC工作到现在大概1年多了，从当初接触oc的”协议”的不明白，到现在代码中随处可见的委托，协议，其中感悟颇多。</span><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">首先，大家应该都明白的是委托是协议的一种，顾名思义，就是委托他人帮自己去做什么事。也就是当自己做什么事情不方便的时候，就可以建立一个委托，这样就可以委托他人帮自己去实现什么方法。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">其次，我简单的总结了一下自己用到的委托的作用有两个，一个是传值，一个是传事件。</span></div><div><span style="font-size: 15px;">1.所谓传值经常用在b类要把自己的一个数据或者对象传给a类，让a类去展示或者处理。（切分紧耦合，和代码分块的时候经常用）</span></div><div><span style="font-size: 15px;">2.所谓传事件就是a类发生了什么事，把这件事告诉关注自己的人，也就是委托的对象，由委托的对象去考虑发生这个事件后应该做出什么反映。（这个经常见，例如在异步请求中，界面事件触发数据层改变等等）</span></div><div><span style="font-size: 15px;">3.利用委托赋值，这种方法感觉是为了不暴露自己的属性就可以给自己复值，而且这样更方便了类的管理，只有在你想要让别人给你赋值的时候才调用，这样的赋值更可控一些。（例如tableView中的委托（dateSource）中常见）。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">最后，我想分享一下在使用委托的时候的一些心得和注意事项。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">心得：delegate的命名要准确，尽量看名字就知道用法。delegate和通知有的用法有些象，但是前者是单对单的，后者是单对多的情况。</span></div><div><span style="font-size: 15px;">注意：在dealloc要把delegate至为nil，还有就是delegate设置属性的时候要用assign，不要用retain。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;"><strong>委托</strong></span><br><br><span style="font-size: 15px;">在IOS中委托通过一种@protocol的方式实现,所以又称为协议.协议是多个类共享的一个方法列表,在协议中所列出的方法没有响应的实现，由其它人来实现.这叫好比我想买个手机，所以我有个buyIphone 方法,但是我不知道谁那买手机,所以把这个需求发布出去(比如公布在网站上),如果有卖手机的商人(也就是说他能实现buyIphone这个方法)看到，他就会接受我的委托,(在商人自己的类中实现&lt;XXXdelegate&gt;),那么我的委托对象就指向了这个商人..当我要买手机的时候，直接找他就行了.</span><br>]]></summary>
+    
+      <category term="delegate" scheme="http://localhost:4000/tags/delegate/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/categories/iOS/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/iOS/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Example of [NSDictionary getObjects:andKeys:] 的示范 - duger]]></title>
+    <link href="http://localhost:4000/2013/09/09/Example-of-%5BNSDictionary-getObjectsandKeys%5D-%E7%9A%84%E7%A4%BA%E8%8C%83---duger.html"/>
+    <id>http://localhost:4000/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html</id>
+    <published>2013-09-09T07:20:00.000Z</published>
+    <updated>2014-09-04T04:06:15.000Z</updated>
+    <content type="html"><![CDATA[<p><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id obj &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id key &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;%@ -&amp;gt; %@&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; obj&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;</code></span></p>
+<p><span style="font-size: 15px;">还有一个：</span><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id __unsafe_unretained objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id __unsafe_unretained keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id obj &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id key &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;%@ -&amp;gt; %@&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; obj&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;</code></span><img src="http://counter.cnblogs.com/blog/rss/3309919" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3309919.html" target="_blank" rel="external">Example of [NSDictionary getObjects:andKeys:] 的示范</a>，转载请注明。</p>
+]]></content>
+    
+    
+      <category term="NSDictionary" scheme="http://localhost:4000/tags/NSDictionary/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[initWithString和initWithFormat的区别 - duger]]></title>
+    <link href="http://localhost:4000/2013/09/06/initWithString%E5%92%8CinitWithFormat%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
+    <id>http://localhost:4000/2013/09/06/initWithString和initWithFormat的区别---duger.html</id>
+    <published>2013-09-06T06:02:00.000Z</published>
+    <updated>2014-09-04T09:48:11.000Z</updated>
+    <content type="html"><![CDATA[<p><span><span>网上看到一篇文章，分析initWithString和initWithFormat的区别，用一下他的用例。</span></span></p>
+<div>&nbsp;</div><div>下面是测试代码：</div><div><br><br><span>NSString</span>&nbsp;<span>* str =[[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithString</span><span>:</span>@”this is from initWithString function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>&nbsp;<br><br><span>str = [[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithFormat</span><span>:</span>@”this is from initWithFormat function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithFormat] m_addr is %ld retainCount is %d”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br><span><span>&nbsp;</span></span><br></div><br><a id="more"></a><br><span><span>下面是LOG的结果：</span></span><br><div><span>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</span></div>
+
+<p>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</p>
+<p>&nbsp;this is from [[NSString alloc] initWithFormat] m_addr is 82076688 retainCount is 1</p>
+<p>&nbsp;</p>
+<p>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</p>
+<p>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</p>
+<p>&nbsp;this is from [[NSString alloc] initWithFormat] m_addr is 78748112 retainCount is 1</p>
+<p>&nbsp;</p>
+<p>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</p>
+<p>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</p>
+<p>&nbsp;this is from [[NSString alloc] initWithFormat] m_addr is 78777072 retainCount is 1</p>
+<p><span>&nbsp;</span></p>
+<div>我将上面这段测试代码调用了三次，得到以上的LOG结果。顺便得出这么几条结论。对于不对，请大家鉴定。</div><div>1.从两个变量的地址看，两个变量的地址差据较大。前者的地址非常靠前。</div><div>2.从<span>release</span>看，前者无论被release多少次，都不会被释放，而且的值不变，而后者只要release一次，变量即消亡。</div><div>3.前者的releaseCount=&nbsp;<span>NSIntegerMax</span>,而<span>NSIntegerMax ==</span><span>INT_MAX&nbsp;</span>,而<span>&nbsp;UINT_MAX== (INT_MAX <em>&nbsp;<span>2U</span>&nbsp;+&nbsp;<span>1U</span>)</em></span>。</div><div>U是指无符号整型，而我们默认的int和NSInteger是有符号的，在32位系统中，NSIntegerMax=0X7FFFFFFF，对其乘以2U，即一次向左挪一位。结果为0XFFFFFFFE，再加1U为0XFFFFFFFF，即无符号的最大值。</div><div>然后根据苹果官方对于retainCount方法的描述：</div><div><br><br><strong><span>retainCount</span></strong><br><br>Returns the receiver&rsquo;s reference count. (required)<br><div>- (NSUInteger)retainCount</div><div><br><br><strong>Return Value</strong><br><br>The receiver&rsquo;s reference count.<br></div><div><br><br><em>*Discussion</em><br><br>You might override this method in a class to implement your own reference-counting scheme. For objects that never get released (that is, their&nbsp;<code>[release](file:///Developer/Platforms/iPhoneOS.platform/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleiOS4_2.iOSLibrary.docset/Contents/Resources/Documents/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/release)</code>&nbsp;method does nothing), this method should return&nbsp;<code>UINT_MAX</code>, as defined in&nbsp;<code>&amp;lt;limits.h&amp;gt;</code>.<br><br><span>小生窃以为，此处的UINT_MAX和</span><span>NSIntegerMax是一样的，都是表示所在类型的最大值。所以，initWithString这个方法初始化后的对象是不可能被release的或者说，它的release方法啥也不干。</span><br><br><span style="font-size: large;"><span>验证了上面的分析2.因为他</span></span><span>不可能被release的或者说，它的release方法啥也不干，所以我们调用无数次release都没有起到预先想想的作用。</span><br><br><span style="text-decoration: line-through;">为什么会导致这样的情况呢？</span><br><br><span style="text-decoration: line-through;">我们再次把目光转向地址。眼尖的同学可能会看到initWithString申请的地址每次都是一样的，而initWithFormat的地址每次都不一样，这个说明什么？</span><br><br><span style="text-decoration: line-through;">说明initWithString的地址是静态的，而initWithFormat是动态的。为什么前者是静态的，而后者是动态的？</span><br><br><span style="text-decoration: line-through;">结合上面关于retainCount的分析，小生窃以为initWithString的地址申请是在编译是进行的，这样才能说明为什么它的地址空间如此靠前。只有在编译是进行的，他才是静态的。</span><br><br><span style="text-decoration: line-through;">对于initWithString生成的对象，对其进行dealloc时，程序会报错（这里就不贴LOG了）。而后者initWithFormat不会报错。这进一步验证了initWithString生成的是静态对象，而initWithFormat是动态的。</span><br><br><span style="text-decoration: line-through;">&nbsp;</span><br><br><span style="text-decoration: line-through;">结论：initWithString生成的对象是在编译是申请地址空间，而且在程序中不能释放，不建议使用。（当然也有可能在某种情况下会使用到这个方法，在此不多加讨论）。</span><br></div></div>
+
+<hr>
+<p><span style="font-size: 14pt;"><strong>以下解释更为准确：</strong></span></p>
+<p><span style="font-size: 16px;">initWithString一个是作为常量字符串，只读数据，</span><br><span style="font-size: 16px;">[[NSString&nbsp;alloc]initWithString:@”this&nbsp;is&nbsp;from&nbsp;initWithString&nbsp;function”];</span><br><span style="font-size: 16px;">这段代码是返回一个不可变对象，而常量字符串本就是不可变，所以这个时候内存会通过isa优化，alloc的区域作废，对象直接指向了”this&nbsp;is&nbsp;from&nbsp;initWithString&nbsp;function”这段常量字符串存储区,作为常量字符串没有retain，所以你retain无数次还是哪个UINR_MAX</span><br><span style="font-size: 16px;">[[NSMutableString&nbsp;alloc]initWithString:@”this&nbsp;is&nbsp;from&nbsp;initWithString&nbsp;function”];</span><br><span style="font-size: 16px;">而这一个是返回一个可变的对象，会另申请空间存放后面的常量字符串，这时其retaincount&nbsp;就为1</span><br><span style="font-size: 16px;">initWithFormat:是一编码格式读入数据，数据存放在哪是根据读入的参数确定的，跟initWithString是右区别的的；</span></p>
+<p><span style="font-size: 16px;">[[NSString&nbsp;alloc]initWithFormat:@”dddd”];</span><br><span style="font-size: 16px;">count＝1；</span></p>
+<p><span style="font-size: 16px;">[[NSMutableString&nbsp;alloc]&nbsp;initWithFormat:@””];</span><br><span style="font-size: 16px;">count＝1；</span><br><span style="font-size: 16px;">不管返回的是可变和不可变对象，其都会发送一个retain&nbsp;和autoRelease指令</span><br><span style="font-size: 16px;">这两个结果都一样</span></p>
+<hr>
+<p><span style="font-size: 16px;"><span>&nbsp;</span></span><span style="font-size: 16px;">NSString <em> str1 = [[NSString alloc] initWithString:@”string 1”];</em></span><br><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;NSLog(@”str1’s address %ld, retain count %d”, (long)str1, [str1 retainCount]);</span><br><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;NSString  str2 = @”This is string 2”;</span><br><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;NSLog(@”str2’s address %ld, retain count %d”, (long)str2, [str2 retainCount]);</span><br><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;NSString * str3 = @”string 1”;</span><br><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;NSLog(@”str3’s address %ld, retain count %d”, (long)str3, [str3 retainCount]);</span></p>
+<p><span style="font-size: 16px;">，运行后输出：</span><br><span style="font-size: 16px;">2011-07-09 21:49:06.526 Ex5_push_pop_nav[1788:207] str1’s address 18176, retain count 2147483647</span><br><span style="font-size: 16px;">2011-07-09 21:49:06.526 Ex5_push_pop_nav[1788:207] str2’s address 18208, retain count 2147483647</span><br><span style="font-size: 16px;">2011-07-09 21:49:06.527 Ex5_push_pop_nav[1788:207] str3’s address 18176, retain count 2147483647</span></p>
+<p><span style="font-size: 16px;">可见，str1和str3是在复用内存地址的。或者可以说[[NSString alloc] initWithString:@”string 1”]; 等价于@”string 1”;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">所以说只要你代码中写了&nbsp;</span><br><span style="font-size: 16px;">NSString * str3 = @”string 1”;</span><br><span style="font-size: 16px;">实际上就会在程序的静态变量区存在一个值为 &rdquo;string 1”的字符串常量。</span><br><span style="font-size: 16px;">而str3只是指向这个常量。因为这是一个常量，所以它的retainCount是MAX_INT</span><br><span style="font-size: 16px;">多次值为”string 1&ldquo;的变量产生，都会指向这一个常量的地址。</span></p>
+<p><span style="font-size: 16px;">如果你把代码写成：</span><br><span style="font-size: 16px;">str = [[NSString alloc] initWithFormat:@”this is from initWithFormat function”];</span><br><span style="font-size: 16px;">实际上是把常量区的复制了一份在堆中，所以你可以release了。但是 @”this is from initWithFormat function” 这个变量本身还是存放在常量区了，所以并没有省内存，反而是增加了内存的使用。</span></p>
+<p><span style="font-size: 16px;">所以，如果直接用一个字符串产生另一个字符串，尽量少用 initWithFormat，而不是initWithString。</span></p>
+<p><span style="font-size: 16px;">而且，从功能上来说，initWithFormat可以支持 %d 等格式化字串，所以功能更强大一些，但是缺点就是产生了额外的内存空间。</span><br><img src="http://counter.cnblogs.com/blog/rss/3305348" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3305348.html" target="_blank" rel="external">initWithString和initWithFormat的区别</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p><span><span>网上看到一篇文章，分析initWithString和initWithFormat的区别，用一下他的用例。</span></span></p>
+<div>&nbsp;</div><div>下面是测试代码：</div><div><br><br><span>NSString</span>&nbsp;<span>* str =[[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithString</span><span>:</span>@”this is from initWithString function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>&nbsp;<br><br><span>str = [[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithFormat</span><span>:</span>@”this is from initWithFormat function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithFormat] m_addr is %ld retainCount is %d”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br><span><span>&nbsp;</span></span><br></div><br>]]></summary>
+    
+      <category term="NSString" scheme="http://localhost:4000/tags/NSString/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger]]></title>
+    <link href="http://localhost:4000/2013/08/29/%E5%9C%A8Mac-OS-X%E4%B8%AD%E9%85%8D%E7%BD%AEApache-%EF%BC%8B-PHP-%EF%BC%8B-MySQL---duger.html"/>
+    <id>http://localhost:4000/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html</id>
+    <published>2013-08-29T05:44:00.000Z</published>
+    <updated>2014-09-04T09:48:58.000Z</updated>
+    <content type="html"><![CDATA[<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
+<div><br><br><strong><span style="font-size: 14px;">&nbsp;</span></strong><br></div>
+
+<p><span style="font-size: 14px;">Mac OS X 内置Apache 和 PHP，使用起来非常方便<strong>。</strong>本文以Mac OS X 10.6.3和<ins>&nbsp;10.8<strong>.</strong>1</ins>为例。主要内容包括：</span></p>
+<p><strong><span style="font-size: 14px;">启动Apache<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;">有两种方法：</span></p>
+<ol>
+<li><span style="font-size: 14px;">打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong><ins>注意，从Mac OS X从10.8开始取消了 &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong></ins></span></li>
+<li><p><span style="font-size: 14px;">打开&ldquo;终端（terminal）&rdquo;，然后（注意，sudo需要的密码就是系统的root帐号密码）</span></p>
+<pre><code>1.  运行&amp;ldquo;`sudo apachectl start`&amp;rdquo;，再输入帐号密码，这样Apache就运行了<span class="keyword">*</span><span class="keyword">*</span>。<span class="keyword">*</span><span class="keyword">*</span>
+</code></pre><ol>
+<li>运行&ldquo;<code>sudo apachectl －v</code>&rdquo;，你会看到Mac OS X的Apache版本信息，如10<strong>.</strong>8.1中：<code>Server version: Apache/2.2.22 (Unix)
+Server built:   Jun 20 2012 13:57:09</code></li>
+</ol>
+</li>
+</ol>
+<p><span style="font-size: 14px;">如此在浏览器中输入&ldquo;<a href="http://localhost&rdquo;，就可以看到一个内容为&ldquo;It" target="_blank" rel="external">http://localhost&rdquo;，就可以看到一个内容为&ldquo;It</a> works<strong>!</strong>&rdquo;的页面，其位于&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;下，这就是Apache的默认根目录<strong>。</strong></span><br><a id="more"></a><br><span style="font-size: 14px;">注意：开启了Apache就是开启了&ldquo;Web共享&rdquo;，这时联网用户就会通过&ldquo;<a href="http://[本地IP]/&rdquo;来访问&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;目录，通过&ldquo;http://[本地IP]/~[用户名]&rdquo;来访问&ldquo;/Users/[用户名]/Sites/&rdquo;目录**。**" target="_blank" rel="external">http://[本地IP]/&rdquo;来访问&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;目录，通过&ldquo;http://[本地IP]/~[用户名]&rdquo;来访问&ldquo;/Users/[用户名]/Sites/&rdquo;目录**。**</a><ins>值得注意的是，Mac OS X在10.8中取消&rdquo;Web共享（Web Sharing）&rdquo;时，也移除了&ldquo;/Users/[用户名]/Sites/&rdquo;目录，所以10<strong>.</strong>8中访问&ldquo;<a href="http://[本地IP]/~[用户名]&rdquo;会显示&ldquo;403" target="_blank" rel="external">http://[本地IP]/~[用户名]&rdquo;会显示&ldquo;403</a> Forbidden&rdquo;，但<a href="http://[本地IP]/依旧可以访问**。**" target="_blank" rel="external">http://[本地IP]/依旧可以访问**。**</a></ins>可以到&ldquo;系统偏好设置&rdquo; -&gt; &ldquo;安全（Security）&rdquo; -&gt; &ldquo;防火墙（Firewall）&rdquo;，开启防火墙，然后在&ldquo;防火墙选项（Firewall Options）&rdquo;中勾上&ldquo;组织所有进入连接（block all incoming connections）&rdquo;即可<strong>。</strong>也可以通过设置httpd.conf来只允许localhost和127.0<strong>.</strong>0.1访问&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;。</span><br><span style="font-size: 14px;">`&lt;Directory “/Library/WebServer/Documents”&gt;<br>    ……<br>    #</span></p>
+<pre><code><span class="comment"># Controls who can get stuff from this server**.**</span>
+<span class="comment">#</span>
+Order allow,deny
+<span class="comment">#Allow from all</span>
+Allow from 127<span class="keyword">*</span><span class="keyword">*</span>.<span class="keyword">*</span><span class="keyword">*</span>0.0<span class="keyword">*</span><span class="keyword">*</span>.<span class="keyword">*</span><span class="keyword">*</span>1
+Allow from localhost 
+</code></pre><p>&lt;/Directory&gt;<br>`</p>
+<p><strong><span style="font-size: 14px;">运行PHP<strong>&nbsp;</strong></span></strong></p>
+<ol>
+<li><span style="font-size: 14px;">在终端中运行&ldquo;<code>sudo vi /etc/apache2/httpd.conf</code>&rdquo;，打开Apache的配置文件<strong>。</strong>（如果不习惯操作终端和vi，可以设置<a href="http://apple.tgbus.com/tutorial/soft/200811/20081125100105.shtml" target="_blank" rel="external">在Finder中显示所有系统隐藏文件&nbsp;</a>，记得设置完毕后需要<a href="http://www.macdocks.com/2009/07/14/mac-tips-%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%E9%87%8D%E5%90%AFmac-os-x-finder/" target="_blank" rel="external">重启Finder&nbsp;</a>，然后就可以找到对应文件，随心所欲编辑了，需要注意的是某些文件的修改还是需要<a href="http://support.apple.com/kb/HT1528?viewlocale=zh_CN" target="_blank" rel="external">开启root帐号&nbsp;</a>，但整体上还是在终端上使用<code>sudo</code>来临时获取root权限比较安全<strong>。</strong>）</span></li>
+<li><span style="font-size: 14px;">找到&ldquo;<code>#LoadModule php5_module libexec/apache2/libphp5**.**so</code>&rdquo;，把前面的#号去掉，保存（在命令行输入<code>:w</code>）并退出vi（在命令行输入<code>:q</code>）<strong>。</strong></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo cp /etc/php.ini.default /etc/php.ini</code>&rdquo;，这样就可以运行<code>sudo vi /etc/php.ini</code>来编辑php.ini配置各种功能了<strong>。</strong>比如：</span><span style="font-size: 14px;"><code>;通过下面两项来调整PHP提交文件的最大值，如phpMyAdmin中导入数据的最大值
+upload_max_filesize = 2M
+post_max_size = 8M
+;通过display_errors来控制是否显示PHP程序的报错信息，这在调试PHP程序时非常有用
+display_errors = Off</code></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo apachectl restart</code>&rdquo;，重启Apache，这样PHP就可以用了<strong>。</strong></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo cp /Library/WebServer/Documents/index.html**.**en /Library/WebServer/Documents/info.php</code>&rdquo;，即在Apache的根目录下复制index.html<strong>.</strong>en文件并重命名为info.php。</span></li>
+<li><span style="font-size: 14px;">在终端中运行&ldquo;<code>sudo vi /Library/WebServer/Document/info.php</code>&rdquo;，这样就可以在vi中编辑info.php文件了<strong>。</strong>在&ldquo;It&rsquo;s works!&rdquo;后面加上&ldquo;<code>&amp;lt;**?**php phpinfo(); ?&amp;gt;</code>&rdquo;，然后保存之。如此就可以在<a href="http://localhost/info.php中看到有关PHP的信息，比如10**.**8中内置PHP版本号是5.3.13**。**" target="_blank" rel="external">http://localhost/info.php中看到有关PHP的信息，比如10**.**8中内置PHP版本号是5.3.13**。**</a></span></li>
+</ol>
+<p><strong><span style="font-size: 14px;">安装MySQL<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;">Mac OS X没有内置MySQL，所以需要自己手动安装，目前MySQL的最稳定版本是5<strong>.</strong>5<strong>。</strong><a href="http://dev.mysql.com/doc/refman/5.5/en/macosx-installation.html" target="_blank" rel="external">MySQL提供了Mac OS X下的安装说明&nbsp;</a>。</span></p>
+<ol>
+<li><span style="font-size: 14px;"><a href="http://dev.mysql.com/downloads/mysql/5.5.html" target="_blank" rel="external">下载MySQL 5<strong>.</strong>5&nbsp;</a>。选择合适版本，如这里选择了mysql-5<strong>.</strong>5.27-osx10.6-x86_64.dmg。</span></li>
+<li><span style="font-size: 14px;">运行dmg，会发现里面有4个文件<strong>。</strong>首先点击安装mysql-5.5.27-osx10.6-x86_64.pkg，这是MySQL主安装包<strong>。</strong>一般情况下，安装文件会自动把MySQL安装到<code>/usr/local</code>下的同名文件夹下<strong>。</strong>如运行&ldquo;<code>mysql-5**.**5.27-osx10.6-x86_64.dmg</code>&rdquo;会把MySQL安装到&ldquo;<code>/usr/local/mysql-5**.**5.27-osx10.6-x86_64</code>&rdquo;中，一路默认安装完毕<strong>。</strong>（注意，从10.8开始Mac OS X的权限更加严格，直接点击会提示&ldquo;mysql-5.5.27-osx10<strong>.</strong>6-x86_64.pkg can&rsquo;t be opened because it is from an unidentified developer<strong>.</strong>&nbsp;Your security preferences allow installation of only apps from the Mac App Store and identified developers<strong>.</strong>&rdquo;阻止了安装，你可以使用双指单击该安装文件，在弹出菜单中选择&ldquo;用&hellip;打开（open with）&rdquo;，再选择&ldquo;安装（Installer）&rdquo;就可以接着安装了<strong>。</strong>）</span></li>
+<li><span style="font-size: 14px;">安装第2个文件MySQLStartupItem.pkg，MySQL就会自动在开机时启动了<strong>。</strong>（注意，10.8的安装方法同上。）</span></li>
+<li><span style="font-size: 14px;">安装第3个文件MySQL.prefPane，就会在&ldquo;系统设置偏好&rdquo;中看到&ldquo;MySQL&rdquo;的ICON，通过它就可以控制MySQL是否开启，以及开机时是否自动运行<strong>。</strong>到这里MySQL就基本安装完毕了。（注意，10.8中用双指单击该安装文件，在弹出的菜单中选择&ldquo;用&hellip;打开（open with）&rdquo;，然后选择&ldquo;系统偏好（System Perference）&rdquo;就可以接着安装了<strong>。</strong>）</span></li>
+<li><p><span style="font-size: 14px;">通过运行&ldquo;<code>sudo vi /etc/bashrc</code>&rdquo;，在bash配置文件中加入<code>mysqlstart</code><strong>、</strong><code>mysql</code>和<code>mysqladmin</code>的别名（注意：修改完毕之后需要退出&ldquo;终端（Terminal）&rdquo;之后重新进入，这些命令才会生效）：</span><span style="font-size: 14px;"><code>#mysql
+alias mysqlstart=&#39;sudo /Library/StartupItems/MySQLCOM/MySQLCOM restart&#39;
+alias mysql=&#39;/usr/local/mysql/bin/mysql&#39;
+alias mysqladmin=&#39;/usr/local/mysql/bin/mysqladmin&#39;</code></span></p>
+<p><span style="font-size: 14px;">这样就可以在终端中比较简单地通过命令进行相应的操作<strong>。</strong>由于开始安装MySQLStartupItem.pkg到&ldquo;<code>/Library/StartupItems/MySQLCOM/</code>&rdquo;来控制MySQL的运行<strong>、</strong>自动运行<strong>、</strong>停止、关闭之类。在MySQL没有启动时，直接运行<code>mysql</code>或<code>mysqladmin</code>命令会提示&ldquo;<code>Can&#39;t connect to local MySQL server through socket &#39;/tmp/mysql.sock&#39; (2)</code>&rdquo;，所以我们可以通过控制面板或者直接运行<code>mysqlstart</code>命令来启动MySQL，之后再运行<code>mysql</code>或<code>mysqladmin</code>命令就正常了<strong>。</strong>比如安装完毕后MySQL的<code>root</code>默认密码为空，如果要设置密码可以在终端运行&ldquo;<code>mysqladmin -u root password &quot;mysqlpassword&quot;</code>&rdquo;来设置，其中mysqlpassword即root的密码<strong>。</strong>更多相关内容可以参考<a href="http://dev.mysql.com/doc/refman/5.5/en/resetting-permissions.html" target="_blank" rel="external">B.5<strong>.</strong>4.1. How to Reset the Root Password&nbsp;</a>。</span></p>
+</li>
+</ol>
+<p><span style="font-size: 14px;">注意：Mac OS X的升级或其他原因可能会导致ＭySQL启动或开机自动运行时，在ＭySQL操作面板上会提示&ldquo;<code>Warning:The /usr/local/mysql/data directory is not owned by the &#39;mysql&#39; or &#39;_mysql&#39;&amp;nbsp;</code>&rdquo;，这应该是某种情况下导致<code>/usr/local/mysql/data</code>的宿主发生了改变，只需要运行&ldquo;<code>sudo chown -R mysql /usr/local/mysql/data</code>&rdquo;即可<strong>。</strong></span></p>
+<p><span style="font-size: 14px;">另外，<a href="http://www.exp2up.com/2009/03/11/mac%E4%B8%8A%E7%9A%84php%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5mysql/" target="_blank" rel="external">使用PHP连接MySQL可能会报错&nbsp;</a>&ldquo;Can&rsquo;t connect to local MySQL server through socket &lsquo;/var/mysql/mysql.sock&rsquo;&rdquo;，或使用localhost无法连接MySQL而需要127<strong>.</strong>0<strong>.</strong>0.1，原因是连接时php默认去找<code>/var/mysql/mysql.sock</code>了，但MAC版的MYSQL改动了文件位置，放在/tmp下了<strong>。</strong>处理办法是按如下修改php.ini：</span><br><span style="font-size: 14px;"><code>mysql.default_socket = /tmp/mysql.sock</code></span></p>
+<p><strong><span style="font-size: 14px;">使用phpMyAdmin<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;"><a href="http://www.phpmyadmin.net/" target="_blank" rel="external">phpMyAdmin&nbsp;</a>是用PHP开发的管理MySQL的程序，非常的流行和实用<strong>。</strong>能够使用phpMyAdmin管理MySQL是检验前面几步效果的非常有效方式。</span></p>
+<ol>
+<li><span style="font-size: 14px;"><a href="http://www.phpmyadmin.net/home_page/downloads.php" target="_blank" rel="external">下载phpMyAdmin&nbsp;</a><strong>。</strong>选择合适的版本，比如这里选择phpMyAdmin-3.5.22-all-languages.tar<strong>.</strong>bz2这个版本。</span></li>
+<li><p><span style="font-size: 14px;">把&ldquo;下载（downloads）&rdquo;中phpMyAdmin-3<strong>.</strong>5.22-all-languages.tar<strong>.</strong>bz2文件解压到&ldquo;<code>&amp;nbsp;/Library/WebServer/Documents/</code>&rdquo;中，并改名为phpmyadmin<strong>。</strong></span><span style="font-size: 14px;">`sudo tar -xf ~/Downloads/phpMyAdmin-3<strong>.</strong>5.2.2-all-languages.tar.bz2 -C</span></p>
+<pre><code>     <span class="regexp">/Library/</span>WebServer<span class="regexp">/Documents/</span>
+</code></pre><p>sudo mv /Library/WebServer/Documents/phpMyAdmin-3<strong>.</strong>5.2.2-all-languages</p>
+<pre><code>    <span class="regexp">/Library/</span>WebServer<span class="regexp">/Documents/</span>phpmyadmin
+</code></pre><p>`</p>
+<p></p>
+</li>
+<li><span style="font-size: 14px;">复制&ldquo;<code>/Library/WebServer/Documents/phpmyadmin/</code>&rdquo;中的config.sample.inc.php，并命名为config.inc.php</span></li>
+<li><p><span style="font-size: 14px;">编辑config.inc.php，修改如下：</span><span style="font-size: 14px;">`用于Cookie加密，随意的长字符串<br>$cfg[‘blowfish_secret’] = ‘a8b7c6d’;</span></p>
+<p>当phpMyAdmin中出现&ldquo;#2002 无法登录 MySQL 服务器（#2002 Cannot log in to the MySQL server）&rdquo;时，<br><a href="http://achan.me/2010/04/mysql-error-2002.html" target="_blank" rel="external">请把localhost改成127<strong>.</strong>0.0.1就ok了 </a>，<br>这是因为MySQL守护程序做了IP绑定（bind-address =127<strong>.</strong>0.0.1）造成的<br>$cfg[‘Servers’][$i][‘host’] = ‘localhost’;</p>
+<p>把false改成true，这样就可以访问无密码的MySQL了，<br>即使MySQL设置了密码也可以这样设置，然后登录phpMyAdmin时输入密码<br>$cfg[‘Servers’][$i][‘AllowNoPassword’] = false;<br>`</p>
+</li>
+<li><span style="font-size: 14px;">这样就可以通过<code>http://localhost/phpmyadmin</code>访问phpMyAdmin了<strong>。</strong>此时会看到一个提示&ldquo;无法加载 mcrypt 扩展，请检查您的 PHP 配置。（The mcrypt extension is missing. Please check your PHP configuration<strong>.</strong>）&rdquo;，这会涉及到下一节安装MCrypt扩展了。</span></li>
+</ol>
+<p><strong><span style="font-size: 14px;">配置PHP的MCrypt<strong>&nbsp;</strong>扩展</span></strong></p>
+<p><span style="font-size: 14px;"><a href="http://mcrypt.sourceforge.net/" target="_blank" rel="external">MCrypt&nbsp;</a>是一个功能强大的加密算法扩展库，它包括有22种算法，phpMyAdmin依赖这个PHP扩展库<strong>。</strong>但在Mac OS X下的安装却不那么友善，具体如下：</span></p>
+<ol>
+<li><span style="font-size: 14px;">下载<a href="http://sourceforge.net/projects/mcrypt/files/Libmcrypt/" target="_blank" rel="external">libmcrypt-2<strong>.</strong>5.8.tar.gz&nbsp;</a><strong>。</strong></span></li>
+<li><span style="font-size: 14px;">在终端执行如下命令（注意如下命令需要安装<a href="http://developer.apple.com/xcode/" target="_blank" rel="external">Xcode&nbsp;</a>支持，可直接去Mac App Store下载，安装完毕后可能会发现在终端运行<code>**.**/configure --disable-posix-threads --enable-static</code>会报错，运行<code>make</code>会提示命令不存在，此时还需要打开Xcode，然后在Xcode的软件&ldquo;配置（Preference&hellip;）&rdquo;）-&gt; &ldquo;下载（Downloads）&rdquo; 中安装 &ldquo;命令行工具（Command Line Tools）&rdquo;：</span><span style="font-size: 14px;"><code>cd ~/Downloads
+tar -zxvf libmcrypt-2**.**5.8.tar.bz2
+cd libmcrypt-2.5**.**8
+./configure --disable-posix-threads --enable-static
+make
+sudo make install</code></span></li>
+<li><span style="font-size: 14px;">下载<a href="http://us2.php.net/get/php-5.3.13.tar.bz2/from/a/mirror" target="_blank" rel="external">PHP源码文件php-5<strong>.</strong>3.13.tar<strong>.</strong>bz2&nbsp;</a>，记得选择中国镜像会比较快。Mac OS X 10.6.3中预装的PHP版本是5<strong>.</strong>3.1，10.8的版本是5.3<strong>.</strong>13，而现在<a href="http://us2.php.net/downloads.php" target="_blank" rel="external">最新的PHP版本是5.4.6&nbsp;</a>，所以需要依据自己的实际情况选择对应的版本，本文以10.8的PHP版本为例<strong>。</strong></span></li>
+<li><p><span style="font-size: 14px;">在终端执行如下命令，把php-5.3.13.tar.bz2，并<a href="http://www.coolestguyplanettech.com/how-to-install-mcrypt-for-php-on-mac-osx-lion-10-7-development-server/" target="_blank" rel="external">配置autoconf&nbsp;</a>（在新的Mac OS X的Xcode中需要自己配置），然后才能运行<code>phpize</code>命令：</span><span style="font-size: 14px;">`cd ~/Downloads<br>tar -zxvf php-5<strong>.</strong>3.13.tar.bz2</span></p>
+<p>cd php-5.3<strong>.</strong>13/ext/mcrypt<br>curl -O <a href="http://ftp.gnu.org/gnu/autoconf/autoconf-latest.tar**.**gz" target="_blank" rel="external">http://ftp.gnu.org/gnu/autoconf/autoconf-latest.tar**.**gz</a><br>tar -zxvf autoconf-latest.tar<strong>.</strong>gz<br>cd autoconf-2.69<br>./configure<br>make<br>sudo make install</p>
+<p>cd ..<br>phpize<br><strong>.</strong>/configure<br>make<br>sudo make install<br>`</p>
+</li>
+<li><p><span style="font-size: 14px;">打开php.ini</span><span style="font-size: 14px;"><code>sudo vi /etc/php.ini</code></span></p>
+<p><span style="font-size: 14px;">在php.ini中加入如下代码，并保存后退出，然后重启Apache</span><br><span style="font-size: 14px;"><code>extension=mcrypt**.**so</code></span></p>
+</li>
+</ol>
+<p><span style="font-size: 14px;">当你再访问<code>http://localhost/phpmyadmin</code>时，会发现&ldquo;无法加载 mcrypt 扩展，请检查您的 PHP 配置<strong>。</strong>&rdquo;提示没有了，这就表示MCrypt扩展库安装成功了。如果还不能加载，尝试把php.ini中的加入的<code>extension</code>修改为：</span><br><span style="font-size: 14px;"><code>extension=/usr/lib/php/extensions/no-debug-non-zts-20090626/mcrypt**.**so</code></span></p>
+<p><span style="font-size: 14px;">Mac OS X下安装MCrypt扩展的确比较复杂，而且稍微不小心会有各种小问题出现，大家还可以参考<a href="http://www.coolestguyplanettech.com/how-to-install-mcrypt-for-php-on-mac-osx-lion-10-7-development-server/" target="_blank" rel="external">How to Install mcrypt for php on Mac OSX Lion 10<strong>.</strong>8 &amp; 10.7 Development Server&nbsp;</a>和<a href="http://remonpel.nl/2012/01/adding-mcrypt-to-your-osx-lion-php-install/" target="_blank" rel="external">Adding MCRYPT to your OSX Lion PHP install</a></span></p>
+<p><strong><span style="font-size: 14px;">设置虚拟主机</span></strong></p>
+<ol>
+<li><span style="font-size: 14px;">在终端运行&ldquo;<code>sudo vi /etc/apache2/httpd.conf</code>&rdquo;，打开Apche的配置文件</span></li>
+<li><span style="font-size: 14px;">在httpd.conf中找到&ldquo;<code>#Include /private/etc/apache2/extra/httpd-vhosts.conf</code>&rdquo;，去掉前面的&ldquo;<code>＃</code>&rdquo;，保存并退出<strong>。</strong></span></li>
+<li><span style="font-size: 14px;">运行&ldquo;<code>sudo apachectl restart</code>&rdquo;，重启Apache后就开启了虚拟主机配置功能<strong>。</strong></span></li>
+<li><p><span style="font-size: 14px;">运行&ldquo;<code>sudo vi /etc/apache2/extra/httpd-vhosts.conf</code>&rdquo;，就打开了配置虚拟主机文件httpd-vhost.conf，配置虚拟主机了<strong>。</strong>需要注意的是该文件默认开启了两个作为例子的虚拟主机：</span><span style="font-size: 14px;">`&lt;VirtualHost *:80&gt;<br>ServerAdmin webmaster@dummy-host.example.com<br>DocumentRoot “/usr/docs/dummy-host.example.com”<br>ServerName dummy-host.example.com<br>ErrorLog “/private/var/log/apache2/dummy-host.example.com-error_log”<br>CustomLog “/private/var/log/apache2/dummy-host.example.com-access_log” common<br>&lt;/VirtualHost&gt;</span></p>
+<p>&lt;VirtualHost *:80&gt;<br>ServerAdmin webmaster@dummy-host2.example.com<br>DocumentRoot “/usr/docs/dummy-host2.example.com”<br>ServerName dummy-host2.example.com<br>ErrorLog “/private/var/log/apache2/dummy-host2.example.com-error_log”<br>CustomLog “/private/var/log/apache2/dummy-host2.example.com-access_log” common<br>&lt;/VirtualHost&gt; `</p>
+<p><span style="font-size: 14px;">而实际上，这两个虚拟主机是不存在的，在没有配置任何其他虚拟主机时，可能会导致访问localhost时出现如下提示：</span><br><span style="font-size: 14px;"><code>Forbidden
+You don&#39;t have permission to access /index.php on this server</code></span></p>
+<p><span style="font-size: 14px;">最简单的办法就是在它们每行前面加上#，注释掉就好了，这样既能参考又不导致其他问题<strong>。</strong></span></p>
+</li>
+<li><p><span style="font-size: 14px;">增加如下配置</span><span style="font-size: 14px;">`&lt;VirtualHost <em>:80&gt;<br>DocumentRoot “/Library/WebServer/Documents”<br>ServerName localhost<br>ErrorLog “/private/var/log/apache2/localhost-error_log”<br>CustomLog “/private/var/log/apache2/localhost-access_log” common<br>&lt;/VirtualHost&gt;<br>&lt;VirtualHost </em>:80&gt;<br>DocumentRoot “/Users/[用户名]/Sites”<br>ServerName sites<br>ErrorLog “/private/var/log/apache2/sites-error_log”<br>CustomLog “/private/var/log/apache2/sites-access_log” common<br>&lt;Directory /&gt;</span></p>
+<pre><code>        <span class="keyword"><span class="common">Options</span></span> Indexes FollowSymLinks MultiViews
+        <span class="keyword">AllowOverride</span> None
+        <span class="keyword"><span class="common">Order</span></span> deny,allow
+        <span class="keyword"><span class="common">Allow</span></span> from <span class="literal">all</span>
+</code></pre><p>  &lt;/Directory&gt;<br>&lt;/VirtualHost&gt; `</p>
+<p><span style="font-size: 14px;">保存退出，并重启Apache<strong>。</strong></span></p>
+</li>
+<li><p><span style="font-size: 14px;">运行&ldquo;<code>sudo vi /etc/hosts</code>&rdquo;，打开hosts配置文件，加入”<code>127**.**0**.**0.1 sites</code>“，这样就可以配置完成sites虚拟主机了，可以访问&ldquo;<a href="http://sites&rdquo;了，在10**.**8之前Mac" target="_blank" rel="external">http://sites&rdquo;了，在10**.**8之前Mac</a> OS X版本其内容和&ldquo;<a href="http://localhost/~[用户名]&rdquo;完全一致。" target="_blank" rel="external">http://localhost/~[用户名]&rdquo;完全一致。</a></span></p>
+</li>
+<li><span style="font-size: 14px;">注意，记录log的&ldquo;<code>ErrorLog &quot;/private/var/log/apache2/sites-error_log&quot;</code>&rdquo;也可以删掉，但记录日志其实是一个好习惯，在出现问题时可以帮助我们判断<strong>。</strong>如果保留这些log代码，一定log文件路径都是存在的，如果随便修改一个不存在的，会导致Apache无法服务而没有错误提示，这个比较恶心<strong>。</strong></span></li>
+</ol>
+<p><span style="font-size: 14px;">这里利用Mac OS X 10<strong>.</strong>6.3和10.8.1中原生支持的方式来实现的配置，也可以参考&ldquo;<a href="http://blog.csdn.net/afatgoat/archive/2008/12/26/3615026.aspx" target="_blank" rel="external">Mac OS X Leopard: 配置Apache, PHP, SQLite, MySQL, and phpMyAdmin(一)&nbsp;</a>&rdquo;和&ldquo;<a href="http://blog.csdn.net/afatgoat/archive/2008/12/28/3628710.aspx" target="_blank" rel="external">Mac OS X Leopard: 配置Apache, PHP, SQLite, MySQL, and phpMyAdmin(二)&nbsp;</a>&rdquo;<strong>。</strong>实际上，还可以使用<a href="http://www.apachefriends.org/en/xampp-macosx.html" target="_blank" rel="external">XAMPP&nbsp;</a>或<a href="http://www.macports.org/" target="_blank" rel="external">MacPorts&nbsp;</a>这种第三方提供的集成方案来实现简单的安装和使用<strong>。</strong></span></p>
+<p><strong><span style="font-size: 14px;">&nbsp;</span></strong><br><img src="http://counter.cnblogs.com/blog/rss/3288982" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3288982.html" target="_blank" rel="external">在Mac OS X中配置Apache ＋ PHP ＋ MySQL</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
+<div><br><br><strong><span style="font-size: 14px;">&nbsp;</span></strong><br></div>
+
+<p><span style="font-size: 14px;">Mac OS X 内置Apache 和 PHP，使用起来非常方便<strong>。</strong>本文以Mac OS X 10.6.3和<ins>&nbsp;10.8<strong>.</strong>1</ins>为例。主要内容包括：</span></p>
+<p><strong><span style="font-size: 14px;">启动Apache<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;">有两种方法：</span></p>
+<ol>
+<li><span style="font-size: 14px;">打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong><ins>注意，从Mac OS X从10.8开始取消了 &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong></ins></span></li>
+<li><p><span style="font-size: 14px;">打开&ldquo;终端（terminal）&rdquo;，然后（注意，sudo需要的密码就是系统的root帐号密码）</span></p>
+<pre><code>1.  运行&amp;ldquo;`sudo apachectl start`&amp;rdquo;，再输入帐号密码，这样Apache就运行了<span class="keyword">*</span><span class="keyword">*</span>。<span class="keyword">*</span><span class="keyword">*</span>
+</code></pre><ol>
+<li>运行&ldquo;<code>sudo apachectl －v</code>&rdquo;，你会看到Mac OS X的Apache版本信息，如10<strong>.</strong>8.1中：<code>Server version: Apache/2.2.22 (Unix)
+Server built:   Jun 20 2012 13:57:09</code></li>
+</ol>
+</li>
+</ol>
+<p><span style="font-size: 14px;">如此在浏览器中输入&ldquo;<a href="http://localhost&rdquo;，就可以看到一个内容为&ldquo;It" target="_blank" rel="external">http://localhost&rdquo;，就可以看到一个内容为&ldquo;It</a> works<strong>!</strong>&rdquo;的页面，其位于&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;下，这就是Apache的默认根目录<strong>。</strong></span><br>]]></summary>
+    
+      <category term="LAMP" scheme="http://localhost:4000/tags/LAMP/"/>
+    
+      <category term="Mac" scheme="http://localhost:4000/tags/Mac/"/>
+    
+      <category term="Apache" scheme="http://localhost:4000/tags/Apache/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[realloc 工作原理 - duger]]></title>
+    <link href="http://localhost:4000/2013/08/29/realloc-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86---duger.html"/>
+    <id>http://localhost:4000/2013/08/29/realloc-工作原理---duger.html</id>
+    <published>2013-08-29T05:40:00.000Z</published>
+    <updated>2014-09-04T09:48:32.000Z</updated>
+    <content type="html"><![CDATA[<div id="box"><div id="box_inner"><div id="text"><div id="pages"><div id="page1" class="page"><div class="page_content"><div id="articleHeader"><br><br><strong><span style="font-size: 16px;">realloc 用过很多次了<strong id="speechFragmentSeparator__1_1" class="speechFragmentSeparator">。</strong>无非就是将已经存在的一块内存扩大。</span></strong><br></div>
+
+<p><span style="font-size: 16px;">char<em> p = malloc(1024);</em></span><br><span style="font-size: 16px;">char q = realloc(p,2048);</span></p>
+<p><span style="font-size: 16px;">现在的问题是我们应该如何处理指针 p<strong>。</strong>&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候会出错。这样我就郁闷了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">后来仔细一跟踪，发现 realloc 完以后 q 和 p 的指针地址是一样<strong>。</strong>不过有时候又不一样<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">仔细查了下资料。得到如下信息：</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<strong>.</strong>如果 当前连续内存块足够 realloc 的话，只是将p所指向的空间扩大，并返回p的指针地址。 这个时候 q 和 p 指向的地址是一样的<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.如果 当前连续内存块不够长度，再找一个足够长的地方，分配一块新的内存，q，并将 p指向的内容 copy到 q，返回 q<strong>。</strong>并将p所指向的内存空间删除。</span></p>
+<p><span style="font-size: 16px;">这样也就是说 realloc 有时候会产生一个新的内存地址 有的时候不会<strong>。</strong>所以在分配完成后。我们需要判断下 p 是否等于 q。并做相应的处理。</span></p>
+<p><span style="font-size: 16px;">这里有点要注意的是要避免 p = realloc(p,2048); 这种写法<strong>。</strong>有可能会造成 realloc 分配失败后，p原先所指向的内存地址丢失。</span><br><a id="more"></a><br><span style="font-size: 16px;">=========================================</span></p>
+<p><span style="font-size: 16px;">关于realloc函数说明的补充：</span><br><span style="font-size: 16px;">函数定义：</span><br><span style="font-size: 16px;">void <em>realloc(void </em>ptr, size_t size);</span><br><span style="font-size: 16px;">上面的分析基本没有问题，但有两点要注意：</span><br><span style="font-size: 16px;">1<strong>.</strong>返回值可能与ptr的值不同，如果是不同的话，那么realloc函数完成后，ptr指向的旧内存已被free掉了<strong>。</strong></span><br><span style="font-size: 16px;">2。如果返回NULL值，则分配不成功，而原来的ptr指向的内存还没有被free掉，要求程序显式free.</span></p>
+<p><span style="font-size: 16px;">故p = (int <em>) realloc (p, sizeof(int) </em>15);语句有这么一个问题，</span><br><span style="font-size: 16px;">调用前p指向一个已分配成功的内存,而调用realloc时却失败（即返回NULL），此时，p原来指向的内存还没有free掉，而现在又找不到地址，这样就出现memory leak了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">关于这一点的确要注意，最好如下：</span><br><span style="font-size: 16px;">int <em>q</em></span><br><span style="font-size: 16px;">q = (int ) realloc (p, sizeof(int) *15);</span></p>
+<p><span style="font-size: 16px;">if(<strong>!</strong>q) p =q;</span></p>
+<p><span style="font-size: 16px;">======================================================</span></p>
+<p><span style="font-size: 16px;">首先看一下下面的C程序片断：</span></p>
+<p><span style="font-size: 16px;">#include &lt;malloc<strong>.</strong>h&gt;</span></p>
+<p><span style="font-size: 16px;">char&nbsp;&nbsp;*p;</span></p>
+<p><span style="font-size: 16px;">p = (char * ) malloc (10);</span></p>
+<p><span style="font-size: 16px;">p = (char * ) realloc (p,20);</span></p>
+<p><span style="font-size: 16px;">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这段程序的意思很简单，只有稍有点C基础的人都可以看懂<strong>。</strong>函数首先定义了一个字符型的指针p，然后为指针p分配了一个10个字节大小的内存空间，接着将这个内存块的大小<strong>增加到</strong>20个字节<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这里有什么问题吗？上机运行一下，好像没有问题！</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 是的，这样上机运行是没有问题的，但是这里存在着也许我们不太注意的<strong>隐患</strong>！隐患在那里？这就是我在本文中要详细说明的realloc（）函数了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 再看一下下面一段来自MSDN的话：</span></p>
+<p><span style="font-size: 16px;"><strong>realloc</strong>&nbsp;returns a&nbsp;<strong>void</strong>&nbsp;pointer to the reallocated (and possibly moved) memory block<strong>.</strong>&nbsp;The return value is&nbsp;<strong>NULL</strong>&nbsp;if the size is zero and the buffer argument is not&nbsp;<strong>NULL</strong>, or if there is not enough available memory to expand the block to the given size<strong>.</strong>&nbsp;In the first case, the original block is freed<strong>.</strong>&nbsp;In the second, the original block is unchanged. The return value points to a storage space that is guaranteed to be suitably aligned for storage of any type of object<strong>.</strong>&nbsp;To get a pointer to a type other than&nbsp;<strong>void</strong>, use a type cast on the return value<strong>.</strong></span></p>
+<p><span style="font-size: 16px;">这段E文还不算是晦涩难懂，所以我就不翻译了，大致的意思是说关于realloc返回值的<strong>。</strong>但是这里对他的返回值分了几种情况：</span></p>
+<p><span style="font-size: 16px;">1、&nbsp;&nbsp;返回void <em>&nbsp;指针，调用成功<em>*。</em></em></span></p>
+<p><span style="font-size: 16px;">2、&nbsp;&nbsp;返回NULL，当需要扩展的大小（第二个参数）为0并且第一个参数不为NULL，此时原内存变成了&ldquo;freed（游离）&rdquo;的了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">3、&nbsp;&nbsp;返回NULL，当没有足够的空间可供扩展的时候，此时，原内存空间的大小维持不变<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">第一种情况告诉了我们在得到需要的内存空间后需要做类型转换的工作；</span></p>
+<p><span style="font-size: 16px;">第二种情况可能只有傻瓜才会去使用吧！</span></p>
+<p><span style="font-size: 16px;">第三种情况，内存空间不够的时候就会维持未来的大小不变<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSDN上面说内存空间不够的时候就不会扩展原来的内存空间的大小，这话固然没有错，但是有点含糊，似乎遗漏了一种情况！我们知道，<strong>realloc**</strong>是从堆上分配内存的，当扩大一块内存空间时，&nbsp;realloc()<strong>**试图直接从堆上现存的数据后面的那些字节中获得附加的字节，如果能够满足，自然天下太平；可如果数据后面的字节不够的话，问题就出来了，那么就使用堆上第一个有足够大小的自由块，现存的数据然后就被拷贝至新的位置，而老块则放回到堆上<strong id="speechFragmentSeparator__1_30" class="speechFragmentSeparator">。</strong></strong>这句话传递的一个重要的信息就是数据可能被移动！看到这里，也许我们已经发现一开始我给出的程序的问题了<strong>。</strong>为了更清楚地说明问题，可以将上面的程序改成下面的形式：</span></p>
+<p><span style="font-size: 16px;">#include &lt;malloc<strong>.</strong>h&gt;</span></p>
+<p><span style="font-size: 16px;">char&nbsp;&nbsp;<em>p，<em>**</em></em>q;</span></p>
+<p><span style="font-size: 16px;">p = (char * ) malloc (10);</span></p>
+<p><span style="font-size: 16px;"><strong>q=p;</strong></span></p>
+<p><span style="font-size: 16px;">p = (char * ) realloc (p,20);</span></p>
+<p><span style="font-size: 16px;">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这段程序也许在编译器中没有办法通过，因为编译器可能会为我们消除一些隐患！在这里我们只是增加了一个记录原来内存地址的指针q，然后记录了原来的内存地址p，如果不幸的话，数据发生了移动，那么所记录的原来的内存地址q所指向的内存空间实际上已经放回到堆上了<strong>!</strong>这样一来，我们应该终于意识到问题的所在和可怕了吧！</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这个问题似乎有点牛角尖的味道，因为我们也许从来不曾遇上过，但是我们应该明白这样的事情的始终存在，只有这样，在万一我们碰上的时候才会去有意识的去避免这种隐患，否则，一旦这样的隐患一旦发作，程序崩溃不说，恐怕查错也不是一件容易的事！</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 候俊杰在《深入浅出MFC》中引用林语堂的《朱门》中的一句话，我很有感触，虽然不可能有他的感触深，但是抱着向前辈学习的心态，所以也拿来作为本为的结束：</span></p>
+<p><span style="font-size: 16px;">&ldquo;只用一样东西，不明白他的道理，实在不高明&rdquo;<strong>。</strong></span><br><span style="font-size: 16px;"><strong>
+</strong></span></p></div></div></div></div></div></div><div id="fitts" title="隐藏覆盖"><span style="font-size: 16px;">&nbsp;</span></div><div id="next_pages_container"><span style="font-size: 16px;">&nbsp;</span></div><div id="audio_elements_container"><span style="font-size: 16px;">&nbsp;</span></div><div id="sidebar"><span style="font-size: 16px;">&nbsp;</span></div><img src="http://counter.cnblogs.com/blog/rss/3288974" alt=""><p></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3288974.html" target="_blank" rel="external">realloc 工作原理</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<div id="box"><div id="box_inner"><div id="text"><div id="pages"><div id="page1" class="page"><div class="page_content"><div id="articleHeader"><br><br><strong><span style="font-size: 16px;">realloc 用过很多次了<strong id="speechFragmentSeparator__1_1" class="speechFragmentSeparator">。</strong>无非就是将已经存在的一块内存扩大。</span></strong><br></div>
+
+<p><span style="font-size: 16px;">char<em> p = malloc(1024);</em></span><br><span style="font-size: 16px;">char q = realloc(p,2048);</span></p>
+<p><span style="font-size: 16px;">现在的问题是我们应该如何处理指针 p<strong>。</strong>&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候会出错。这样我就郁闷了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">后来仔细一跟踪，发现 realloc 完以后 q 和 p 的指针地址是一样<strong>。</strong>不过有时候又不一样<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">仔细查了下资料。得到如下信息：</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<strong>.</strong>如果 当前连续内存块足够 realloc 的话，只是将p所指向的空间扩大，并返回p的指针地址。 这个时候 q 和 p 指向的地址是一样的<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.如果 当前连续内存块不够长度，再找一个足够长的地方，分配一块新的内存，q，并将 p指向的内容 copy到 q，返回 q<strong>。</strong>并将p所指向的内存空间删除。</span></p>
+<p><span style="font-size: 16px;">这样也就是说 realloc 有时候会产生一个新的内存地址 有的时候不会<strong>。</strong>所以在分配完成后。我们需要判断下 p 是否等于 q。并做相应的处理。</span></p>
+<p><span style="font-size: 16px;">这里有点要注意的是要避免 p = realloc(p,2048); 这种写法<strong>。</strong>有可能会造成 realloc 分配失败后，p原先所指向的内存地址丢失。</span><br>]]></summary>
+    
+      <category term="iOS" scheme="http://localhost:4000/tags/iOS/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[字节对齐详解 - duger]]></title>
+    <link href="http://localhost:4000/2013/08/22/%E5%AD%97%E8%8A%82%E5%AF%B9%E9%BD%90%E8%AF%A6%E8%A7%A3---duger.html"/>
+    <id>http://localhost:4000/2013/08/22/字节对齐详解---duger.html</id>
+    <published>2013-08-22T05:10:00.000Z</published>
+    <updated>2014-09-04T09:49:20.000Z</updated>
+    <content type="html"><![CDATA[<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
+<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
+<p><span>sizeof( A)=6, sizeof( B)=8,为什么？</span><br><span>注：sizeof(short)=2,sizeof(long)=4</span></p>
+<p><span>因为：&ldquo;成员对齐有一个重要的条件，即每个成员按自己的方式对齐。其对齐的规则是，每个成员按其类型的对齐参数(通常是这个类型的大小)和指定对齐参数(这里默认是8字节)中较小的一个对齐。并且结构的长度必须为所用过的所有对齐参数的整数倍，不够就补空字节。&rdquo;(引用)</span></p>
+<p><span>结构体A中有3个short类型变量，各自以2字节对齐，结构体对齐参数按默认的8字节对齐，则a1,a2,a3都取2字节对齐，则sizeof(A)为6，其也是2的整数倍；</span><br><span>B中a1为4字节对齐，a2为2字节对齐，结构体默认对齐参数为8，则a1取4字节对齐，a2取2字节对齐，结构体大小6字节，6不为4的整数倍，补空字节，增到8时，符合所有条件，则sizeof(B)为8；</span></p>
+<p><span>可以设置成对齐的</span></p>
+<p><span>#pragma pack(1)</span><br><span>#pragma pack(push)</span><br><span>#pragma pack(1)</span></p>
+<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
+<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
+<p><span>#pragma pack(pop)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>结果为sizeof( A)=6,sizeof( B)=6</span></p>
+<p><span><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></span></p>
+<p><span>#pragma pack(8)</span></p>
+<p><span>struct S1{</span><br><span>&nbsp;&nbsp;&nbsp; char a;</span><br><span>&nbsp;&nbsp;&nbsp; long b;</span><br><span>};</span></p>
+<p><span>struct S2 {</span><br><span>&nbsp;&nbsp;&nbsp; char c;</span><br><span>&nbsp;&nbsp;&nbsp; struct S1 d;</span><br><span>&nbsp;&nbsp;&nbsp; long long e;</span><br><span>};</span></p>
+<p><span>#pragma pack()</span></p>
+<p><span>sizeof(S2)结果为24.</span><br><a id="more"></a><br><span>成员对齐有一个重要的条件，即每个成员分别对齐，即每个成员按自己的方式对齐。</span><br><span>也就是说上面虽然指定了按8字节对齐，但并不是所有的成员都是以8字节对齐。其对齐的规则是，每个成员按其类型的对齐参数(通常是这个类型的大小)和指定对齐参数(这里是8字节)中较小的一个对齐。并且结构的长度必须为所用过的所有对齐参数的整数倍，不够就补空字节。</span></p>
+<p><span>S1中，成员a是1字节默认按1字节对齐，指定对齐参数为8，这两个值中取1，a按1字节对齐；成员b是4个字节，默认是按4字节对齐，这时就按4字节对齐，所以sizeof(S1)应该为8；</span></p>
+<p><span>S2 中，c和S1中的a一样,按1字节对齐，而d 是个结构，它是8个字节，它按什么对齐呢?对于结构来说，它的默认对齐方式就是它的所有成员使用的对齐参数中最大的一个，S1的就是4.所以,成员d就是按4字节对齐。成员e是8个字节，它是默认按8字节对齐,和指定的一样，所以它对到8字节的边界上,这时，已经使用了12个字节了，所以又添加了4个字节的空,从第16个字节开始放置成员e。这时，长度为24，已经可以被8(成员e按8字节对齐)整除.这样， 一共使用了24个字节。</span></p>
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b</span><br><span>S1的内存布局：1<strong><em>, 1111,</em></strong></span><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S1.a&nbsp;&nbsp;&nbsp; S1.b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e</span><br><span>S2的内存布局：1, 1<strong><em>,&nbsp;&nbsp;&nbsp;1111, *</em></strong>11111111</span></p>
+<p><span>这里有三点很重要：</span><br><span>1.每个成员分别按自己的方式对齐,并能最小化长度</span><br><span>2.复杂类型(如结构)的默认对齐方式是它最长的成员的对齐方式,这样在成员是复杂类型时，可以最小化长度</span><br><span>3.对齐后的长度必须是成员中最大的对齐参数的整数倍，这样在处理数组时可以保证每一项都边界对齐</span></p>
+<p><span>补充一下，对于数组，比如：</span><br><span>char a[3]；这种，它的对齐方式和分别写3个char是一样的。也就是说它还是按1个字节对齐。</span><br><span>如果写： typedef char Array3[3]；</span><br><span>Array3这种类型的对齐方式还是按1个字节对齐，而不是按它的长度。</span><br><span>不论类型是什么,对齐的边界一定是1,2,4,8,16,32,64….中的一个。</span></p>
+<p><span>/<strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong>/</span><br><span>字节对齐详解</span></p>
+<p><span>为什么要对齐？</span><br><span>现代计算机中内存空间都是按照byte划分的，从理论上讲似乎对任何类型的变量的访问可以从任何地址开始，但实际情况是在访问特定类型变量的时候经常在特 定的内存地址访问，这就需要各种类型数据按照一定的规则在空间上排列，而不是顺序的一个接一个的排放，这就是对齐。</span></p>
+<p><span>对齐的作用和原因：各个硬件平台对存储空间的处理上有很大的不同。一些平台对某些特定类型的数据只能从某些特定地址开始存取。比如有些架构的CPU在访问一个没有进行对齐的变量的时候会发生错误，那么在这种架构下编程必须保证字节对齐。其他平台可能没有这种情况，但是最常见的是如果不按照适合其平台要求对数据存放进行对齐，会在存取效率上带来损失。比如有些平台每次读都是从偶地址开始，如果一个int型（假设为32位系统）如果存放在偶地址开始的地方，那么一个读周期就可以读出这32bit，而如果存放在奇地址开始的地方，就需要2个读周期，并对两次读出的结果的高低字节进行拼凑才能得到该32bit数 据。显然在读取效率上下降很多。</span></p>
+<p><span>二。字节对齐对程序的影响：</span></p>
+<p><span>先让我们看几个例子吧(32bit,x86环境,gcc编译器)：</span><br><span>设结构体如下定义：</span></p>
+<p><span>struct A</span><br><span>{</span><br><span>&nbsp;&nbsp;&nbsp; int a;</span><br><span>&nbsp;&nbsp;&nbsp; char b;</span><br><span>&nbsp;&nbsp;&nbsp; short c;</span><br><span>};</span></p>
+<p><span>struct B</span><br><span>{</span><br><span>&nbsp;&nbsp;&nbsp; char b;</span><br><span>&nbsp;&nbsp;&nbsp; int a;</span><br><span>&nbsp;&nbsp;&nbsp; short c;</span><br><span>};</span></p>
+<p><span>现在已知32位机器上各种数据类型的长度如下：</span></p>
+<p><span>char:1(有符号无符号同)&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span>short:2(有符号无符号同)&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span>int:4(有符号无符号同)&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span>long:4(有符号无符号同)&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span>float:4&nbsp;&nbsp;&nbsp; double:8</span></p>
+<p><span>那么上面两个结构大小如何呢？</span><br><span>结果是：</span><br><span>sizeof(strcut A)值为8</span><br><span>sizeof(struct B)的值却是12</span></p>
+<p><span>结构体A中包含了4字节长度的int一个，1字节长度的char一个和2字节长度的short型数据一个，B也一样；按理说A，B大小应该都是7字节。</span><br><span>之所以出现上面的结果是因为编译器要对数据成员在空间上进行对齐。上面是按照编译器的默认设置进行对齐的结果，那么我们是不是可以改变编译器的这种默认对齐设置呢，当然可以。例如：</span></p>
+<p><span>#pragma pack (2) /<em>指定按2字节对齐</em>/</span></p>
+<p><span>struct C</span><br><span>{</span><br><span>&nbsp;&nbsp;&nbsp; char b;</span><br><span>&nbsp;&nbsp;&nbsp; int a;</span><br><span>&nbsp;&nbsp;&nbsp; short c;</span><br><span>};</span></p>
+<p><span>#pragma pack () /<em>取消指定对齐，恢复缺省对齐</em>/</span></p>
+<p><span>sizeof(struct C)值是8。</span></p>
+<p><span>修改对齐值为1：</span></p>
+<p><span>#pragma pack (1) /<em>指定按1字节对齐</em>/</span></p>
+<p><span>struct D</span><br><span>{</span><br><span>&nbsp;&nbsp;&nbsp; char b;</span><br><span>&nbsp;&nbsp;&nbsp; int a;</span><br><span>&nbsp;&nbsp;&nbsp; short c;</span><br><span>};</span></p>
+<p><span>#pragma pack () /<em>取消指定对齐，恢复缺省对齐</em>/</span></p>
+<p><span>sizeof(struct D)值为7。</span></p>
+<p><span>后面我们再讲解#pragma pack()的作用。</span></p>
+<p><span>三。编译器是按照什么样的原则进行对齐的？</span></p>
+<p><span>先让我们看四个重要的基本概念：</span><br><span>1.数据类型自身的对齐值：对于char型数据，其自身对齐值为1，对于short型为2，对于int,float,double类型，其自身对齐值为4，单位字节。</span><br><span>2.结构体或者类的自身对齐值：其成员中自身对齐值最大的那个值。</span><br><span>3.指定对齐值：#pragma pack (value)时的指定对齐值value。</span><br><span>4.数据成员、结构体和类的有效对齐值：自身对齐值和指定对齐值中小的那个值。</span></p>
+<p><span>有了这些值，我们就可以很方便的来讨论具体数据结构的成员和其自身的对齐方式。有效对齐值N是最终用来决定数据存放地址方式的值，最重要。有效对齐N，就是 表示&ldquo;对齐在N上&rdquo;，也就是说该数据的&ldquo;存放起始地址%N=0&rdquo;。而数据结构中的数据变量都是按定义的先后顺序来排放的。第一个数据变量的起始地址就是数据结构的起始地址。结构体的成员变量要对齐排放，结构体本身也要根据自身的有效对齐值圆整(就是结构体成员变量占用总长度需要是对结构体有效对齐值的整数倍，结合下面例子理解)。这样就不能理解上面的几个例子的值了。</span></p>
+<p><span>例子分析：</span><br><span>分析例子B：</span></p>
+<p><span>struct B</span><br><span>{</span><br><span>&nbsp;&nbsp;&nbsp; char b;</span><br><span>&nbsp;&nbsp;&nbsp; int a;</span><br><span>&nbsp;&nbsp;&nbsp; short c;</span><br><span>};</span></p>
+<p><span>假设B从地址空间0x0000开始排放。该例子中没有定义指定对齐值，在笔者环境下，该值默认为4。第一个成员变量b的自身对齐值是1，比指定或者默认指定对齐值4小，所以其有效对齐值为1，所以其存放地址0x0000符合0x0000%1=0。第二个成员变量a，其自身对齐值为4，所以有效对齐值也为4，所以只能存放在起始地址为0x0004到0x0007这四个连续的字节空间中，符合0x0004%4=0，且紧靠第一个变量。第三个变量c，自身对齐值为2，所以有效对齐值也是2，可以存放在0x0008到0x0009这两个字节空间中，符合0x0008%2=0。所以从0x0000到0x0009存放的都是B内容。再看数据结构B的自身对齐值为其变量中最大对齐值(这里是b）所以就是4，所以结构体的有效对齐值也是4。根据结构体圆整的要求，0x0009到0x0000=10字节，（10＋2）％4＝0。所以0x0000A到0x000B也为结构体B所占用。故B从0x0000到0x000B 共有12个字节，sizeof(struct B)=12；其实如果就这一个就来说它已将满足字节对齐了， 因为它的起始地址是0，因此肯定是对齐的。之所以在后面补充2个字节，是因为编译器为了实现结构数组的存取效率，试想如果我们定义了一个结构B的数组，那么第一个结构起始地址是0没有问题，但是第二个结构呢？按照数组的定义，数组中所有元素都是紧挨着的，如果我们不把结构的大小补充为4的整数倍，那么下一 个结构的起始地址将是0x0000A，这显然不能满足结构的地址对齐了，因此我们要把结构补充成有效对齐大小的整数倍。其实诸如：对于char型数据，其 自身对齐值为1，对于short型为2，对于int，float，double类型，其自身对齐值为4，这些已有类型的自身对齐值也是基于数组考虑的，只是因为这些类型的长度已知了，所以他们的自身对齐值也就已知了。</span><br><span>同理，分析上面例子C：</span></p>
+<p><span>#pragma pack (2) /<em>指定按2字节对齐</em>/</span></p>
+<p><span>struct C</span><br><span>{</span><br><span>&nbsp;&nbsp;&nbsp; char b;</span><br><span>&nbsp;&nbsp;&nbsp; int a;</span><br><span>&nbsp;&nbsp;&nbsp; short c;</span><br><span>};</span></p>
+<p><span>#pragma pack () /<em>取消指定对齐，恢复缺省对齐</em>/</span></p>
+<p><span>第一个变量b的自身对齐值为1，指定对齐值为2，所以，其有效对齐值为1，假设C从0x0000开始，那么b存放在0x0000，符合0x0000%1= 0；第二个变量，自身对齐值为4，指定对齐值为2，所以有效对齐值为2，所以顺序存放在0x0002、0x0003、0x0004、0x0005四个连续 字节中，符合0x0002%2=0。第三个变量c的自身对齐值为2，所以有效对齐值为2，顺序存放在0x0006、0x0007中，符合 0x0006%2=0。所以从0x0000到0x00007共八字节存放的是C的变量。又C的自身对齐值为4，所以C的有效对齐值为2。又8%2=0，C 只占用0x0000到0x0007的八个字节。所以sizeof(struct C)=8。</span><br><img src="http://counter.cnblogs.com/blog/rss/3274650" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3274650.html" target="_blank" rel="external">字节对齐详解</a>，转载请注明。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
+<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
+<p><span>sizeof( A)=6, sizeof( B)=8,为什么？</span><br><span>注：sizeof(short)=2,sizeof(long)=4</span></p>
+<p><span>因为：&ldquo;成员对齐有一个重要的条件，即每个成员按自己的方式对齐。其对齐的规则是，每个成员按其类型的对齐参数(通常是这个类型的大小)和指定对齐参数(这里默认是8字节)中较小的一个对齐。并且结构的长度必须为所用过的所有对齐参数的整数倍，不够就补空字节。&rdquo;(引用)</span></p>
+<p><span>结构体A中有3个short类型变量，各自以2字节对齐，结构体对齐参数按默认的8字节对齐，则a1,a2,a3都取2字节对齐，则sizeof(A)为6，其也是2的整数倍；</span><br><span>B中a1为4字节对齐，a2为2字节对齐，结构体默认对齐参数为8，则a1取4字节对齐，a2取2字节对齐，结构体大小6字节，6不为4的整数倍，补空字节，增到8时，符合所有条件，则sizeof(B)为8；</span></p>
+<p><span>可以设置成对齐的</span></p>
+<p><span>#pragma pack(1)</span><br><span>#pragma pack(push)</span><br><span>#pragma pack(1)</span></p>
+<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
+<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
+<p><span>#pragma pack(pop)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>结果为sizeof( A)=6,sizeof( B)=6</span></p>
+<p><span><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></span></p>
+<p><span>#pragma pack(8)</span></p>
+<p><span>struct S1{</span><br><span>&nbsp;&nbsp;&nbsp; char a;</span><br><span>&nbsp;&nbsp;&nbsp; long b;</span><br><span>};</span></p>
+<p><span>struct S2 {</span><br><span>&nbsp;&nbsp;&nbsp; char c;</span><br><span>&nbsp;&nbsp;&nbsp; struct S1 d;</span><br><span>&nbsp;&nbsp;&nbsp; long long e;</span><br><span>};</span></p>
+<p><span>#pragma pack()</span></p>
+<p><span>sizeof(S2)结果为24.</span><br>]]></summary>
+    
+      <category term="C" scheme="http://localhost:4000/tags/C/"/>
+    
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="C" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/C/"/>
     
   </entry>
   

@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>Example of [NSDictionary getObjects:andKeys:] 的示范 - duger | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="&amp;lt;span class=&amp;quot;typ&amp;quot;&amp;gt;NSDictionary&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;pun&amp;quot;&amp;gt;*&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;pln&amp;quot;&amp;gt;myDictionary &amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;pun&amp;quot;&amp;gt">
+  
+  <meta name="description" content="&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Example of [NSDictionary getObjects:andKeys:] 的示范 - duger">
+<meta property="og:url" content="http://localhost:4000/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt">
+<meta property="og:image" content="http://counter.cnblogs.com/blog/rss/3309919">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Example of [NSDictionary getObjects:andKeys:] 的示范 - duger">
+<meta name="twitter:description" content="&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt">
+
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html">
+  <time datetime="2013-09-09T07:20:00.000Z">
+    2013年 9月 09日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">Example of [NSDictionary getObjects:andKeys:] 的示范 - duger</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id obj &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id key &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;%@ -&amp;gt; %@&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; obj&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;</code></span></p>
+<p><span style="font-size: 15px;">还有一个：</span><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id __unsafe_unretained objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id __unsafe_unretained keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id obj &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id key &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;%@ -&amp;gt; %@&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; obj&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;</code></span><img src="http://counter.cnblogs.com/blog/rss/3309919" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3309919.html" target="_blank" rel="external">Example of [NSDictionary getObjects:andKeys:] 的示范</a>，转载请注明。</p>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/技术/">技术</a>, <a class="categories-link" href="/categories/技术/iOS/">iOS</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/NSDictionary/">NSDictionary</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="Example of [NSDictionary getObjects:andKeys:] 的示范 - duger">
+  </div>
+</section>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
+  
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>

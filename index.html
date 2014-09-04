@@ -21,8 +21,6 @@
 <meta name="twitter:description" content="Duger | iOS">
 
   
-    <link rel="alternate" href="/atom.xml" title="Duger 博客" type="application/atom+xml">
-  
   
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   
@@ -60,8 +58,8 @@
       
         <li><a href="/about">About</a></li>
       
-      
         <li><a href="/atom.xml">RSS</a></li>
+      
       
     </ul>
     <div class="clearfix"></div>
@@ -150,7 +148,16 @@
 <li>Facebook的Phabricator </li>
 <li>Google的Gerrit</li>
 </ul>
-<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。<br>
+<p>看了CodeReview那么多好处，在单位也没时间搞这东西，干脆自己先研究一下，自己先把Code Review做起来。</p>
+<h3 id="安装">安装</h3>
+<p>本来想着应该是个软件吧，下下来就能用。去<a href="http://phabricator.org" target="_blank" rel="external">Phabricator官网</a>上溜达了一圈儿。翻了翻<a href="https://secure.phabricator.com/book/phabricator/article/installation_guide/" target="_blank" rel="external"><strong>官方教程</strong></a>，发现原来这厮还得要台Web服务器：</p>
+<blockquote>
+<ul>
+<li><strong>Apache</strong>: Many installs use Apache + mod_php.</li>
+<li><strong>Nnginx</strong>: Many installs use nginx + php-fpm.</li>
+<li><strong>lighttpd</strong> : lighttpd is less popular than Apache or nginx, but it works fine.</li>
+<li><strong>Other</strong>: Other webservers which can run PHP are also likely to work fine, although these installation instructions will not cover how to set them up.</li>
+<li><strong>PHP Builtin Server</strong>: You can use the builtin PHP webserver for development or testing, although it should not be used in production.<br>
     
   </div>
   <footer class="end-sep">
@@ -159,43 +166,6 @@
         <div class="alignleft">
           <a href="/2014/04/26/setup-phabricator-on-aliyun.html#more" class="more-link">阅读全文</a>
         </div>
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2014/04/21/easy-comeeasy-go.html">
-  <time datetime="2014-04-20T16:00:00.000Z">
-    2014年 4月 21日
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2014/04/21/easy-comeeasy-go.html">Easy come,easy go</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>三月25日鼓起勇气相识，到今天4月21日，整整的四周时间，其实也就四周。</p>
-<p>从开始就打的火热，你来我往的，聊得来，有话说。</p>
-<p>约出来，一起吃饭，爬山，处着很舒服。</p>
-<p>慢慢从好感到喜欢，从喜欢到牵挂，付出了感情，希望能走到一起。</p>
-
-    
-  </div>
-  <footer class="end-sep">
-    
       
       
     
@@ -224,12 +194,14 @@
   
   <div class="entry">
     
-      <p>清明假期第二天，我、顾鑫、高圆圆和她的小伙伴小芳一起去香八拉徒步。</p>
+      <p>清明假期第二天，我和小伙伴小鑫鑫高圆圆小芳一起去香八拉徒步。</p>
 <blockquote>
 <p>香八拉就是指香山至八大处之间的一段徒步山路，徒友爱称香八拉。</p>
 </blockquote>
 <p>驱车八大处，路线是：雍王府——虎头山——八大处——翠微山——陈家沟——香山水库——北马场——上满是松树的山——挂甲塔——碧云寺——公主坟——香山。</p>
-<p><img src="/images/shanbala/IMG_1746.PNG" alt="路程" title="20公里啊！" width="600"><br>
+<p><img src="http://duger.qiniudn.com/dalian/DSC03807.JPG" alt="路程" title="20公里啊！" width="600"></p>
+<p>从上午9点出发，总的走下来到下午4点左右到达香山。</p>
+<p>开始爬山啦，到达虎头山！<br>
     
   </div>
   <footer class="end-sep">
@@ -247,7 +219,7 @@
 
 
   
-    <article class="post">
+    <article class="photo">
   <header>
     
       <div class="icon"></div>
@@ -349,36 +321,15 @@
 <p>现今移动设备越来越多，苹果为iOS设备配备了apple-touch-icon私有属性，添加该属性，在iPhone,iPad,iTouch的safari浏览器上可以使用添加到主屏按钮将网站添加到主屏幕上，方便用户以后访问。实现方法是在HTML文档的<code>&lt;head&gt;</code>标签加入下面代码即可。</p>
 <pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">href=</span><span class="string">"/custom_icon.png"</span>/&gt;   
 </code></pre><p>apple-touch-icon 标签支持sizes属性，可以用来放置对应不同的设备。</p>
-<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。</p>
-<p>所以最完善的写法应该是：</p>
-<pre><code>&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"57x57"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone.png"</span> /&gt;  
-&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"72x72"</span> <span class="variable">href=</span><span class="string">"touch-icon-ipad.png"</span> /&gt;  
-&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"114x114"</span> <span class="variable">href=</span><span class="string">"touch-icon-iphone4.png"</span> /&gt;    
-&lt;link <span class="variable">rel=</span><span class="string">"apple-touch-icon"</span> <span class="variable">sizes=</span><span class="string">"144x144"</span> <span class="variable">href=</span><span class="string">"apple-touch-icon-ipad3-144.png"</span> /&gt;  
-</code></pre><p>虽然官方都用的png图片做说明，但实际测试jpg格式也可用（不推荐），图片无需做圆角和高光效果，同Native App一样，系统会自动为图标添加圆角及高光。如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon，这时我们提供的图标就要自己做圆角和高亮效果了。</p>
-<p>图标搜索的优先级如下：<br>如果没有跟相应设备推荐尺寸一致的图标，那个会优先使用比推荐尺寸大，但最接近推荐尺寸的图标。<br>如果没有比推荐尺寸大的图标，会优先选择最接近推荐尺寸的图标。<br>如些有多个图标符合推荐尺寸，会优先选择包含关键字precomposed的图标。<br>如果未在区域指定用link标签指定图标，会自动搜索网站根目录下有apple-touch-icon…或者 apple-touch-icon-precomposed…前缀的图标。 如设备推荐尺寸为57x57,优先级如下：</p>
-<ul>
-<li><p>apple-touch-icon-57×57-precomposed.png</p>
-</li>
-<li><p>apple-touch-icon-57×57.png</p>
-</li>
-<li><p>apple-touch-icon-precomposed.png</p>
-</li>
-<li><p>apple-touch-icon.png</p>
-<p>在第三代 iPad 上有四种图标规格： 57x57, 72x72, 114x114, 144x144.</p>
-</li>
-</ul>
-<p>由于 retina 图标的尺寸是标准图标大小的2倍，因此实际上我们只需要只做2款图标即可：114 x 114 和 144 x 144 。 将retina 图标的大小设置成标准图标的尺寸，那么IOS就会根据情况自动进行缩放了。</p>
-<p><!-- Standard iPhone -->  </p>
-<p><link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone-114.png"><br><!-- Retina iPhone -->  </p>
-<p><link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png"><br><!-- Standard iPad -->  </p>
-<p><link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad-144.png"><br><!-- Retina iPad -->  </p>
-<link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-144.png">  
-
+<p>57×57（默认值）的图标对应320×640的iphone老设备，72×72对应ipad，114×114对应retina屏的iPhone及iTouch。ipad3对应144×144的高分辨率。<br>
     
   </div>
   <footer class="end-sep">
     
+      
+        <div class="alignleft">
+          <a href="/2014/03/31/apple-touch-icon.html#more" class="more-link">阅读全文</a>
+        </div>
       
       
     
@@ -388,7 +339,7 @@
 
 
   
-    <article class="post">
+    <article class="photo">
   <header>
     
       <div class="icon"></div>
@@ -426,7 +377,7 @@
 
 
   
-    <article class="post">
+    <article class="photo">
   <header>
     
       <div class="icon"></div>
@@ -468,36 +419,77 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2014/03/30/mylove.html">
-  <time datetime="2014-03-29T16:00:00.000Z">
-    2014年 3月 30日
+      <a href="/2014/03/28/finish-work.html">
+  <time datetime="2014-03-27T16:00:00.000Z">
+    2014年 3月 28日
   </time>
 </a>
     
     
   
-    <h1 class="title"><a href="/2014/03/30/mylove.html">惊喜总是来的那么忽然</a></h1>
+    <h1 class="title"><a href="/2014/03/28/finish-work.html">Jekyll小窝搭好了</a></h1>
   
 
   </header>
   
   <div class="entry">
     
-      <p>今天周日，加班的第二天了，中午吃过饭，慵懒得刷了刷朋友圈儿，你一盘儿咸猪手和黑木耳下面赫然标着<code>北京·福来居</code>！心依来北京了？心依来北京了！</p>
-<p>打了个电话，果然是在北京了，唉~我咋这么迟钝，让我看相册！</p>
-<p>翻开相册，这28号已经开始在北京玩儿起来了，来了两三天，通着微信我竟然没发现》《，她也真够沉得住气的！</p>
-<p>这还让我怎么安心上班，下午在公司值守着，心里翻来覆去，坐不住。打算下午晚些时候申请一下，早点儿下班，我来啦~</p>
-<p>—</p>
-<p><img src="http://m3.img.srcdd.com/farm4/d/2014/0212/09/9DBE69BE9F2C058D5E97F1D0D5C6086F_B1280_1280_500_332.jpeg" alt="leave" title="say goodbye"></p>
-<p>If you’re brave enough to say goodbye, life will reward you with a new hello.</p>
+      <p>花了一天半，小窝终于搭好了，使用的是    <a href="http://www.jekyllbootstrap.com" target="_blank" rel="external">jekyllbootstrap</a>的模板，很好用，很效率。<br>在安装Jekyll的时候遇到了些问题,报错如下：</p>
+<figure class="highlight"><pre><div class="line">sudo gem install jekyll</div><div class="line">Password:</div><div class="line">Building native extensions.  This could take <span class="operator">a</span> <span class="keyword">while</span>...</div><div class="line">ERROR:  Error installing jekyll:</div><div class="line">    ERROR: Failed <span class="built_in">to</span> build gem native extension.</div><div class="line"></div><div class="line">    /System/Library/Frameworks/Ruby.framework/Versions/<span class="number">2.0</span>/usr/bin/ruby extconf.rb</div><div class="line">creating Makefile</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span> clean</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span></div><div class="line">compiling porter.c</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: warning: <span class="string">'&&'</span> <span class="operator">within</span> <span class="string">'||'</span> [-Wlogical-op-parentheses]</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: note: place parentheses around <span class="operator">the</span> <span class="string">'&&'</span> expression <span class="built_in">to</span> silence this warning</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                          ^</div><div class="line">                   (                          )</div><div class="line"><span class="number">1</span> warning generated.</div><div class="line">compiling porter_wrap.c</div><div class="line">linking shared-object stemmer.bundle</div><div class="line">clang: error: unknown argument: <span class="string">'-multiply_definedsuppress'</span> [-Wunused-<span class="command"><span class="keyword">command</span>-line-argument-hard-error-in-future]</span></div><div class="line">clang: note: this will be <span class="operator">a</span> hard error (cannot be downgraded <span class="built_in">to</span> <span class="operator">a</span> warning) <span class="operator">in</span> <span class="operator">the</span> future</div><div class="line">make: *** [stemmer.bundle] Error <span class="number">1</span></div><div class="line"></div><div class="line">make failed, exit code <span class="number">2</span></div><div class="line"></div><div class="line">Gem <span class="built_in">files</span> will remain installed <span class="operator">in</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/gems/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span> <span class="keyword">for</span> inspection.</div><div class="line">Results logged <span class="built_in">to</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/extensions/universal-darwin-<span class="number">13</span>/<span class="number">2.0</span><span class="number">.0</span>/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span>/gem_make.out</div></pre></figure>
+
+<p>This is due to Xcode 5.1 - its already reported as a bug to Ruby.</p>
+<p>I found three different ways to fix the bug:</p>
+<ul>
+<li>Install using:<br><code>sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll</code></li>
+<li>Install Ruby 2.1.1. You can do this using brew install <a href="http://brew.sh/" target="_blank" rel="external">ruby</a></li>
+<li>Follow the instructions from <a href="http://stackoverflow.com/a/22340285/1270034" target="_blank" rel="external">http://stackoverflow.com/a/22340285/1270034</a> to remove the offending arg from rbconfig.</li>
+</ul>
 <blockquote>
-<p>如果你足够勇敢说再见，生活便会奖励你一个新的开始。</p>
+<p>还有些有用的Jekyll命令：<br>    jekyll serve    <em>开启本地浏览服务 <localhost:4000></localhost:4000></em><br>    jekyll build —watch   内容或者设置有更改时 自动更新</p>
 </blockquote>
 
     
   </div>
   <footer class="end-sep">
     
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">
+  <time datetime="2014-03-26T12:55:00.000Z">
+    2014年 3月 26日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>报错如下：</p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html#more" class="more-link">阅读全文</a>
+        </div>
       
       
     
@@ -530,13 +522,21 @@
   <h3 class="title">categories</h3>
   <ul class="entry">
   
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
     <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
   
-    <li><a href="/categories/情感/">情感</a><small>1</small></li>
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
   
-    <li><a href="/categories/技术/">技术</a><small>4</small></li>
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
   
-    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
   
   </ul>
 </div>
@@ -548,7 +548,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/ContOS/" style="font-size: NaNpx;">ContOS</a><a href="/tags/LAMP/" style="font-size: NaNpx;">LAMP</a><a href="/tags/Phabricator/" style="font-size: NaNpx;">Phabricator</a><a href="/tags/code-review/" style="font-size: NaNpx;">code review</a><a href="/tags/iOS/" style="font-size: NaNpx;">iOS</a><a href="/tags/jekyll/" style="font-size: NaNpx;">jekyll</a><a href="/tags/setter/" style="font-size: NaNpx;">setter</a><a href="/tags/人生/" style="font-size: NaNpx;">人生</a><a href="/tags/博客/" style="font-size: NaNpx;">博客</a><a href="/tags/心依/" style="font-size: NaNpx;">心依</a><a href="/tags/春天/" style="font-size: NaNpx;">春天</a><a href="/tags/爱情/" style="font-size: NaNpx;">爱情</a>
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
   </div>
 </div>
 
@@ -569,15 +569,15 @@
       </li>
     
       <li>
-        <a href="/2014/04/21/easy-comeeasy-go.html">Easy come,easy go</a>
-      </li>
-    
-      <li>
         <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
       </li>
     
       <li>
         <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
       </li>
     
   </ul>

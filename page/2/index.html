@@ -21,8 +21,6 @@
 <meta name="twitter:description" content="Duger | iOS">
 
   
-    <link rel="alternate" href="/atom.xml" title="Duger 博客" type="application/atom+xml">
-  
   
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   
@@ -60,8 +58,8 @@
       
         <li><a href="/about">About</a></li>
       
-      
         <li><a href="/atom.xml">RSS</a></li>
+      
       
     </ul>
     <div class="clearfix"></div>
@@ -78,39 +76,416 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2014/03/28/finish-work.html">
-  <time datetime="2014-03-27T16:00:00.000Z">
-    2014年 3月 28日
+      <a href="/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html">
+  <time datetime="2014-03-25T03:49:00.000Z">
+    2014年 3月 25日
   </time>
 </a>
     
     
   
-    <h1 class="title"><a href="/2014/03/28/finish-work.html">Jekyll小窝搭好了</a></h1>
+    <h1 class="title"><a href="/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html">Xcode升级5.1 iOS升级7.1无法真机调试 - duger</a></h1>
   
 
   </header>
   
   <div class="entry">
     
-      <p>花了一天半，小窝终于搭好了，使用的是    <a href="http://www.jekyllbootstrap.com" target="_blank" rel="external">jekyllbootstrap</a>的模板，很好用，很效率。<br>在安装Jekyll的时候遇到了些问题,报错如下：</p>
-<figure class="highlight"><pre><div class="line">sudo gem install jekyll</div><div class="line">Password:</div><div class="line">Building native extensions.  This could take <span class="operator">a</span> <span class="keyword">while</span>...</div><div class="line">ERROR:  Error installing jekyll:</div><div class="line">    ERROR: Failed <span class="built_in">to</span> build gem native extension.</div><div class="line"></div><div class="line">    /System/Library/Frameworks/Ruby.framework/Versions/<span class="number">2.0</span>/usr/bin/ruby extconf.rb</div><div class="line">creating Makefile</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span> clean</div><div class="line"></div><div class="line">make <span class="string">"DESTDIR="</span></div><div class="line">compiling porter.c</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: warning: <span class="string">'&&'</span> <span class="operator">within</span> <span class="string">'||'</span> [-Wlogical-op-parentheses]</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                ~~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~</div><div class="line">porter.c:<span class="number">359</span>:<span class="number">27</span>: note: place parentheses around <span class="operator">the</span> <span class="string">'&&'</span> expression <span class="built_in">to</span> silence this warning</div><div class="line">      <span class="keyword">if</span> (<span class="operator">a</span> &gt; <span class="number">1</span> || <span class="operator">a</span> == <span class="number">1</span> && !cvc(z, z-&gt;k - <span class="number">1</span>)) z-&gt;k<span class="comment">--;</span></div><div class="line">                          ^</div><div class="line">                   (                          )</div><div class="line"><span class="number">1</span> warning generated.</div><div class="line">compiling porter_wrap.c</div><div class="line">linking shared-object stemmer.bundle</div><div class="line">clang: error: unknown argument: <span class="string">'-multiply_definedsuppress'</span> [-Wunused-<span class="command"><span class="keyword">command</span>-line-argument-hard-error-in-future]</span></div><div class="line">clang: note: this will be <span class="operator">a</span> hard error (cannot be downgraded <span class="built_in">to</span> <span class="operator">a</span> warning) <span class="operator">in</span> <span class="operator">the</span> future</div><div class="line">make: *** [stemmer.bundle] Error <span class="number">1</span></div><div class="line"></div><div class="line">make failed, exit code <span class="number">2</span></div><div class="line"></div><div class="line">Gem <span class="built_in">files</span> will remain installed <span class="operator">in</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/gems/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span> <span class="keyword">for</span> inspection.</div><div class="line">Results logged <span class="built_in">to</span> /Library/Ruby/Gems/<span class="number">2.0</span><span class="number">.0</span>/extensions/universal-darwin-<span class="number">13</span>/<span class="number">2.0</span><span class="number">.0</span>/fast-stemmer-<span class="number">1.0</span><span class="number">.2</span>/gem_make.out</div></pre></figure>
+      <p><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">warning: ignoring debug info with an invalid version (<span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br>warning: ignoring debug info with an invalid version (</span><span style="color: #800080;">0</span><span style="color: #000000;">)<br></span><span style="color: #800080;">0</span>  <span style="color: #800080;">0x10fca9f93</span>  __assert_rtn + <span style="color: #800080;">144</span><br><span style="color: #800080;">1</span>  <span style="color: #800080;">0x10fd4ced4</span>  ld::passes::stubs::Pass::makeStub(ld::Atom <span style="color: #0000ff;">const</span>&amp;, <span style="color: #0000ff;">bool</span>) + <span style="color: #800080;">0</span><br><span style="color: #800080;">2</span>  <span style="color: #800080;">0x10fd4d5f7</span>  ld::passes::stubs::Pass::process(ld::Internal&amp;) + <span style="color: #800080;">497</span><br><span style="color: #800080;">3</span>  <span style="color: #800080;">0x10fd4dc07</span>  ld::passes::stubs::doPass(Options <span style="color: #0000ff;">const</span>&amp;, ld::Internal&amp;) + <span style="color: #800080;">111</span><br><span style="color: #800080;">4</span>  <span style="color: #800080;">0x10fcaab50</span>  main + <span style="color: #800080;">772</span><br><span style="color: #800080;">5</span>  <span style="color: #800080;">0x7fff8a3af5fd</span>  start + <span style="color: #800080;">1</span><span style="color: #000000;"><br>A linker snapshot was created at:<br>     </span>/tmp/MyApp-<span style="color: #800080;">2014</span>-<span style="color: #800080;">02</span>-<span style="color: #800080;">11</span>-<span style="color: #800080;">123906</span>.ld-<span style="color: #000000;">snapshot<br>ld: Assertion failed: (target </span>!= NULL), function stubableFixup, file /SourceCache/ld64/ld64-<span style="color: #800080;">236.3</span>/src/ld/passes/stubs/stubs.cpp, line <span style="color: #800080;">126</span><span style="color: #000000;">.<br>clang: error: linker command failed with exit code </span><span style="color: #800080;">1</span> (use -v to see invocation)</div><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
 
-<p>This is due to Xcode 5.1 - its already reported as a bug to Ruby.</p>
-<p>I found three different ways to fix the bug:</p>
-<ul>
-<li>Install using:<br><code>sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install jekyll</code></li>
-<li>Install Ruby 2.1.1. You can do this using brew install <a href="http://brew.sh/" target="_blank" rel="external">ruby</a></li>
-<li>Follow the instructions from <a href="http://stackoverflow.com/a/22340285/1270034" target="_blank" rel="external">http://stackoverflow.com/a/22340285/1270034</a> to remove the offending arg from rbconfig.</li>
-</ul>
-<blockquote>
-<p>还有些有用的Jekyll命令：<br>    jekyll serve    <em>开启本地浏览服务 <localhost:4000></localhost:4000></em><br>    jekyll build —watch   内容或者设置有更改时 自动更新</p>
-</blockquote>
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/01/21/使用SourceTree和GitHub共同开发---duger.html">
+  <time datetime="2014-01-21T15:10:00.000Z">
+    2014年 1月 21日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/01/21/使用SourceTree和GitHub共同开发---duger.html">使用SourceTree和GitHub共同开发 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><span><strong>GitHub详细教程</strong></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span><strong>1&nbsp;Git详细教程</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1&nbsp;Git简介</strong></span></p>
+<p>&nbsp;</p>
+<p><span><strong>1.1.1&nbsp;Git是何方神圣?</strong></span></p>
+<p>&nbsp;</p>
+<p><span>Git是用C语言开发的分布版本控制系统。版本控制系统可以保留一个文件集合的历史记录，并能回滚文件集合到另一个状态（历史记录状态）。另一个状态可以是不同的文件，也可以是不同的文件内容。举个例子，你可以将文件集合转换到两天之前的状态，或者你可以在生产代码和实验性质的代码之间进行切换。文件集合往往被称作是&ldquo;源代码&rdquo;。在一个分布版本控制系统中，每个人都有一份完整的源代码（包括源代码所有的历史记录信息），而且可以对这个本地的数据进行操作。分布版本控制系统不需要一个集中式的代码仓库。</span></p>
+<p>&nbsp;</p>
+<p><span>当你对本地的源代码进行了修改，你可以标注他们跟下一个版本相关（将他们加到index中），然后提交到仓库中来（commit）。Git保存了所有的版本信息，所以你可以转换你的源代码到任何的历史版本。你可以对本地的仓库进行代码的提交，然后与其他的仓库进行同步。你可以使用Git来进行仓库的克隆（clone）操作，完整的复制一个已有的仓库。仓库的所有者可以通过push操作（推送变更到别处的仓库）或者Pull操作（从别处的仓库拉取变更）来同步变更。</span><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2014/01/21/使用SourceTree和GitHub共同开发---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html">
+  <time datetime="2014-01-19T03:51:00.000Z">
+    2014年 1月 19日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html">iOS中 nil Nil NULL 的区别 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<p>nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。</p>
+<p><span>示例如下：</span></p>
+<ol>
+<li>id&nbsp;object&nbsp;=&nbsp;nil;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象不为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;判断对象为空&nbsp;&nbsp;</li>
+<li>if&nbsp;(object&nbsp;==&nbsp;nil)&nbsp;{&nbsp;&nbsp;</li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>//&nbsp;数组初始化，空值结束&nbsp;&nbsp;</li>
+<li>NSArray&nbsp;*array&nbsp;=&nbsp;[[NSArray&nbsp;alloc]&nbsp;initWithObjects:@”First”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>//&nbsp;判断数组元素是否为空&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*element&nbsp;=&nbsp;[array&nbsp;objectAtIndex:2];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)element&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li><p>}&nbsp;&nbsp;<div><span><span>今天做项目的时候就遇到，要判断数组元素是否为空，我的以下写法，都无效</span></span></div><div><span><span>if(!element)</span></span></div><div><span><span>if([element length]&gt;0)</span></span></div><div><span><span>if(element== NULL)</span></span></div><div><span><span>if(element == Nil)</span></span></div><div><span><span>&nbsp;</span></span></div><div><span><span>&nbsp;</span></span></div></p>
+</li>
+<li><p>&nbsp;&nbsp;</p>
+</li>
+<li>//&nbsp;判断字典对象的元素是否为空&nbsp;&nbsp;</li>
+<li>NSDictionary&nbsp;*dictionary&nbsp;=&nbsp;[NSDictionary&nbsp;dictionaryWithObjectsAndKeys:&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;@”iPhone”,&nbsp;@”First”,&nbsp;@”iPad”,&nbsp;@”Second”,&nbsp;nil];&nbsp;&nbsp;</li>
+<li>NSString&nbsp;*value&nbsp;=&nbsp;[dictionary&nbsp;objectForKey:@”First”];&nbsp;&nbsp;</li>
+<li>if&nbsp;((NSNull&nbsp;*)value&nbsp;==&nbsp;[NSNull&nbsp;null])&nbsp;{&nbsp;&nbsp;</li>
+<li>} &nbsp;<div><span><span>欢迎大家继续补充他们的区别。<br></span></span></div><div><span><span>加深理解一</span></span></div><div><span><span>&nbsp;</span></span></div><div><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html">
+  <time datetime="2013-09-11T12:24:00.000Z">
+    2013年 9月 11日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html">[转]ios中关于delegate （委托）的使用心得 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <div id="article_content" class="article_content"><span style="font-size: 15px;">从开始从事OC工作到现在大概1年多了，从当初接触oc的”协议”的不明白，到现在代码中随处可见的委托，协议，其中感悟颇多。</span><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">首先，大家应该都明白的是委托是协议的一种，顾名思义，就是委托他人帮自己去做什么事。也就是当自己做什么事情不方便的时候，就可以建立一个委托，这样就可以委托他人帮自己去实现什么方法。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">其次，我简单的总结了一下自己用到的委托的作用有两个，一个是传值，一个是传事件。</span></div><div><span style="font-size: 15px;">1.所谓传值经常用在b类要把自己的一个数据或者对象传给a类，让a类去展示或者处理。（切分紧耦合，和代码分块的时候经常用）</span></div><div><span style="font-size: 15px;">2.所谓传事件就是a类发生了什么事，把这件事告诉关注自己的人，也就是委托的对象，由委托的对象去考虑发生这个事件后应该做出什么反映。（这个经常见，例如在异步请求中，界面事件触发数据层改变等等）</span></div><div><span style="font-size: 15px;">3.利用委托赋值，这种方法感觉是为了不暴露自己的属性就可以给自己复值，而且这样更方便了类的管理，只有在你想要让别人给你赋值的时候才调用，这样的赋值更可控一些。（例如tableView中的委托（dateSource）中常见）。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">最后，我想分享一下在使用委托的时候的一些心得和注意事项。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">心得：delegate的命名要准确，尽量看名字就知道用法。delegate和通知有的用法有些象，但是前者是单对单的，后者是单对多的情况。</span></div><div><span style="font-size: 15px;">注意：在dealloc要把delegate至为nil，还有就是delegate设置属性的时候要用assign，不要用retain。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;"><strong>委托</strong></span><br><br><span style="font-size: 15px;">在IOS中委托通过一种@protocol的方式实现,所以又称为协议.协议是多个类共享的一个方法列表,在协议中所列出的方法没有响应的实现，由其它人来实现.这叫好比我想买个手机，所以我有个buyIphone 方法,但是我不知道谁那买手机,所以把这个需求发布出去(比如公布在网站上),如果有卖手机的商人(也就是说他能实现buyIphone这个方法)看到，他就会接受我的委托,(在商人自己的类中实现&lt;XXXdelegate&gt;),那么我的委托对象就指向了这个商人..当我要买手机的时候，直接找他就行了.</span><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html">
+  <time datetime="2013-09-09T07:20:00.000Z">
+    2013年 9月 09日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html">Example of [NSDictionary getObjects:andKeys:] 的示范 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id obj &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id key &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;%@ -&amp;gt; %@&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; obj&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;</code></span></p>
+<p><span style="font-size: 15px;">还有一个：</span><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id __unsafe_unretained objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+id __unsafe_unretained keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id obj &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
+  id key &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;%@ -&amp;gt; %@&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; obj&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; key&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;}&lt;/span&gt;</code></span><img src="http://counter.cnblogs.com/blog/rss/3309919" alt=""></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3309919.html" target="_blank" rel="external">Example of [NSDictionary getObjects:andKeys:] 的示范</a>，转载请注明。</p>
 
     
   </div>
   <footer class="end-sep">
     
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/09/06/initWithString和initWithFormat的区别---duger.html">
+  <time datetime="2013-09-06T06:02:00.000Z">
+    2013年 9月 06日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2013/09/06/initWithString和initWithFormat的区别---duger.html">initWithString和initWithFormat的区别 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><span><span>网上看到一篇文章，分析initWithString和initWithFormat的区别，用一下他的用例。</span></span></p>
+<div>&nbsp;</div><div>下面是测试代码：</div><div><br><br><span>NSString</span>&nbsp;<span>* str =[[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithString</span><span>:</span>@”this is from initWithString function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>&nbsp;<br><br><span>str = [[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithFormat</span><span>:</span>@”this is from initWithFormat function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithFormat] m_addr is %ld retainCount is %d”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br><span><span>&nbsp;</span></span><br></div><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2013/09/06/initWithString和initWithFormat的区别---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html">
+  <time datetime="2013-08-29T05:44:00.000Z">
+    2013年 8月 29日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html">在Mac OS X中配置Apache ＋ PHP ＋ MySQL - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
+<div><br><br><strong><span style="font-size: 14px;">&nbsp;</span></strong><br></div>
+
+<p><span style="font-size: 14px;">Mac OS X 内置Apache 和 PHP，使用起来非常方便<strong>。</strong>本文以Mac OS X 10.6.3和<ins>&nbsp;10.8<strong>.</strong>1</ins>为例。主要内容包括：</span></p>
+<p><strong><span style="font-size: 14px;">启动Apache<strong>&nbsp;</strong></span></strong></p>
+<p><span style="font-size: 14px;">有两种方法：</span></p>
+<ol>
+<li><span style="font-size: 14px;">打开&ldquo;系统设置偏好（System Preferences）&rdquo; -&gt; &ldquo;共享（Sharing）&rdquo; -&gt; &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong><ins>注意，从Mac OS X从10.8开始取消了 &ldquo;Web共享（Web Sharing）&rdquo;<strong>。</strong></ins></span></li>
+<li><p><span style="font-size: 14px;">打开&ldquo;终端（terminal）&rdquo;，然后（注意，sudo需要的密码就是系统的root帐号密码）</span></p>
+<pre><code>1.  运行&amp;ldquo;`sudo apachectl start`&amp;rdquo;，再输入帐号密码，这样Apache就运行了<span class="keyword">*</span><span class="keyword">*</span>。<span class="keyword">*</span><span class="keyword">*</span>
+</code></pre><ol>
+<li>运行&ldquo;<code>sudo apachectl －v</code>&rdquo;，你会看到Mac OS X的Apache版本信息，如10<strong>.</strong>8.1中：<code>Server version: Apache/2.2.22 (Unix)
+Server built:   Jun 20 2012 13:57:09</code></li>
+</ol>
+</li>
+</ol>
+<p><span style="font-size: 14px;">如此在浏览器中输入&ldquo;<a href="http://localhost&rdquo;，就可以看到一个内容为&ldquo;It" target="_blank" rel="external">http://localhost&rdquo;，就可以看到一个内容为&ldquo;It</a> works<strong>!</strong>&rdquo;的页面，其位于&ldquo;/Library（资源库）/WebServer/Documents/&rdquo;下，这就是Apache的默认根目录<strong>。</strong></span><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2013/08/29/在Mac-OS-X中配置Apache-＋-PHP-＋-MySQL---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/08/29/realloc-工作原理---duger.html">
+  <time datetime="2013-08-29T05:40:00.000Z">
+    2013年 8月 29日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2013/08/29/realloc-工作原理---duger.html">realloc 工作原理 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <div id="box"><div id="box_inner"><div id="text"><div id="pages"><div id="page1" class="page"><div class="page_content"><div id="articleHeader"><br><br><strong><span style="font-size: 16px;">realloc 用过很多次了<strong id="speechFragmentSeparator__1_1" class="speechFragmentSeparator">。</strong>无非就是将已经存在的一块内存扩大。</span></strong><br></div>
+
+<p><span style="font-size: 16px;">char<em> p = malloc(1024);</em></span><br><span style="font-size: 16px;">char q = realloc(p,2048);</span></p>
+<p><span style="font-size: 16px;">现在的问题是我们应该如何处理指针 p<strong>。</strong>&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候会出错。这样我就郁闷了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">后来仔细一跟踪，发现 realloc 完以后 q 和 p 的指针地址是一样<strong>。</strong>不过有时候又不一样<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">仔细查了下资料。得到如下信息：</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<strong>.</strong>如果 当前连续内存块足够 realloc 的话，只是将p所指向的空间扩大，并返回p的指针地址。 这个时候 q 和 p 指向的地址是一样的<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.如果 当前连续内存块不够长度，再找一个足够长的地方，分配一块新的内存，q，并将 p指向的内容 copy到 q，返回 q<strong>。</strong>并将p所指向的内存空间删除。</span></p>
+<p><span style="font-size: 16px;">这样也就是说 realloc 有时候会产生一个新的内存地址 有的时候不会<strong>。</strong>所以在分配完成后。我们需要判断下 p 是否等于 q。并做相应的处理。</span></p>
+<p><span style="font-size: 16px;">这里有点要注意的是要避免 p = realloc(p,2048); 这种写法<strong>。</strong>有可能会造成 realloc 分配失败后，p原先所指向的内存地址丢失。</span><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2013/08/29/realloc-工作原理---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/08/22/字节对齐详解---duger.html">
+  <time datetime="2013-08-22T05:10:00.000Z">
+    2013年 8月 22日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2013/08/22/字节对齐详解---duger.html">字节对齐详解 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
+<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
+<p><span>sizeof( A)=6, sizeof( B)=8,为什么？</span><br><span>注：sizeof(short)=2,sizeof(long)=4</span></p>
+<p><span>因为：&ldquo;成员对齐有一个重要的条件，即每个成员按自己的方式对齐。其对齐的规则是，每个成员按其类型的对齐参数(通常是这个类型的大小)和指定对齐参数(这里默认是8字节)中较小的一个对齐。并且结构的长度必须为所用过的所有对齐参数的整数倍，不够就补空字节。&rdquo;(引用)</span></p>
+<p><span>结构体A中有3个short类型变量，各自以2字节对齐，结构体对齐参数按默认的8字节对齐，则a1,a2,a3都取2字节对齐，则sizeof(A)为6，其也是2的整数倍；</span><br><span>B中a1为4字节对齐，a2为2字节对齐，结构体默认对齐参数为8，则a1取4字节对齐，a2取2字节对齐，结构体大小6字节，6不为4的整数倍，补空字节，增到8时，符合所有条件，则sizeof(B)为8；</span></p>
+<p><span>可以设置成对齐的</span></p>
+<p><span>#pragma pack(1)</span><br><span>#pragma pack(push)</span><br><span>#pragma pack(1)</span></p>
+<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
+<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
+<p><span>#pragma pack(pop)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p><span>结果为sizeof( A)=6,sizeof( B)=6</span></p>
+<p><span><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></span></p>
+<p><span>#pragma pack(8)</span></p>
+<p><span>struct S1{</span><br><span>&nbsp;&nbsp;&nbsp; char a;</span><br><span>&nbsp;&nbsp;&nbsp; long b;</span><br><span>};</span></p>
+<p><span>struct S2 {</span><br><span>&nbsp;&nbsp;&nbsp; char c;</span><br><span>&nbsp;&nbsp;&nbsp; struct S1 d;</span><br><span>&nbsp;&nbsp;&nbsp; long long e;</span><br><span>};</span></p>
+<p><span>#pragma pack()</span></p>
+<p><span>sizeof(S2)结果为24.</span><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2013/08/22/字节对齐详解---duger.html#more" class="more-link">阅读全文</a>
+        </div>
       
       
     
@@ -143,13 +518,21 @@
   <h3 class="title">categories</h3>
   <ul class="entry">
   
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
     <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
   
-    <li><a href="/categories/情感/">情感</a><small>1</small></li>
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
   
-    <li><a href="/categories/技术/">技术</a><small>4</small></li>
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
   
-    <li><a href="/categories/随笔/">随笔</a><small>3</small></li>
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
   
   </ul>
 </div>
@@ -161,7 +544,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/ContOS/" style="font-size: NaNpx;">ContOS</a><a href="/tags/LAMP/" style="font-size: NaNpx;">LAMP</a><a href="/tags/Phabricator/" style="font-size: NaNpx;">Phabricator</a><a href="/tags/code-review/" style="font-size: NaNpx;">code review</a><a href="/tags/iOS/" style="font-size: NaNpx;">iOS</a><a href="/tags/jekyll/" style="font-size: NaNpx;">jekyll</a><a href="/tags/setter/" style="font-size: NaNpx;">setter</a><a href="/tags/人生/" style="font-size: NaNpx;">人生</a><a href="/tags/博客/" style="font-size: NaNpx;">博客</a><a href="/tags/心依/" style="font-size: NaNpx;">心依</a><a href="/tags/春天/" style="font-size: NaNpx;">春天</a><a href="/tags/爱情/" style="font-size: NaNpx;">爱情</a>
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
   </div>
 </div>
 
@@ -182,15 +565,15 @@
       </li>
     
       <li>
-        <a href="/2014/04/21/easy-comeeasy-go.html">Easy come,easy go</a>
-      </li>
-    
-      <li>
         <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
       </li>
     
       <li>
         <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
       </li>
     
   </ul>

@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="报错如下：
+sudo gem install jekyllPassword:Building native extensions.  This could take a while…ERROR:  Error installing jekyll:    ERROR: Failed to build gem native extension.    /System/Library/Framework">
+  
+  <meta name="description" content="报错如下：
+sudo gem install jekyllPassword:Building native extensions.  This could take a while…ERROR:  Error installing jekyll:    ERROR: Failed to build gem native extension.    /System/Library/Framework">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger">
+<meta property="og:url" content="http://localhost:4000/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="报错如下：
+sudo gem install jekyllPassword:Building native extensions.  This could take a while…ERROR:  Error installing jekyll:    ERROR: Failed to build gem native extension.    /System/Library/Framework">
+<meta property="og:image" content="http://counter.cnblogs.com/blog/rss/3626969">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger">
+<meta name="twitter:description" content="报错如下：
+sudo gem install jekyllPassword:Building native extensions.  This could take a while…ERROR:  Error installing jekyll:    ERROR: Failed to build gem native extension.    /System/Library/Framework">
+
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">
+  <time datetime="2014-03-26T12:55:00.000Z">
+    2014年 3月 26日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>报错如下：</p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br><a id="more"></a><br>make failed</span>, exit code 2<span style="color: #000000;"><br><br>Gem files will remain installed in /Library/Ruby/Gems/</span>2.0.0/gems/fast-stemmer-1.0.2<span style="color: #000000;"> for inspection.<br>Results logged to /Library/Ruby/Gems/</span>2.0.0/extensions/universal-darwin-13/2.0.0/fast-stemmer-1.0.2/gem_make.out</div>
+
+<p><span>This is due to Xcode 5.1 - its already reported as a bug to Ruby.</span></p>
+<p>I&nbsp;found three different ways to fix the bug:</p>
+<ul>
+<li><p>Install using:<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-<span style="color: #0000ff;">in</span>-future gem install cheatset</div></p>
+</li>
+<li><p>Install Ruby 2.1.1. You can do this using&nbsp;<code>brew install ruby</code>&nbsp;(<a href="http://brew.sh/" target="_blank" rel="external">http://brew.sh/</a>)</p>
+</li>
+<li>Follow the instructions from&nbsp;<a href="http://stackoverflow.com/a/22340285/1270034" target="_blank" rel="external">http://stackoverflow.com/a/22340285/1270034</a>&nbsp;to remove the offending arg from rbconfig.<img src="http://counter.cnblogs.com/blog/rss/3626969" alt=""></li>
+</ul>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3626969.html" target="_blank" rel="external">OS X 10.9 XCode5.1升级后 安装Jekyll报错</a>，转载请注明。</p>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/技术/">技术</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/Jekyll/">Jekyll</a>, <a class="tags-link" href="/tags/XCode/">XCode</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger">
+  </div>
+</section>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
+  
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>

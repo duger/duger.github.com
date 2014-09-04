@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>realloc 工作原理 - duger | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="realloc 用过很多次了。无非就是将已经存在的一块内存扩大。
+
+char p = malloc(1024);char q = realloc(p,2048);
+现在的问题是我们应该如何处理指针 p。&amp;nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了。
+因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候">
+  
+  <meta name="description" content="realloc 用过很多次了。无非就是将已经存在的一块内存扩大。
+
+char p = malloc(1024);char q = realloc(p,2048);
+现在的问题是我们应该如何处理指针 p。&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了。
+因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候">
+<meta property="og:type" content="article">
+<meta property="og:title" content="realloc 工作原理 - duger">
+<meta property="og:url" content="http://localhost:4000/2013/08/29/realloc-工作原理---duger.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="realloc 用过很多次了。无非就是将已经存在的一块内存扩大。
+
+char p = malloc(1024);char q = realloc(p,2048);
+现在的问题是我们应该如何处理指针 p。&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了。
+因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候">
+<meta property="og:image" content="http://counter.cnblogs.com/blog/rss/3288974">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="realloc 工作原理 - duger">
+<meta name="twitter:description" content="realloc 用过很多次了。无非就是将已经存在的一块内存扩大。
+
+char p = malloc(1024);char q = realloc(p,2048);
+现在的问题是我们应该如何处理指针 p。&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了。
+因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候">
+
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2013/08/29/realloc-工作原理---duger.html">
+  <time datetime="2013-08-29T05:40:00.000Z">
+    2013年 8月 29日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">realloc 工作原理 - duger</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <div id="box"><div id="box_inner"><div id="text"><div id="pages"><div id="page1" class="page"><div class="page_content"><div id="articleHeader"><br><br><strong><span style="font-size: 16px;">realloc 用过很多次了<strong id="speechFragmentSeparator__1_1" class="speechFragmentSeparator">。</strong>无非就是将已经存在的一块内存扩大。</span></strong><br></div>
+
+<p><span style="font-size: 16px;">char<em> p = malloc(1024);</em></span><br><span style="font-size: 16px;">char q = realloc(p,2048);</span></p>
+<p><span style="font-size: 16px;">现在的问题是我们应该如何处理指针 p<strong>。</strong>&nbsp;刚开始按照我最直观的理解，如果就是直接将 p = NULL;。 到最后只需要释放 q的空间就可以了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">因为最近在做个封装。结果在做单元测试的时候发现。有时候我在 free(q); 的时候会出错。这样我就郁闷了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">后来仔细一跟踪，发现 realloc 完以后 q 和 p 的指针地址是一样<strong>。</strong>不过有时候又不一样<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">仔细查了下资料。得到如下信息：</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<strong>.</strong>如果 当前连续内存块足够 realloc 的话，只是将p所指向的空间扩大，并返回p的指针地址。 这个时候 q 和 p 指向的地址是一样的<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.如果 当前连续内存块不够长度，再找一个足够长的地方，分配一块新的内存，q，并将 p指向的内容 copy到 q，返回 q<strong>。</strong>并将p所指向的内存空间删除。</span></p>
+<p><span style="font-size: 16px;">这样也就是说 realloc 有时候会产生一个新的内存地址 有的时候不会<strong>。</strong>所以在分配完成后。我们需要判断下 p 是否等于 q。并做相应的处理。</span></p>
+<p><span style="font-size: 16px;">这里有点要注意的是要避免 p = realloc(p,2048); 这种写法<strong>。</strong>有可能会造成 realloc 分配失败后，p原先所指向的内存地址丢失。</span><br><a id="more"></a><br><span style="font-size: 16px;">=========================================</span></p>
+<p><span style="font-size: 16px;">关于realloc函数说明的补充：</span><br><span style="font-size: 16px;">函数定义：</span><br><span style="font-size: 16px;">void <em>realloc(void </em>ptr, size_t size);</span><br><span style="font-size: 16px;">上面的分析基本没有问题，但有两点要注意：</span><br><span style="font-size: 16px;">1<strong>.</strong>返回值可能与ptr的值不同，如果是不同的话，那么realloc函数完成后，ptr指向的旧内存已被free掉了<strong>。</strong></span><br><span style="font-size: 16px;">2。如果返回NULL值，则分配不成功，而原来的ptr指向的内存还没有被free掉，要求程序显式free.</span></p>
+<p><span style="font-size: 16px;">故p = (int <em>) realloc (p, sizeof(int) </em>15);语句有这么一个问题，</span><br><span style="font-size: 16px;">调用前p指向一个已分配成功的内存,而调用realloc时却失败（即返回NULL），此时，p原来指向的内存还没有free掉，而现在又找不到地址，这样就出现memory leak了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">关于这一点的确要注意，最好如下：</span><br><span style="font-size: 16px;">int <em>q</em></span><br><span style="font-size: 16px;">q = (int ) realloc (p, sizeof(int) *15);</span></p>
+<p><span style="font-size: 16px;">if(<strong>!</strong>q) p =q;</span></p>
+<p><span style="font-size: 16px;">======================================================</span></p>
+<p><span style="font-size: 16px;">首先看一下下面的C程序片断：</span></p>
+<p><span style="font-size: 16px;">#include &lt;malloc<strong>.</strong>h&gt;</span></p>
+<p><span style="font-size: 16px;">char&nbsp;&nbsp;*p;</span></p>
+<p><span style="font-size: 16px;">p = (char * ) malloc (10);</span></p>
+<p><span style="font-size: 16px;">p = (char * ) realloc (p,20);</span></p>
+<p><span style="font-size: 16px;">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这段程序的意思很简单，只有稍有点C基础的人都可以看懂<strong>。</strong>函数首先定义了一个字符型的指针p，然后为指针p分配了一个10个字节大小的内存空间，接着将这个内存块的大小<strong>增加到</strong>20个字节<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这里有什么问题吗？上机运行一下，好像没有问题！</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 是的，这样上机运行是没有问题的，但是这里存在着也许我们不太注意的<strong>隐患</strong>！隐患在那里？这就是我在本文中要详细说明的realloc（）函数了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 再看一下下面一段来自MSDN的话：</span></p>
+<p><span style="font-size: 16px;"><strong>realloc</strong>&nbsp;returns a&nbsp;<strong>void</strong>&nbsp;pointer to the reallocated (and possibly moved) memory block<strong>.</strong>&nbsp;The return value is&nbsp;<strong>NULL</strong>&nbsp;if the size is zero and the buffer argument is not&nbsp;<strong>NULL</strong>, or if there is not enough available memory to expand the block to the given size<strong>.</strong>&nbsp;In the first case, the original block is freed<strong>.</strong>&nbsp;In the second, the original block is unchanged. The return value points to a storage space that is guaranteed to be suitably aligned for storage of any type of object<strong>.</strong>&nbsp;To get a pointer to a type other than&nbsp;<strong>void</strong>, use a type cast on the return value<strong>.</strong></span></p>
+<p><span style="font-size: 16px;">这段E文还不算是晦涩难懂，所以我就不翻译了，大致的意思是说关于realloc返回值的<strong>。</strong>但是这里对他的返回值分了几种情况：</span></p>
+<p><span style="font-size: 16px;">1、&nbsp;&nbsp;返回void <em>&nbsp;指针，调用成功<em>*。</em></em></span></p>
+<p><span style="font-size: 16px;">2、&nbsp;&nbsp;返回NULL，当需要扩展的大小（第二个参数）为0并且第一个参数不为NULL，此时原内存变成了&ldquo;freed（游离）&rdquo;的了<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">3、&nbsp;&nbsp;返回NULL，当没有足够的空间可供扩展的时候，此时，原内存空间的大小维持不变<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">第一种情况告诉了我们在得到需要的内存空间后需要做类型转换的工作；</span></p>
+<p><span style="font-size: 16px;">第二种情况可能只有傻瓜才会去使用吧！</span></p>
+<p><span style="font-size: 16px;">第三种情况，内存空间不够的时候就会维持未来的大小不变<strong>。</strong></span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSDN上面说内存空间不够的时候就不会扩展原来的内存空间的大小，这话固然没有错，但是有点含糊，似乎遗漏了一种情况！我们知道，<strong>realloc**</strong>是从堆上分配内存的，当扩大一块内存空间时，&nbsp;realloc()<strong>**试图直接从堆上现存的数据后面的那些字节中获得附加的字节，如果能够满足，自然天下太平；可如果数据后面的字节不够的话，问题就出来了，那么就使用堆上第一个有足够大小的自由块，现存的数据然后就被拷贝至新的位置，而老块则放回到堆上<strong id="speechFragmentSeparator__1_30" class="speechFragmentSeparator">。</strong></strong>这句话传递的一个重要的信息就是数据可能被移动！看到这里，也许我们已经发现一开始我给出的程序的问题了<strong>。</strong>为了更清楚地说明问题，可以将上面的程序改成下面的形式：</span></p>
+<p><span style="font-size: 16px;">#include &lt;malloc<strong>.</strong>h&gt;</span></p>
+<p><span style="font-size: 16px;">char&nbsp;&nbsp;<em>p，<em>**</em></em>q;</span></p>
+<p><span style="font-size: 16px;">p = (char * ) malloc (10);</span></p>
+<p><span style="font-size: 16px;"><strong>q=p;</strong></span></p>
+<p><span style="font-size: 16px;">p = (char * ) realloc (p,20);</span></p>
+<p><span style="font-size: 16px;">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这段程序也许在编译器中没有办法通过，因为编译器可能会为我们消除一些隐患！在这里我们只是增加了一个记录原来内存地址的指针q，然后记录了原来的内存地址p，如果不幸的话，数据发生了移动，那么所记录的原来的内存地址q所指向的内存空间实际上已经放回到堆上了<strong>!</strong>这样一来，我们应该终于意识到问题的所在和可怕了吧！</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 这个问题似乎有点牛角尖的味道，因为我们也许从来不曾遇上过，但是我们应该明白这样的事情的始终存在，只有这样，在万一我们碰上的时候才会去有意识的去避免这种隐患，否则，一旦这样的隐患一旦发作，程序崩溃不说，恐怕查错也不是一件容易的事！</span></p>
+<p><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp; 候俊杰在《深入浅出MFC》中引用林语堂的《朱门》中的一句话，我很有感触，虽然不可能有他的感触深，但是抱着向前辈学习的心态，所以也拿来作为本为的结束：</span></p>
+<p><span style="font-size: 16px;">&ldquo;只用一样东西，不明白他的道理，实在不高明&rdquo;<strong>。</strong></span><br><span style="font-size: 16px;"><strong>
+</strong></span></p></div></div></div></div></div></div><div id="fitts" title="隐藏覆盖"><span style="font-size: 16px;">&nbsp;</span></div><div id="next_pages_container"><span style="font-size: 16px;">&nbsp;</span></div><div id="audio_elements_container"><span style="font-size: 16px;">&nbsp;</span></div><div id="sidebar"><span style="font-size: 16px;">&nbsp;</span></div><img src="http://counter.cnblogs.com/blog/rss/3288974" alt=""><p></p>
+<p>本文链接：<a href="http://www.cnblogs.com/duger/p/3288974.html" target="_blank" rel="external">realloc 工作原理</a>，转载请注明。</p>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/技术/">技术</a>, <a class="categories-link" href="/categories/技术/iOS/">iOS</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/iOS/">iOS</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="realloc 工作原理 - duger">
+  </div>
+</section>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>5</small></li>
+  
+    <li><a href="/categories/iOS/">iOS</a><small>2</small></li>
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>12</small></li>
+  
+    <li><a href="/categories/iOS/技术/">技术</a><small>2</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
