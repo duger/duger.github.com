@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:4000/2014/04/02/setternil-and-saferelease.html</loc>
+    <lastmod>2014-09-04T11:24:49.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2014/03/31/apple-touch-icon.html</loc>
+    <lastmod>2014-09-04T11:24:38.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2014/01/19/iOS%E4%B8%AD-nil-Nil-NULL-%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html</loc>
+    <lastmod>2014-09-04T11:24:09.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2013/09/11/%5B%E8%BD%AC%5Dios%E4%B8%AD%E5%85%B3%E4%BA%8Edelegate-%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97---duger.html</loc>
+    <lastmod>2014-09-04T11:23:59.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2013/09/09/Example-of-%5BNSDictionary-getObjectsandKeys%5D-%E7%9A%84%E7%A4%BA%E8%8C%83---duger.html</loc>
+    <lastmod>2014-09-04T11:23:41.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2013/09/06/initWithString%E5%92%8CinitWithFormat%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html</loc>
+    <lastmod>2014-09-04T11:23:33.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/2013/08/29/realloc-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86---duger.html</loc>
+    <lastmod>2014-09-04T11:23:20.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://localhost:4000/2014/04/10/shanbala.html</loc>
     <lastmod>2014-09-04T10:07:07.000Z</lastmod>
   </url>
@@ -14,26 +49,6 @@
   <url>
     <loc>http://localhost:4000/2013/08/29/%E5%9C%A8Mac-OS-X%E4%B8%AD%E9%85%8D%E7%BD%AEApache-%EF%BC%8B-PHP-%EF%BC%8B-MySQL---duger.html</loc>
     <lastmod>2014-09-04T09:48:58.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/2013/08/29/realloc-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86---duger.html</loc>
-    <lastmod>2014-09-04T09:48:32.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/2013/09/06/initWithString%E5%92%8CinitWithFormat%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html</loc>
-    <lastmod>2014-09-04T09:48:11.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/2013/09/11/%5B%E8%BD%AC%5Dios%E4%B8%AD%E5%85%B3%E4%BA%8Edelegate-%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97---duger.html</loc>
-    <lastmod>2014-09-04T09:47:22.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/2014/01/19/iOS%E4%B8%AD-nil-Nil-NULL-%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html</loc>
-    <lastmod>2014-09-04T09:46:54.000Z</lastmod>
   </url>
   
   <url>
@@ -52,16 +67,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2014/03/31/apple-touch-icon.html</loc>
-    <lastmod>2014-09-04T09:43:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/2014/04/02/setternil-and-saferelease.html</loc>
-    <lastmod>2014-09-04T09:42:53.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:4000/2014/04/26/setup-phabricator-on-aliyun.html</loc>
     <lastmod>2014-09-04T09:41:09.000Z</lastmod>
   </url>
@@ -74,11 +79,6 @@
   <url>
     <loc>http://localhost:4000/2014/03/31/god-never-forgive-us.html</loc>
     <lastmod>2014-09-04T04:07:28.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/2013/09/09/Example-of-%5BNSDictionary-getObjectsandKeys%5D-%E7%9A%84%E7%A4%BA%E8%8C%83---duger.html</loc>
-    <lastmod>2014-09-04T04:06:15.000Z</lastmod>
   </url>
   
   <url>

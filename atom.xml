@@ -4,7 +4,7 @@
   <subtitle><![CDATA[iOS小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://localhost:4000/"/>
-  <updated>2014-09-04T10:07:42.028Z</updated>
+  <updated>2014-09-04T11:25:38.079Z</updated>
   <id>http://localhost:4000/</id>
   
   <author>
@@ -219,7 +219,7 @@
     <link href="http://localhost:4000/2014/04/02/setternil-and-saferelease.html"/>
     <id>http://localhost:4000/2014/04/02/setternil-and-saferelease.html</id>
     <published>2014-04-01T16:00:00.000Z</published>
-    <updated>2014-09-04T09:42:53.000Z</updated>
+    <updated>2014-09-04T11:24:49.000Z</updated>
     <content type="html"><![CDATA[<p>如果一个界面内有个arr暂时存储数据，在这个界面类中，不对这个arr进行alloc,给这个界面传值时简单调用其<code>setter方法</code>，那么在这个界面类的dealoc方法中，我还能直接写成<code>_Pointer release,_Pointer = nil;</code>呢？</p>
 <p>在一个界面类dealloc方法中，有两种常用的retainCount减一方法：</p>
 <pre><code>*    <span class="comment">#define SAFERELEASE(_Pointer){[_Pointer release],_Pointer = nil;} </span>
@@ -285,7 +285,7 @@
     <link href="http://localhost:4000/2014/03/31/apple-touch-icon.html"/>
     <id>http://localhost:4000/2014/03/31/apple-touch-icon.html</id>
     <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2014-09-04T09:43:45.000Z</updated>
+    <updated>2014-09-04T11:24:38.000Z</updated>
     <content type="html"><![CDATA[<p>以前我们用过favicon在浏览器给网站进行身份标识，用法如下：</p>
 <figure class="highlight"><pre><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"shortcut icon"</span> /&gt;  </div><div class="line">&lt;link <span class="variable">href=</span><span class="string">"http://image.feeliu.com/web/favicon.ico"</span> <span class="variable">rel=</span><span class="string">"Bookmark"</span> /&gt;</div></pre></figure>
 
@@ -651,7 +651,7 @@
     <link href="http://localhost:4000/2014/01/19/iOS%E4%B8%AD-nil-Nil-NULL-%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
     <id>http://localhost:4000/2014/01/19/iOS中-nil-Nil-NULL-的区别---duger.html</id>
     <published>2014-01-19T03:51:00.000Z</published>
-    <updated>2014-09-04T09:46:54.000Z</updated>
+    <updated>2014-09-04T11:24:09.000Z</updated>
     <content type="html"><![CDATA[<!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
 
 <p>nil用来给对象赋值（Objective-C中的任何对象都属于id类型），NULL则给任何指针赋值，NULL和nil不能互换，nil用于类指针赋值（在Objective-C中类是一个对象，是类的meta-class的实例）， 而NSNull则用于集合操作，虽然它们表示的都是空值，但使用的场合完全不同。</p>
@@ -776,9 +776,9 @@
     
       <category term="nil" scheme="http://localhost:4000/tags/nil/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/iOS/"/>
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/iOS/%E6%8A%80%E6%9C%AF/"/>
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
@@ -787,7 +787,7 @@
     <link href="http://localhost:4000/2013/09/11/%5B%E8%BD%AC%5Dios%E4%B8%AD%E5%85%B3%E4%BA%8Edelegate-%EF%BC%88%E5%A7%94%E6%89%98%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97---duger.html"/>
     <id>http://localhost:4000/2013/09/11/[转]ios中关于delegate-（委托）的使用心得---duger.html</id>
     <published>2013-09-11T12:24:00.000Z</published>
-    <updated>2014-09-04T09:47:22.000Z</updated>
+    <updated>2014-09-04T11:23:59.000Z</updated>
     <content type="html"><![CDATA[<div id="article_content" class="article_content"><span style="font-size: 15px;">从开始从事OC工作到现在大概1年多了，从当初接触oc的”协议”的不明白，到现在代码中随处可见的委托，协议，其中感悟颇多。</span><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">首先，大家应该都明白的是委托是协议的一种，顾名思义，就是委托他人帮自己去做什么事。也就是当自己做什么事情不方便的时候，就可以建立一个委托，这样就可以委托他人帮自己去实现什么方法。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">其次，我简单的总结了一下自己用到的委托的作用有两个，一个是传值，一个是传事件。</span></div><div><span style="font-size: 15px;">1.所谓传值经常用在b类要把自己的一个数据或者对象传给a类，让a类去展示或者处理。（切分紧耦合，和代码分块的时候经常用）</span></div><div><span style="font-size: 15px;">2.所谓传事件就是a类发生了什么事，把这件事告诉关注自己的人，也就是委托的对象，由委托的对象去考虑发生这个事件后应该做出什么反映。（这个经常见，例如在异步请求中，界面事件触发数据层改变等等）</span></div><div><span style="font-size: 15px;">3.利用委托赋值，这种方法感觉是为了不暴露自己的属性就可以给自己复值，而且这样更方便了类的管理，只有在你想要让别人给你赋值的时候才调用，这样的赋值更可控一些。（例如tableView中的委托（dateSource）中常见）。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">最后，我想分享一下在使用委托的时候的一些心得和注意事项。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;">心得：delegate的命名要准确，尽量看名字就知道用法。delegate和通知有的用法有些象，但是前者是单对单的，后者是单对多的情况。</span></div><div><span style="font-size: 15px;">注意：在dealloc要把delegate至为nil，还有就是delegate设置属性的时候要用assign，不要用retain。</span></div><div><span style="font-size: 15px;">&nbsp;</span></div><div><span style="font-size: 15px;"><strong>委托</strong></span><br><br><span style="font-size: 15px;">在IOS中委托通过一种@protocol的方式实现,所以又称为协议.协议是多个类共享的一个方法列表,在协议中所列出的方法没有响应的实现，由其它人来实现.这叫好比我想买个手机，所以我有个buyIphone 方法,但是我不知道谁那买手机,所以把这个需求发布出去(比如公布在网站上),如果有卖手机的商人(也就是说他能实现buyIphone这个方法)看到，他就会接受我的委托,(在商人自己的类中实现&lt;XXXdelegate&gt;),那么我的委托对象就指向了这个商人..当我要买手机的时候，直接找他就行了.</span><br><a id="more"></a><br><span style="font-size: 15px;">例如:</span><br><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="font-size: 15px;">@protocol MyDelegate<br>-(void)buyIphone:(NSString <em>)iphoneType money:(NSString </em>)money;<br><br>@end<br>@interface My : NSObject<br>{<br>    id&lt;MyDelegate&gt; deleage;<br>}<br>@property(assign,nonatomic)id&lt;MyDelegate&gt; delegate;<br>@end</span></div>
 
 <p><span style="font-size: 15px;">代码中声明了一个协议 名叫Mydelegate,在其中有一个buyIphone方法，即一个委托项。当我要购买手机的时候只需要通过delegate 调用 BuyIphone方法即可.</span></p>
@@ -855,9 +855,9 @@
     
       <category term="delegate" scheme="http://localhost:4000/tags/delegate/"/>
     
-      <category term="iOS" scheme="http://localhost:4000/categories/iOS/"/>
+      <category term="技术" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="技术" scheme="http://localhost:4000/categories/iOS/%E6%8A%80%E6%9C%AF/"/>
+      <category term="iOS" scheme="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/iOS/"/>
     
   </entry>
   
@@ -866,7 +866,7 @@
     <link href="http://localhost:4000/2013/09/09/Example-of-%5BNSDictionary-getObjectsandKeys%5D-%E7%9A%84%E7%A4%BA%E8%8C%83---duger.html"/>
     <id>http://localhost:4000/2013/09/09/Example-of-[NSDictionary-getObjectsandKeys]-的示范---duger.html</id>
     <published>2013-09-09T07:20:00.000Z</published>
-    <updated>2014-09-04T04:06:15.000Z</updated>
+    <updated>2014-09-04T11:23:41.000Z</updated>
     <content type="html"><![CDATA[<p><span style="font-size: 15px;"><code>&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSDictionary&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; dictionaryWithObjectsAndKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;A&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;str&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;NSInteger&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
 id objects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
 id keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;myDictionary getObjects&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;objects andKeys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;kwd&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;typ&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;lit&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i &lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; count&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; i&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;++)&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt;
@@ -894,7 +894,7 @@ id __unsafe_unretained keys&lt;/span&gt;&lt;span class=&quot;pun&quot;&gt;[&lt;/
     <link href="http://localhost:4000/2013/09/06/initWithString%E5%92%8CinitWithFormat%E7%9A%84%E5%8C%BA%E5%88%AB---duger.html"/>
     <id>http://localhost:4000/2013/09/06/initWithString和initWithFormat的区别---duger.html</id>
     <published>2013-09-06T06:02:00.000Z</published>
-    <updated>2014-09-04T09:48:11.000Z</updated>
+    <updated>2014-09-04T11:23:33.000Z</updated>
     <content type="html"><![CDATA[<p><span><span>网上看到一篇文章，分析initWithString和initWithFormat的区别，用一下他的用例。</span></span></p>
 <div>&nbsp;</div><div>下面是测试代码：</div><div><br><br><span>NSString</span>&nbsp;<span>* str =[[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithString</span><span>:</span>@”this is from initWithString function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br>[str&nbsp;<span>release</span>];<br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithString] m_addr is %ld retainCount is %i”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br>&nbsp;<br><br><span>str = [[</span><span>NSString</span>&nbsp;<span>alloc</span><span>]</span>&nbsp;<span>initWithFormat</span><span>:</span>@”this is from initWithFormat function”<span>];</span><br><br><span>NSLog</span><span>(</span>@”this is from [[NSString alloc] initWithFormat] m_addr is %ld retainCount is %d”<span>, str, [str</span><span>retainCount</span><span>]);</span><br><br><span><span>&nbsp;</span></span><br></div><br><a id="more"></a><br><span><span>下面是LOG的结果：</span></span><br><div><span>&nbsp;this is from [[NSString alloc] initWithString] m_addr is 12356 retainCount is 2147483647</span></div>
 
@@ -1098,7 +1098,7 @@ Server built:   Jun 20 2012 13:57:09</code></li>
     <link href="http://localhost:4000/2013/08/29/realloc-%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86---duger.html"/>
     <id>http://localhost:4000/2013/08/29/realloc-工作原理---duger.html</id>
     <published>2013-08-29T05:40:00.000Z</published>
-    <updated>2014-09-04T09:48:32.000Z</updated>
+    <updated>2014-09-04T11:23:20.000Z</updated>
     <content type="html"><![CDATA[<div id="box"><div id="box_inner"><div id="text"><div id="pages"><div id="page1" class="page"><div class="page_content"><div id="articleHeader"><br><br><strong><span style="font-size: 16px;">realloc 用过很多次了<strong id="speechFragmentSeparator__1_1" class="speechFragmentSeparator">。</strong>无非就是将已经存在的一块内存扩大。</span></strong><br></div>
 
 <p><span style="font-size: 16px;">char<em> p = malloc(1024);</em></span><br><span style="font-size: 16px;">char q = realloc(p,2048);</span></p>
