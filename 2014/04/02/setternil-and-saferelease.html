@@ -19,7 +19,7 @@
 *    #define SAFERELEASE(_Pointer){">
 <meta property="og:type" content="article">
 <meta property="og:title" content="setter=nil and saferelease">
-<meta property="og:url" content="http://wfyh007.gitcafe.com/2014/04/02/setternil-and-saferelease.html">
+<meta property="og:url" content="http://www.autonavi.me/2014/04/02/setternil-and-saferelease.html">
 <meta property="og:site_name" content="Duger 博客">
 <meta property="og:description" content="如果一个界面内有个arr暂时存储数据，在这个界面类中，不对这个arr进行alloc,给这个界面传值时简单调用其setter方法，那么在这个界面类的dealoc方法中，我还能直接写成_Pointer release,_Pointer = nil;呢？
 在一个界面类dealloc方法中，有两种常用的retainCount减一方法：
@@ -217,7 +217,8 @@
   Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
 </div>
 <div class="clearfix"></div></footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="/js/scale.fix.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
