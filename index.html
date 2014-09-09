@@ -76,6 +76,57 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2014/09/09/Hexo加载过慢.html">
+  <time datetime="2014-09-09T04:09:16.000Z">
+    2014年 9月 09日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/09/09/Hexo加载过慢.html">HEXO个人博客速度优化</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:</p>
+<blockquote>
+<ol>
+<li>使用DNSPOD解析域名</li>
+<li>使用GitHub和GitCafe双托管</li>
+<li>解决由于Google被墙资源下载困难的问题</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="1-_使用DNSPOD解析域名">1. 使用DNSPOD解析域名</h3>
+<p>我是在<a href="https://www.godaddy.com/89170699" target="_blank" rel="external">GoDaddy</a>上购买的域名,非常简单方便,可以直接用支付宝支付,而且网上也有很多<a href="http://www.dute.me" target="_blank" rel="external">优惠码</a>可以使用.<br>然后我们使用<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPOD</a>解析我们的域名,将GoDaddy中的DNS解析服务器改为自定义,并将地址改为DNSPOD的地址:</p>
+<figure class="highlight"><pre><div class="line">f1g1ns1.dnspod.<span class="winutils">net</span></div><div class="line">f1g1ns2.dnspod.<span class="winutils">net</span></div></pre></figure>
+
+<p>然后我们在DNSPOD中添加我们的域名,它会自动解析并帮我们添加若干条基础的记录,我们可以根据自己的需要添加等多记录.</p>
+<p><strong>DNSPod多线路解析</strong><br>DNSPOD支持不同线路类型解析到不同IP,那么我们就可以将国内请求解析到GitCafe上的博客,将国外的请求解析到GitHub上的博客,那么速度上会提高很多.<br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2014/09/09/Hexo加载过慢.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2014/08/01/hello-world.html">
   <time datetime="2014-07-31T16:00:00.000Z">
     2014年 8月 01日
@@ -461,44 +512,6 @@
 
 
   
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">
-  <time datetime="2014-03-26T12:55:00.000Z">
-    2014年 3月 26日
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>报错如下：</p>
-<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br>
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-        <div class="alignleft">
-          <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html#more" class="more-link">阅读全文</a>
-        </div>
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
 
   <nav id="pagination">
   
@@ -526,11 +539,13 @@
   
     <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
   
+    <li><a href="/categories/技术/Hexo/">Hexo</a><small>1</small></li>
+  
     <li><a href="/categories/技术/iOS/">iOS</a><small>8</small></li>
   
     <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
   
-    <li><a href="/categories/技术/">技术</a><small>15</small></li>
+    <li><a href="/categories/技术/">技术</a><small>16</small></li>
   
     <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
   
@@ -544,7 +559,7 @@
 <div class="widget tagcloud">
   <h3 class="title">标签云</h3>
   <div class="entry">
-    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/Certificates/" style="font-size: 10.00px;">Certificates</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/Profiles/" style="font-size: 10.00px;">Profiles</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/苹果证书/" style="font-size: 10.00px;">苹果证书</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/Certificates/" style="font-size: 10.00px;">Certificates</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Google字体/" style="font-size: 10.00px;">Google字体</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/Profiles/" style="font-size: 10.00px;">Profiles</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/苹果证书/" style="font-size: 10.00px;">苹果证书</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
   </div>
 </div>
 
@@ -555,6 +570,10 @@
 <div class="widget recent-posts">
   <h3 class="title">最近的文章</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2014/09/09/Hexo加载过慢.html">HEXO个人博客速度优化</a>
+      </li>
     
       <li>
         <a href="/2014/08/01/hello-world.html">Hello World</a>
@@ -570,10 +589,6 @@
     
       <li>
         <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
       </li>
     
   </ul>
@@ -595,8 +610,7 @@
   Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
 </div>
 <div class="clearfix"></div></footer>
-  // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script src="//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script src="//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="/js/scale.fix.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>

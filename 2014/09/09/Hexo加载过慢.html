@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>HEXO个人博客速度优化 | Duger 博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Duger wang">
+  
+  
+    <meta name="description" content="最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:
+
+
+使用DNSPOD解析域名
+使用GitHub和GitCafe双托管
+解决由于Google被墙资源下载困难的问题
+
+
+
+1. 使用DNSPOD解析域名
+我是在GoDaddy上购买的域名,非常简单方便,可以直接用支付宝支付,而且网上也有很多优惠码可以使用.然后我们使用DNSPOD解析我们的域名,将G">
+  
+  <meta name="description" content="最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:
+
+
+使用DNSPOD解析域名
+使用GitHub和GitCafe双托管
+解决由于Google被墙资源下载困难的问题
+
+
+
+1. 使用DNSPOD解析域名
+我是在GoDaddy上购买的域名,非常简单方便,可以直接用支付宝支付,而且网上也有很多优惠码可以使用.然后我们使用DNSPOD解析我们的域名,将G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HEXO个人博客速度优化">
+<meta property="og:url" content="http://www.autonavi.me/2014/09/09/Hexo加载过慢.html">
+<meta property="og:site_name" content="Duger 博客">
+<meta property="og:description" content="最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:
+
+
+使用DNSPOD解析域名
+使用GitHub和GitCafe双托管
+解决由于Google被墙资源下载困难的问题
+
+
+
+1. 使用DNSPOD解析域名
+我是在GoDaddy上购买的域名,非常简单方便,可以直接用支付宝支付,而且网上也有很多优惠码可以使用.然后我们使用DNSPOD解析我们的域名,将G">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HEXO个人博客速度优化">
+<meta name="twitter:description" content="最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:
+
+
+使用DNSPOD解析域名
+使用GitHub和GitCafe双托管
+解决由于Google被墙资源下载困难的问题
+
+
+
+1. 使用DNSPOD解析域名
+我是在GoDaddy上购买的域名,非常简单方便,可以直接用支付宝支付,而且网上也有很多优惠码可以使用.然后我们使用DNSPOD解析我们的域名,将G">
+
+  
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49504269-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Duger 博客</a></h1>
+    <p><a href="/">iOS小生</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+        <li><a href="/about">About</a></li>
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2014/09/09/Hexo加载过慢.html">
+  <time datetime="2014-09-09T04:09:16.000Z">
+    2014年 9月 09日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">HEXO个人博客速度优化</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:</p>
+<blockquote>
+<ol>
+<li>使用DNSPOD解析域名</li>
+<li>使用GitHub和GitCafe双托管</li>
+<li>解决由于Google被墙资源下载困难的问题</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="1-_使用DNSPOD解析域名">1. 使用DNSPOD解析域名</h3>
+<p>我是在<a href="https://www.godaddy.com/89170699" target="_blank" rel="external">GoDaddy</a>上购买的域名,非常简单方便,可以直接用支付宝支付,而且网上也有很多<a href="http://www.dute.me" target="_blank" rel="external">优惠码</a>可以使用.<br>然后我们使用<a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPOD</a>解析我们的域名,将GoDaddy中的DNS解析服务器改为自定义,并将地址改为DNSPOD的地址:</p>
+<figure class="highlight"><pre><div class="line">f1g1ns1.dnspod.<span class="winutils">net</span></div><div class="line">f1g1ns2.dnspod.<span class="winutils">net</span></div></pre></figure>
+
+<p>然后我们在DNSPOD中添加我们的域名,它会自动解析并帮我们添加若干条基础的记录,我们可以根据自己的需要添加等多记录.</p>
+<p><strong>DNSPod多线路解析</strong><br>DNSPOD支持不同线路类型解析到不同IP,那么我们就可以将国内请求解析到GitCafe上的博客,将国外的请求解析到GitHub上的博客,那么速度上会提高很多.<br><a id="more"></a><br>详情请移步:<a href="http://bigc.at/godaddy-domain-dnspod-dns.orz" target="_blank" rel="external">如何让Godaddy域名使用DNSPod做DNS解析</a></p>
+<hr>
+<h3 id="2-使用GitHub和GitCafe双托管">2.使用GitHub和<a href="www.gitcafe.com">GitCafe</a>双托管</h3>
+<p>因为天朝的城墙让那些翻不过去的人望着旋转的菊花只能是欲哭无泪,GitCafe的出现让我们的博客有了秒刷的可能.</p>
+<p>配合DNSPod实现GitHub和GitCafe双托管,能让国内的用户上GitCafe,国外的用户上GitHub,如此完美的方案真正的让我们的博客速度飞快,负载均衡.</p>
+<p>Hexo不负众望,为我们提供了Git多Repository部署的方案,只需要在博客目录下的配置文件<em>_config.yml</em>中的<em>deploy</em>添加以下内容:</p>
+<pre><code><span class="label">deploy:</span>
+<span class="label">type:</span> git
+<span class="label">message:</span> [message]
+<span class="label">repo:</span>
+<span class="label">github:</span> &lt;repository url&gt;,[branch]
+<span class="label">gitcafe:</span> &lt;repository url&gt;,[branch]
+</code></pre><p>同时,在    <em>/source</em>目录下添加<strong>CNAME</strong>文件,文件中写入我们的域名即可.</p>
+<p><strong>参考:</strong><br><a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档.</a><br><a href="http://blog.billryan.me/posts/2014/05/multi-deployment-with-hexo.html" target="_blank" rel="external">Hexo多Repo部署——使用Github和GitCafe同时托管博客.</a></p>
+<hr>
+<h3 id="3-_解决Google资源下载困难问题">3. 解决Google资源下载困难问题</h3>
+<p>Hexo的主题都使用了Google Font和Google Ajax,而天朝的网络环境造成的结果不言而喻!</p>
+<blockquote>
+<ul>
+<li>首页加载奇慢无比,下载字体时阻塞了页面!</li>
+<li>下载<strong>jquery.min.js</strong>困难,评论模块迟迟不能加载出来!</li>
+</ul>
+</blockquote>
+<p>网页加载时会加载如下Google的资源导致页面阻塞:</p>
+<figure class="highlight"><pre><div class="line"><span class="constant">Google</span> <span class="constant">Font</span><span class="symbol">:</span></div><div class="line">/<span class="regexp">/目录:/themes</span><span class="regexp">/modernist/source</span><span class="regexp">/css/</span>_base/variable.styl</div><div class="line"><span class="variable">@import</span> url(<span class="string">"https://fonts.google.com/css?family=Droid+Serif:400italic,700italic,400,700"</span>)</div><div class="line"></div><div class="line"><span class="constant">Google</span> <span class="constant">Ajax</span><span class="symbol">:</span></div><div class="line">/<span class="regexp">/目录:/themes</span><span class="regexp">/modernist/layout</span><span class="regexp">/_partial/after</span>-footer.ejs</div><div class="line">&lt;script src=<span class="string">"//ajax.google.com/ajax/libs/jquery/1.8/jquery.min.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></div></pre></figure>
+
+<p>针对以上两点我们解决方案有两种:</p>
+<blockquote>
+<ol>
+<li>替换CDN服务源.</li>
+<li>将资源存到本地(PS:如果字体没那么必要,可以直接不使用.)</li>
+</ol>
+</blockquote>
+<h4 id="3-1_替换CDN服务源">3.1 替换CDN服务源</h4>
+<p>这里我们可以使用<a href="http://libs.useso.com" target="_blank" rel="external">360的前端公共库CDN服务</a>替代谷歌的服务.</p>
+<p><strong>替换字体服务:</strong><br>直接将:</p>
+<figure class="highlight"><pre><div class="line"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url</span>(<span class="string">"https://fonts.google.com/css?family=Droid+Serif:400italic,700italic,400,700"</span>)</span></div></pre></figure>
+
+<p>替换为:</p>
+<figure class="highlight"><pre><div class="line"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url</span>(<span class="string">"http://fonts.useso.com/css?family=Droid+Serif:400italic,700italic,400,700"</span>)</span></div></pre></figure>
+
+<p><strong>替换Ajax:</strong><br>将:</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//ajax.google.com/ajax/libs/jquery/1.8/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>替换为:</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><h4 id="3-2_将资源存到本地">3.2 将资源存到本地</h4>
+<p>需要下载的字体资源:</p>
+<figure class="highlight"><pre><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/</span>0AKsP294HTD-nvJgucYTaGfQcKutQXcIrRfyR5jdjY8.eot</div><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/</span><span class="constant">QQt14e8dY39u</span>-eYBZmppwbFt29aCHKT7otDW9l62Aag.eot</div><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/cj</span>2hUnSRBhwmSPr9kS5896SxSvC1lIsK_unZDHWqTBg.eot</div><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/c</span>92rD_x0V1LslSFt3-<span class="constant">QEptmkQI_kos</span>-lIOeNt19QAas.eot</div></pre></figure>
+
+<p>将下载的字体放到本地<em>/themes/modernist/source/css/fonts</em>,并且将:</p>
+<figure class="highlight"><pre><div class="line"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url</span>(<span class="string">"https://fonts.google.com/css?family=Droid+Serif:400italic,700italic,400,700"</span>)</span></div></pre></figure>
+
+<p>修改为:</p>
+<figure class="highlight"><pre><div class="line"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url</span>(<span class="string">"/css/fonts/0AKsP294HTD-nvJgucYTaGfQcKutQXcIrRfyR5jdjY8.eot"</span>)</span></div><div class="line">@import <span class="function">url</span>(<span class="string">"/css/fonts/QQt14e8dY39u-eYBZmppwbFt29aCHKT7otDW9l62Aag.eot"</span>)</div><div class="line">@import <span class="function">url</span>(<span class="string">"/css/fonts/cj2hUnSRBhwmSPr9kS5896SxSvC1lIsK_unZDHWqTBg.eot"</span>)</div><div class="line">@import <span class="function">url</span>(<span class="string">"/css/fonts/c92rD_x0V1LslSFt3-QEptmkQI_kos-lIOeNt19QAas.eot"</span>)</div></pre></figure>
+
+<p>下载一个<strong>jquery.min.js</strong>放入<em>hexo\themes\modernist\source\js</em>中,然后将<em>/themes/modernist/layout/_partial/after-footer.ejs</em>中的:</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//ajax.google.com/ajax/libs/jquery/1.8/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>改为从本地获取:</p>
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"&lt;%- config.root %&gt;js/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p><strong>参考:</strong><br><a href="http://dlutwuwei.github.io/2014/05/20/hexo%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/" target="_blank" rel="external">hexo速度优化;</a><br><a href="http://ibruce.info/2013/12/03/fonts-googleapis-lead-to-slow/" target="_blank" rel="external">google字库导致hexo modernist首页加载变慢;</a><br><a href="http://blog.depressedmarvin.com/blog/2014/07/08/new-google-fonts-cdn/" target="_blank" rel="external">替换Octopress Google 字体库.</a></p>
+<hr>
+<p>通过以上三种方法,相信我们的博客就可以体验秒刷的感觉了,赶紧刷起来!!</p>
+<hr>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/" target="_blank" rel="external">StackEdit</a>.</p>
+</blockquote>
+
+    
+  </div>
+  <footer>
+    
+      
+  <div class="categories">
+    <a class="categories-link" href="/categories/技术/">技术</a>, <a class="categories-link" href="/categories/技术/Hexo/">Hexo</a>
+  </div>
+
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/Google字体/">Google字体</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="HEXO个人博客速度优化">
+  </div>
+</section>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/技术/C/">C</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Git/">Git</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/技术/iOS/">iOS</a><small>8</small></li>
+  
+    <li><a href="/categories/只言片语/">只言片语</a><small>2</small></li>
+  
+    <li><a href="/categories/技术/">技术</a><small>16</small></li>
+  
+    <li><a href="/categories/随笔/">随笔</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Apache/" style="font-size: 10.00px;">Apache</a><a href="/tags/C/" style="font-size: 10.00px;">C</a><a href="/tags/Certificates/" style="font-size: 10.00px;">Certificates</a><a href="/tags/ContOS/" style="font-size: 10.00px;">ContOS</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 10.00px;">GitHub</a><a href="/tags/Google字体/" style="font-size: 10.00px;">Google字体</a><a href="/tags/Jekyll/" style="font-size: 10.00px;">Jekyll</a><a href="/tags/LAMP/" style="font-size: 15.00px;">LAMP</a><a href="/tags/Mac/" style="font-size: 10.00px;">Mac</a><a href="/tags/NSDictionary/" style="font-size: 10.00px;">NSDictionary</a><a href="/tags/NSString/" style="font-size: 10.00px;">NSString</a><a href="/tags/Phabricator/" style="font-size: 10.00px;">Phabricator</a><a href="/tags/Profiles/" style="font-size: 10.00px;">Profiles</a><a href="/tags/SourceTree/" style="font-size: 10.00px;">SourceTree</a><a href="/tags/XCode/" style="font-size: 10.00px;">XCode</a><a href="/tags/Xcode/" style="font-size: 10.00px;">Xcode</a><a href="/tags/code-review/" style="font-size: 10.00px;">code review</a><a href="/tags/delegate/" style="font-size: 10.00px;">delegate</a><a href="/tags/iOS/" style="font-size: 20.00px;">iOS</a><a href="/tags/jekyll/" style="font-size: 10.00px;">jekyll</a><a href="/tags/nil/" style="font-size: 10.00px;">nil</a><a href="/tags/setter/" style="font-size: 10.00px;">setter</a><a href="/tags/人生/" style="font-size: 10.00px;">人生</a><a href="/tags/博客/" style="font-size: 10.00px;">博客</a><a href="/tags/春天/" style="font-size: 10.00px;">春天</a><a href="/tags/苹果证书/" style="font-size: 10.00px;">苹果证书</a><a href="/tags/香八拉/" style="font-size: 10.00px;">香八拉</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">最近的文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2014/09/09/Hexo加载过慢.html">HEXO个人博客速度优化</a>
+      </li>
+    
+      <li>
+        <a href="/2014/08/01/hello-world.html">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/26/setup-phabricator-on-aliyun.html">在CentOS上搭建Phabricator</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/10/shanbala.html">香八拉徒步</a>
+      </li>
+    
+      <li>
+        <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2014 <a href="/">Duger wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'duger' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
