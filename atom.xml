@@ -4,7 +4,7 @@
   <subtitle><![CDATA[iOS小生]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.autonavi.me/"/>
-  <updated>2014-09-09T13:08:23.034Z</updated>
+  <updated>2014-09-10T03:40:25.574Z</updated>
   <id>http://www.autonavi.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.autonavi.me/2014/09/09/Hexo%E5%8A%A0%E8%BD%BD%E8%BF%87%E6%85%A2.html"/>
     <id>http://www.autonavi.me/2014/09/09/Hexo加载过慢.html</id>
     <published>2014-09-09T04:09:16.000Z</published>
-    <updated>2014-09-09T13:04:40.000Z</updated>
+    <updated>2014-09-10T03:39:44.000Z</updated>
     <content type="html"><![CDATA[<p>最近把博客更新为Hexo的了,使用的是Modernist主题.做了一些速度上的优化,主要包括3部分:</p>
 <blockquote>
 <ol>
@@ -39,14 +39,14 @@
 <h3 id="2-使用GitHub和GitCafe双托管">2.使用GitHub和<a href="www.gitcafe.com">GitCafe</a>双托管</h3>
 <p>因为天朝的城墙让那些翻不过去的人望着旋转的菊花只能是欲哭无泪,GitCafe的出现让我们的博客有了秒刷的可能.</p>
 <p>配合DNSPod实现GitHub和GitCafe双托管,能让国内的用户上GitCafe,国外的用户上GitHub,如此完美的方案真正的让我们的博客速度飞快,负载均衡.</p>
-<p>Hexo不负众望,为我们提供了Git多Repository部署的方案,只需要在博客目录下的配置文件<em>_config.yml</em>中的<em>deploy</em>添加以下内容:</p>
+<p>Hexo不负众望,为我们提供了Git多Repository部署的方案,只需要在博客目录下的配置文件<code>_config.yml</code>中的<code>deploy</code>添加以下内容:</p>
 <pre><code><span class="label">deploy:</span>
 <span class="label">type:</span> git
 <span class="label">message:</span> [message]
 <span class="label">repo:</span>
 <span class="label">github:</span> &lt;repository url&gt;,[branch]
 <span class="label">gitcafe:</span> &lt;repository url&gt;,[branch]
-</code></pre><p>同时,在    <em>/source</em>目录下添加<strong>CNAME</strong>文件,文件中写入我们的域名即可.</p>
+</code></pre><p>同时,在<code>/source</code>目录下添加<code>CNAME</code>文件,文件中写入我们的域名即可.</p>
 <p><strong>参考:</strong><br><a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档.</a><br><a href="http://blog.billryan.me/posts/2014/05/multi-deployment-with-hexo.html" target="_blank" rel="external">Hexo多Repo部署——使用Github和GitCafe同时托管博客.</a></p>
 <hr>
 <h3 id="3-_解决Google资源下载困难问题">3. 解决Google资源下载困难问题</h3>
@@ -54,7 +54,7 @@
 <blockquote>
 <ul>
 <li>首页加载奇慢无比,下载字体时阻塞了页面!</li>
-<li>下载<strong>jquery.min.js</strong>困难,评论模块迟迟不能加载出来!</li>
+<li>下载<code>jquery.min.js</code>困难,评论模块迟迟不能加载出来!</li>
 </ul>
 </blockquote>
 <p>网页加载时会加载如下Google的资源导致页面阻塞:</p>
@@ -83,20 +83,18 @@
 <p>需要下载的字体资源:</p>
 <figure class="highlight"><pre><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/</span>0AKsP294HTD-nvJgucYTaGfQcKutQXcIrRfyR5jdjY8.eot</div><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/</span><span class="constant">QQt14e8dY39u</span>-eYBZmppwbFt29aCHKT7otDW9l62Aag.eot</div><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/cj</span>2hUnSRBhwmSPr9kS5896SxSvC1lIsK_unZDHWqTBg.eot</div><div class="line"><span class="symbol">https:</span>/<span class="regexp">/themes.googleusercontent.com/static</span><span class="regexp">/fonts/droidserif</span><span class="regexp">/v3/c</span>92rD_x0V1LslSFt3-<span class="constant">QEptmkQI_kos</span>-lIOeNt19QAas.eot</div></pre></figure>
 
-<p>将下载的字体放到本地<em>/themes/modernist/source/css/fonts</em>,并且将:</p>
+<p>将下载的字体放到本地<code>/themes/modernist/source/css/fonts</code>,并且将:</p>
 <figure class="highlight"><pre><div class="line"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url</span>(<span class="string">"https://fonts.google.com/css?family=Droid+Serif:400italic,700italic,400,700"</span>)</span></div></pre></figure>
 
 <p>修改为:</p>
 <figure class="highlight"><pre><div class="line"><span class="at_rule">@<span class="keyword">import</span> <span class="function">url</span>(<span class="string">"/css/fonts/0AKsP294HTD-nvJgucYTaGfQcKutQXcIrRfyR5jdjY8.eot"</span>)</span></div><div class="line">@import <span class="function">url</span>(<span class="string">"/css/fonts/QQt14e8dY39u-eYBZmppwbFt29aCHKT7otDW9l62Aag.eot"</span>)</div><div class="line">@import <span class="function">url</span>(<span class="string">"/css/fonts/cj2hUnSRBhwmSPr9kS5896SxSvC1lIsK_unZDHWqTBg.eot"</span>)</div><div class="line">@import <span class="function">url</span>(<span class="string">"/css/fonts/c92rD_x0V1LslSFt3-QEptmkQI_kos-lIOeNt19QAas.eot"</span>)</div></pre></figure>
 
-<p>下载一个<strong>jquery.min.js</strong>放入<em>hexo\themes\modernist\source\js</em>中,然后将<em>/themes/modernist/layout/_partial/after-footer.ejs</em>中的:</p>
+<p>下载一个<code>jquery.min.js</code>放入<code>hexo\themes\modernist\source\js</code>中,然后将<code>/themes/modernist/layout/_partial/after-footer.ejs</code>中的:</p>
 <pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//ajax.google.com/ajax/libs/jquery/1.8/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 </code></pre><p>改为从本地获取:</p>
 <pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"&lt;%- config.root %&gt;js/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 </code></pre><p><strong>参考:</strong><br><a href="http://dlutwuwei.github.io/2014/05/20/hexo%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96/" target="_blank" rel="external">hexo速度优化;</a><br><a href="http://ibruce.info/2013/12/03/fonts-googleapis-lead-to-slow/" target="_blank" rel="external">google字库导致hexo modernist首页加载变慢;</a><br><a href="http://blog.depressedmarvin.com/blog/2014/07/08/new-google-fonts-cdn/" target="_blank" rel="external">替换Octopress Google 字体库.</a></p>
-<hr>
 <p>通过以上三种方法,相信我们的博客就可以体验秒刷的感觉了,赶紧刷起来!!</p>
-<hr>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/" target="_blank" rel="external">StackEdit</a>.</p>
 </blockquote>
