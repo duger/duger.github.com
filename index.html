@@ -76,6 +76,52 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2015/08/17/SourceTree中使用BeyondCompare作为默认对比工具.html">
+  <time datetime="2015-08-16T16:00:00.000Z">
+    2015年 8月 17日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2015/08/17/SourceTree中使用BeyondCompare作为默认对比工具.html"></a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>title: SourceTree中使用BeyondCompare作为默认对比工具<br>date: 2015-08-17 15:32:33<br>category:[技术,Git]</p>
+<h2 id="tags:SourceTree">tags:SourceTree</h2>
+<p>SourceTree支持多种代码对比、合并工具。配置位置：<code>偏好设置（⌘+，）-&gt;比较</code><br>支持现有的比较工具中并没有beyoundCompare<br><img src="http://duger.qiniudn.com/img/SourceTreeUseBeyoundCompare/sourceTreeUseBeyoundCompare_list.png" alt="支持的比较工具"><br>但是咱们可以选择其他，使用beyondCompare的命令行工具。<br>具体配置如下：<br><img src="http://duger.qiniudn.com/img/SourceTreeUseBeyoundCompare/sourceTreeUseBeyoundCompare_detail.png" alt="beyondCompare配置"></p>
+<pre><code><span class="constant">Visual</span> <span class="constant">Diff</span> <span class="constant">Tool</span><span class="symbol">:</span> <span class="constant">Other</span>
+<span class="constant">Diff</span> <span class="constant">Command</span><span class="symbol">:/usr/local/bin/bcomp</span>
+<span class="constant">Parameters</span><span class="symbol">:</span><span class="variable">$LOCAL</span> <span class="variable">$REMOTE</span>
+<span class="constant">Merge</span> <span class="constant">Tool</span><span class="symbol">:</span> <span class="constant">Other</span>
+<span class="constant">Merge</span> <span class="constant">Command</span><span class="symbol">:/usr/local/bin/bcomp</span>
+<span class="constant">Paramters</span><span class="symbol">:</span><span class="variable">$LOCAL</span> <span class="variable">$REMOTE</span> <span class="variable">$BASE</span> <span class="variable">$MERGED</span>
+</code></pre><p>还有一种改法：更改<code>gitconfig</code>文件。<br>打开<code>~/.gitconfig</code>文件，修改如下配置：</p>
+<figure class="highlight git"><pre><div class="line">[difftool <span class="string">"sourcetree"</span>]</div><div class="line">        cmd = <span class="regexp">/usr/local</span><span class="regexp">/bin/bcomp</span> <span class="variable">$LOCAL</span> <span class="variable">$REMOTE</span></div><div class="line">        path =</div><div class="line">[mergetool <span class="string">"sourcetree"</span>]</div><div class="line">        cmd = <span class="regexp">/usr/local</span><span class="regexp">/bin/bcomp</span> <span class="variable">@LOCAL</span> <span class="variable">$REMOTE</span> <span class="variable">$BASE</span> <span class="variable">$MERGED</span></div><div class="line">        trustExitCode = <span class="keyword">true</span></div></pre></figure>
+
+<p>然后，你就可以在SourceTree中使用BeyoundCompare快速比较和合并（⌘+D）代码啦。</p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2014/09/09/Hexo加载过慢.html">
   <time datetime="2014-09-09T04:09:16.000Z">
     2014年 9月 09日
@@ -482,44 +528,6 @@
 
 
   
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">
-  <time datetime="2014-03-26T12:55:00.000Z">
-    2014年 3月 26日
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p>报错如下：</p>
-<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br>
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-        <div class="alignleft">
-          <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html#more" class="more-link">阅读全文</a>
-        </div>
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
 
   <nav id="pagination">
   
@@ -580,6 +588,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2015/08/17/SourceTree中使用BeyondCompare作为默认对比工具.html"></a>
+      </li>
+    
+      <li>
         <a href="/2014/09/09/Hexo加载过慢.html">HEXO个人博客速度优化</a>
       </li>
     
@@ -593,10 +605,6 @@
     
       <li>
         <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
       </li>
     
   </ul>
@@ -618,7 +626,9 @@
   Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
 </div>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv" style="color:white"></span>次</span>
+<span id="busuanzi_container_site_pv">
+	本站总访问量<span id="busuanzi_value_site_pv" style="color:white"></span>次
+</span>
 <div class="clearfix"></div></footer>
   <script src="//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="/js/scale.fix.js"></script>

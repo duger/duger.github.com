@@ -76,6 +76,44 @@
   <header>
     
       <div class="icon"></div>
+      <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">
+  <time datetime="2014-03-26T12:55:00.000Z">
+    2014年 3月 26日
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html">OS X 10.9 XCode5.1升级后 安装Jekyll报错 - duger</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>报错如下：</p>
+<div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;"><span style="color: #000000;">sudo gem install jekyll<br>Password:<br>Building native extensions.  This could take a while…<br>ERROR:  Error installing jekyll:<br>    ERROR: Failed to build gem native extension.<br><br>    /System/Library/Frameworks/Ruby.framework/Versions/</span>2.0<span style="color: #000000;">/usr/bin/ruby extconf.rb<br>creating Makefile<br><br>make </span>“DESTDIR=”<span style="color: #000000;"> clean<br><br>make </span>“DESTDIR=”<span style="color: #000000;"><br>compiling porter.c<br>porter.c:</span>359:27: warning: ‘&amp;&amp;’ within ‘||’ <span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wlogical-op-parentheses</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                ~~ <del>~</del><del>^</del><del>~</del><del>~</del><del>~</del>~~<br>porter.c:</span>359:27<span style="color: #000000;">: note: place parentheses around the ‘&amp;&amp;’ expression to silence this warning<br>      if (a &gt; </span>1 || a == 1 &amp;&amp; !cvc(z, z-&gt;k - 1)) z-&gt;k—<span style="color: #008000;">;<br></span><span style="color: #000000;">                          ^<br>                   (                          )<br></span>1<span style="color: #000000;"> warning generated.<br>compiling porter_wrap.c<br>linking shared-object stemmer.bundle<br>clang: error: unknown argument: ‘-multiply_definedsuppress’ </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">-Wunused-command-line-argument-hard-error-in-future</span><span style="color: #800000; font-weight: bold;">]</span><span style="color: #000000;"><br>clang: note: this will be a hard error (cannot be downgraded to a warning) in the future<br>make: <em>*</em> </span><span style="color: #800000; font-weight: bold;">[</span><span style="color: #800000;">stemmer.bundle</span><span style="color: #800000; font-weight: bold;">]</span> Error 1<span style="color: #000000;"><br>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2014/03/26/OS-X-109-XCode51升级后-安装Jekyll报错---duger.html#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
       <a href="/2014/03/25/Xcode升级51-iOS升级71无法真机调试---duger.html">
   <time datetime="2014-03-25T03:49:00.000Z">
     2014年 3月 25日
@@ -481,64 +519,13 @@ Server built:   Jun 20 2012 13:57:09</code></li>
 
 
   
-    <article class="post">
-  <header>
-    
-      <div class="icon"></div>
-      <a href="/2013/08/22/字节对齐详解---duger.html">
-  <time datetime="2013-08-22T05:10:00.000Z">
-    2013年 8月 22日
-  </time>
-</a>
-    
-    
-  
-    <h1 class="title"><a href="/2013/08/22/字节对齐详解---duger.html">字节对齐详解 - duger</a></h1>
-  
-
-  </header>
-  
-  <div class="entry">
-    
-      <p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
-<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
-<p><span>sizeof( A)=6, sizeof( B)=8,为什么？</span><br><span>注：sizeof(short)=2,sizeof(long)=4</span></p>
-<p><span>因为：&ldquo;成员对齐有一个重要的条件，即每个成员按自己的方式对齐。其对齐的规则是，每个成员按其类型的对齐参数(通常是这个类型的大小)和指定对齐参数(这里默认是8字节)中较小的一个对齐。并且结构的长度必须为所用过的所有对齐参数的整数倍，不够就补空字节。&rdquo;(引用)</span></p>
-<p><span>结构体A中有3个short类型变量，各自以2字节对齐，结构体对齐参数按默认的8字节对齐，则a1,a2,a3都取2字节对齐，则sizeof(A)为6，其也是2的整数倍；</span><br><span>B中a1为4字节对齐，a2为2字节对齐，结构体默认对齐参数为8，则a1取4字节对齐，a2取2字节对齐，结构体大小6字节，6不为4的整数倍，补空字节，增到8时，符合所有条件，则sizeof(B)为8；</span></p>
-<p><span>可以设置成对齐的</span></p>
-<p><span>#pragma pack(1)</span><br><span>#pragma pack(push)</span><br><span>#pragma pack(1)</span></p>
-<p><span>struct{</span><br><span>short a1;</span><br><span>short a2;</span><br><span>short a3;</span><br><span>}A;</span></p>
-<p><span>struct{</span><br><span>long a1;</span><br><span>short a2;</span><br><span>}B;</span></p>
-<p><span>#pragma pack(pop)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-<p><span>结果为sizeof( A)=6,sizeof( B)=6</span></p>
-<p><span><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></span></p>
-<p><span>#pragma pack(8)</span></p>
-<p><span>struct S1{</span><br><span>&nbsp;&nbsp;&nbsp; char a;</span><br><span>&nbsp;&nbsp;&nbsp; long b;</span><br><span>};</span></p>
-<p><span>struct S2 {</span><br><span>&nbsp;&nbsp;&nbsp; char c;</span><br><span>&nbsp;&nbsp;&nbsp; struct S1 d;</span><br><span>&nbsp;&nbsp;&nbsp; long long e;</span><br><span>};</span></p>
-<p><span>#pragma pack()</span></p>
-<p><span>sizeof(S2)结果为24.</span><br>
-    
-  </div>
-  <footer class="end-sep">
-    
-      
-        <div class="alignleft">
-          <a href="/2013/08/22/字节对齐详解---duger.html#more" class="more-link">阅读全文</a>
-        </div>
-      
-      
-    
-    <div class="clearfix"></div>
-  </footer>
-</article>
-
-
-  
 
   <nav id="pagination">
   
     <a href="/" class="prev">上一页</a>
   
+  
+    <a href="/page/3/" class="next">下一页</a>
   
   <div class="clearfix"></div>
 </nav>
@@ -594,6 +581,10 @@ Server built:   Jun 20 2012 13:57:09</code></li>
   <ul class="entry">
     
       <li>
+        <a href="/2015/08/17/SourceTree中使用BeyondCompare作为默认对比工具.html"></a>
+      </li>
+    
+      <li>
         <a href="/2014/09/09/Hexo加载过慢.html">HEXO个人博客速度优化</a>
       </li>
     
@@ -607,10 +598,6 @@ Server built:   Jun 20 2012 13:57:09</code></li>
     
       <li>
         <a href="/2014/04/04/beauly-fade-love-stay.html">Beauly fade Love stay</a>
-      </li>
-    
-      <li>
-        <a href="/2014/04/02/setternil-and-saferelease.html">setter=nil and saferelease</a>
       </li>
     
   </ul>
@@ -632,7 +619,9 @@ Server built:   Jun 20 2012 13:57:09</code></li>
   Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
 </div>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv" style="color:white"></span>次</span>
+<span id="busuanzi_container_site_pv">
+	本站总访问量<span id="busuanzi_value_site_pv" style="color:white"></span>次
+</span>
 <div class="clearfix"></div></footer>
   <script src="//ajax.useso.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="/js/scale.fix.js"></script>
